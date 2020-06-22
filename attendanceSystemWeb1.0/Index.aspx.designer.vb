@@ -129,13 +129,4 @@ Partial Public Class Index
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
-
-    '''<summary>
-    '''Control smPageScriptManage.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents smPageScriptManage As Global.System.Web.UI.ScriptManager
 End Class

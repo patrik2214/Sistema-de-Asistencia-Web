@@ -153,12 +153,7 @@
         
       </div>
     </div>
-    <asp:ScriptManager runat="server" ID="smPageScriptManage" ScriptMode="Release" >
-      <Scripts>
-        <asp:ScriptReference Path="~/Scripts/jquery-3.0.0.min.js" />
-        <asp:ScriptReference Path="~/Scripts/bootstrap.min.js" />
-      </Scripts>
-    </asp:ScriptManager>
+    
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
