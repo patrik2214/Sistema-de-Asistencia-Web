@@ -100,13 +100,25 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ConAsistencia.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Horario.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="MantenimientoEmpleado.aspx" />
+    <Content Include="MantenimientoUsuario.aspx" />
+    <Content Include="OprAsistencia.aspx" />
+    <Content Include="OprJustificacion.aspx" />
+    <Content Include="OprLicencias.aspx" />
+    <Content Include="OprPermisos.aspx" />
+    <Content Include="RepAsistencia.aspx" />
+    <Content Include="RepFaltas.aspx" />
+    <Content Include="RepLicencia.aspx" />
+    <Content Include="RepTardanzas.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -210,11 +222,39 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConAsistencia.aspx.designer.vb">
+      <DependentUpon>ConAsistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConAsistencia.aspx.vb">
+      <DependentUpon>ConAsistencia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Horario.aspx.designer.vb">
+      <DependentUpon>Horario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Horario.aspx.vb">
+      <DependentUpon>Horario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Index.aspx.designer.vb">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.vb">
       <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MantenimientoEmpleado.aspx.designer.vb">
+      <DependentUpon>MantenimientoEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoEmpleado.aspx.vb">
+      <DependentUpon>MantenimientoEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuario.aspx.designer.vb">
+      <DependentUpon>MantenimientoUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuario.aspx.vb">
+      <DependentUpon>MantenimientoUsuario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -241,6 +281,62 @@
     </Compile>
     <Compile Include="Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OprAsistencia.aspx.designer.vb">
+      <DependentUpon>OprAsistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OprAsistencia.aspx.vb">
+      <DependentUpon>OprAsistencia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OprJustificacion.aspx.designer.vb">
+      <DependentUpon>OprJustificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OprJustificacion.aspx.vb">
+      <DependentUpon>OprJustificacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OprLicencias.aspx.designer.vb">
+      <DependentUpon>OprLicencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OprLicencias.aspx.vb">
+      <DependentUpon>OprLicencias.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OprPermisos.aspx.designer.vb">
+      <DependentUpon>OprPermisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OprPermisos.aspx.vb">
+      <DependentUpon>OprPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RepAsistencia.aspx.designer.vb">
+      <DependentUpon>RepAsistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepAsistencia.aspx.vb">
+      <DependentUpon>RepAsistencia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RepFaltas.aspx.designer.vb">
+      <DependentUpon>RepFaltas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepFaltas.aspx.vb">
+      <DependentUpon>RepFaltas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RepLicencia.aspx.designer.vb">
+      <DependentUpon>RepLicencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepLicencia.aspx.vb">
+      <DependentUpon>RepLicencia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RepTardanzas.aspx.designer.vb">
+      <DependentUpon>RepTardanzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepTardanzas.aspx.vb">
+      <DependentUpon>RepTardanzas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

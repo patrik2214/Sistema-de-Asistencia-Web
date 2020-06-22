@@ -1,4 +1,4 @@
-﻿Public Class Index
+﻿Public Class ConAsistencia
     Inherits System.Web.UI.Page
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -48,8 +48,6 @@
     Protected Sub Redirect_Tardanzas(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("RepTardanzas.aspx")
     End Sub
-
-
 
 
 End Class

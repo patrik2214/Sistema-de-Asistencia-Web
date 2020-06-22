@@ -1,4 +1,5 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Index.aspx.vb" Inherits="attendanceSystemWeb1._0.Index" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="RepLicencia.aspx.vb" Inherits="attendanceSystemWeb1._0.RepLicencia" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head runat="server">
@@ -121,21 +122,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Calendario</h3>
-              </div>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_content">
-
-                    <div id='calendar'></div>
-
-                  </div>
-                </div>
+                <h3>Reporte de Licencias</h3>
               </div>
             </div>
           </div>
@@ -170,4 +157,3 @@
 	
   </body>
 </html>
-

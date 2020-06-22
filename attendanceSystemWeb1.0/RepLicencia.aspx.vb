@@ -1,5 +1,9 @@
-﻿Public Class Index
+﻿Public Class RepLicencia
     Inherits System.Web.UI.Page
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+    End Sub
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoUsuario.aspx")
@@ -48,8 +52,5 @@
     Protected Sub Redirect_Tardanzas(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("RepTardanzas.aspx")
     End Sub
-
-
-
 
 End Class
