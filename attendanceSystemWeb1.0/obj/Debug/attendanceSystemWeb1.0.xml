@@ -46,6 +46,114 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:attendanceSystemWeb1._0.Index._ManUsuario">
+<summary>
+Control ManUsuario.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._ManEmpleado">
+<summary>
+Control ManEmpleado.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._ManHorario">
+<summary>
+Control ManHorario.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._OprAsistencia">
+<summary>
+Control OprAsistencia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._OprJustificacion">
+<summary>
+Control OprJustificacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._OprPermisos">
+<summary>
+Control OprPermisos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._OprLicencias">
+<summary>
+Control OprLicencias.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._ConAsistencia">
+<summary>
+Control ConAsistencia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._Asistencia">
+<summary>
+Control Asistencia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._Faltas">
+<summary>
+Control Faltas.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._Licencias">
+<summary>
+Control Licencias.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Index._Tardanzas">
+<summary>
+Control Tardanzas.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:attendanceSystemWeb1._0.WebForm1._form1">
 <summary>
 Control form1.
