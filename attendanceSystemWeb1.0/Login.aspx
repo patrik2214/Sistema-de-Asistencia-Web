@@ -31,22 +31,20 @@
           <section class="login_content">
             <form id="form1" runat="server">
               <h1>Iniciar Sesión</h1>
-              <div class="">
-                <h3>Usuario</h3>
-                <asp:TextBox ID="txtNombreUsuario" CssClass="form-control" runat="server" Width="180px" Height="30px"></asp:TextBox>
+              <div class="row">
+                <h2 class="text-left">Usuario</h2>
+                <asp:TextBox ID="txtNombreUsuario" CssClass="form-control" runat="server" placeholder="Ingrese su contraseña aquí" Width="350px" Height="30px"></asp:TextBox>
               </div>
-              <div class="">
-                <h3>Contraseña</h3>
-                <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server" TextMode="Password" Width="180px" Height="30px"></asp:TextBox>
+              <div class="row">
+                <h2 class="text-left">Contraseña</h2>
+                <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server" placeholder="Ingrese su contraseña aquí" TextMode="Password" Width="350px" Height="30px"></asp:TextBox>
               </div>
-              <div class="">
                 <br />
-                <asp:Button ID="btnLogin" CssClass="btn btn-primary center" runat="server" Width="100px" Text="Ingresar"/>
+              <div class="row">
+                <asp:Button ID="btnLogin" CssClass="btn btn-primary center" runat="server" Width="270px"  Height="50px" Text="Ingresar"/>
               </div>
                 <br/>
-    
               <div class="clearfix"></div>
-
               <div class="separator">
                 <div class="clearfix"></div>
                 <br />
