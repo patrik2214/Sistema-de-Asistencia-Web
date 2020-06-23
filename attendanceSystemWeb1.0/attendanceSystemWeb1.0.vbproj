@@ -48,11 +48,13 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="capaDatos">
-      <HintPath>..\..\7° CICLO\SISTEMAS DISTRIBUIDOS\PROYECTO Web\Plantilla 3\attendanceSystemWEB\capaDatos.dll</HintPath>
+    <Reference Include="capaDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\capaDatos.dll</HintPath>
     </Reference>
-    <Reference Include="capaNegocio">
-      <HintPath>..\..\7° CICLO\SISTEMAS DISTRIBUIDOS\PROYECTO Web\Plantilla 3\attendanceSystemWEB\capaNegocio.dll</HintPath>
+    <Reference Include="capaNegocio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\capaNegocio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
