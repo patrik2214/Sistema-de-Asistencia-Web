@@ -25,6 +25,7 @@
   </head>
 
   <body class="nav-md">
+    <form id="form1" runat="server">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -49,7 +50,7 @@
             <br />
 
             <!-- sidebar menu -->
-            <form id="form1" runat="server">
+            
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
@@ -88,7 +89,6 @@
                 </ul>
               </div>
             </div>
-            </form>
             
           </div>
         </div>
@@ -125,6 +125,57 @@
                 <h3>Usuario</h3>
               </div>
             </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2><small>Mantenimiento</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="txtNombre" required="required" class="form-control "/>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Contraseña <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="txtContraseña"  required="required" class="form-control"/>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">DNI</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="txtDni" class="form-control" type="text"  />
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Estado</label> 
+                        <div class="col-md-6 col-sm-6 ">
+                            <asp:RadioButton  runat="server" />
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">
+                          <button class="btn btn-danger"  type="button">Cancelar</button>
+						  <button class="btn btn-primary"  type="reset">Limpiar</button>
+                          <button class="btn btn-success"  type="submit">Guardar</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                 
+            </div>
           </div>
         </div>
         <!-- /page content -->
@@ -154,6 +205,6 @@
     <script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../vendors/build/js/custom.min.js"></script>
-	
+	</form>
   </body>
 </html>

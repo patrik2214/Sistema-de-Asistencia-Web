@@ -11,8 +11,6 @@ Public Class WebForm1
             Response.Redirect("Index.aspx")
         Catch ex As Exception
 
-
-
         End Try
     End Sub
 
