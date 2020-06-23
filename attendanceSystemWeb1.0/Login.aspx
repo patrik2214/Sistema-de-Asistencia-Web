@@ -40,7 +40,7 @@
                 <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server" TextMode="Password" Width="180px" Height="30px"></asp:TextBox>
               </div>
               <div class="">
-                <br/>
+                <br />
                 <asp:Button ID="btnLogin" CssClass="btn btn-primary center" runat="server" Width="100px" Text="Ingresar"/>
               </div>
                 <br/>

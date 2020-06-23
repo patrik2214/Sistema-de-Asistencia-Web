@@ -10,9 +10,9 @@
 
 
 #Vainas
-attendanceSystemWeb1.0/vendors/
-attendanceSystemWeb1.0/Content/
-attendanceSystemWeb1.0/Scripts/
+attendanceSystemWeb1.0/vendors/*
+attendanceSystemWeb1.0/Content/*
+attendanceSystemWeb1.0/Scripts/*
 
 
 # User-specific files
