@@ -53,4 +53,12 @@
         Response.Redirect("RepTardanzas.aspx")
     End Sub
 
+    Protected Sub Redirect_Contrato(ByVal sender As Object, ByVal e As System.EventArgs)
+        Response.Redirect("Contrato.aspx")
+    End Sub
+
+    Protected Sub Redirect_TipoLicencia(ByVal sender As Object, ByVal e As System.EventArgs)
+        Response.Redirect("TipoLicencia.aspx")
+    End Sub
+
 End Class

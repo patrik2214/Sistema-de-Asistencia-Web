@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="RepTardanzas.aspx.vb" Inherits="attendanceSystemWeb1._0.RepTardanzas" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Contrato.aspx.vb" Inherits="attendanceSystemWeb1._0.Contrato" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,6 +25,7 @@
   </head>
 
   <body class="nav-md">
+    <form id="form1" runat="server">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -49,11 +50,11 @@
             <br />
 
             <!-- sidebar menu -->
-            <form id="form1" runat="server">
+            
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                 <li><a><i class="fa fa-child"></i>Empleado<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-child"></i>Empleado<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><asp:LinkButton runat="server" ID="ManUsuario" OnClick="Redirect_Usuario">Usuario</asp:LinkButton></li>
                       <li><asp:LinkButton runat="server" ID="ManEmpleado" OnClick="Redirect_Empleado">Mantenimiento</asp:LinkButton></li>
@@ -98,7 +99,6 @@
                 </ul>
               </div>
             </div>
-            </form>
             
           </div>
         </div>
@@ -132,8 +132,85 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Reporte de Tardanzas</h3>
+                <h3>Contrato</h3>
               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2><small>Mantenimiento</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Inicio<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:Calendar ID="calInicio" CssClass="" runat="server"  Width="400px" Height="400px"></asp:Calendar>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Fin<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:Calendar ID="calFin" CssClass="" runat="server"  Width="400px" Height="400px"></asp:Calendar>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Salario<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:TextBox ID="txtSalario" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">DNI<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Horas extra<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <label class="form-check-label"></label>
+                          <asp:CheckBox ID="chkHorasExtra" CssClass="custom-checkbox" runat="server"  Width="400px" Height="30px"></asp:CheckBox>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Estado<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                           <label class="form-check-label"></label>
+                          <asp:CheckBox ID="chkEstado" CssClass="custom-checkbox" runat="server"  Width="400px" Height="40px"></asp:CheckBox>
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Modificar" Text="Buscar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="row">
+                  <div class="col-md-12 col-sm-12 ">
+                    <div class="x_panel">
+                  <asp:DataGrid runat="server" ID="tblContrato" CssClass="table"/>
+                    </div>
+                  </div>
+              </div>
+                 
             </div>
           </div>
         </div>
@@ -149,7 +226,7 @@
         <!-- /footer content -->
         
       </div>
-    </div>
+  
     
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
@@ -164,6 +241,6 @@
     <script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../vendors/build/js/custom.min.js"></script>
-	
+	</form>
   </body>
 </html>

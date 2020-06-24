@@ -41,6 +41,15 @@ Partial Public Class OprLicencias
     Protected WithEvents ManEmpleado As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control ManContratos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ManContratos As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''Control ManHorario.
     '''</summary>
     '''<remarks>
@@ -48,6 +57,15 @@ Partial Public Class OprLicencias
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ManHorario As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control ManTipoLicencia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ManTipoLicencia As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''Control OprAsistencia.
@@ -129,4 +147,76 @@ Partial Public Class OprLicencias
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control ddlTipoLicencia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlTipoLicencia As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control calFechaPresentacion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents calFechaPresentacion As Global.System.Web.UI.WebControls.Calendar
+
+    '''<summary>
+    '''Control calFechaInicio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents calFechaInicio As Global.System.Web.UI.WebControls.Calendar
+
+    '''<summary>
+    '''Control CalFechaFin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CalFechaFin As Global.System.Web.UI.WebControls.Calendar
+
+    '''<summary>
+    '''Control txtDocumento.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDocumento As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control Cancelar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Cancelar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control Button1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control Guardar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Guardar As Global.System.Web.UI.WebControls.Button
 End Class

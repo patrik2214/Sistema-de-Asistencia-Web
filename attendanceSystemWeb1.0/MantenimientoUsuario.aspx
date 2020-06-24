@@ -54,15 +54,25 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-file-text-o"></i>Empleado<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-child"></i>Empleado<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><asp:LinkButton runat="server" ID="ManUsuario" OnClick="Redirect_Usuario">Usuario</asp:LinkButton></li>
                       <li><asp:LinkButton runat="server" ID="ManEmpleado" OnClick="Redirect_Empleado">Mantenimiento</asp:LinkButton></li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-file-text-o"></i>Contratos<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><asp:LinkButton runat="server" ID="ManContratos" OnClick="Redirect_Contrato">Mantenimiento</asp:LinkButton></li>                     
+                    </ul>
+                  </li>
                   <li><a><i class="fa fa-table"></i>Horarios<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Mantenimiento</asp:LinkButton></li>                     
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Tipo Licencia</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Operaciones<span class="fa fa-chevron-down"></span></a>
@@ -137,43 +147,52 @@
                     <br />
 
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre <span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Nombre <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="txtNombre" required="required" class="form-control "/>
+                          <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Contraseña <span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Contraseña <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="txtContraseña"  required="required" class="form-control"/>
+                          <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">DNI</label>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">DNI</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input id="txtDni" class="form-control" type="text"  />
+                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Estado</label> 
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Estado</label> 
+                          <br/>
                         <div class="col-md-6 col-sm-6 ">
-                            <asp:RadioButton  runat="server" />
+                            <asp:CheckBox runat="server" TextAlign="right"  CssClass="form-check-input" Text="Activo" />
                         </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <button class="btn btn-danger"  type="button">Cancelar</button>
-						  <button class="btn btn-primary"  type="reset">Limpiar</button>
-                          <button class="btn btn-success"  type="submit">Guardar</button>
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Button1" Text="Buscar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
                         </div>
                       </div>
                   </div>
                 </div>
               </div>
             </div>
+
+              <div class="row">
+                  <div class="col-md-12 col-sm-12 ">
+                    <div class="x_panel">
+                  <asp:DataGrid runat="server" ID="tblUsuario" CssClass="table"/>
+                    </div>
+                  </div>
+              </div>
                  
             </div>
           </div>
@@ -190,7 +209,6 @@
         <!-- /footer content -->
         
       </div>
-    </div>
     
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>

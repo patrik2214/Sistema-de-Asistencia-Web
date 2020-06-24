@@ -41,6 +41,15 @@ Partial Public Class OprAsistencia
     Protected WithEvents ManEmpleado As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control ManContratos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ManContratos As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''Control ManHorario.
     '''</summary>
     '''<remarks>
@@ -48,6 +57,15 @@ Partial Public Class OprAsistencia
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ManHorario As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control ManTipoLicencia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ManTipoLicencia As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''Control OprAsistencia.
@@ -129,4 +147,22 @@ Partial Public Class OprAsistencia
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control txtApellido.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtApellido As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control Guardar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Guardar As Global.System.Web.UI.WebControls.Button
 End Class

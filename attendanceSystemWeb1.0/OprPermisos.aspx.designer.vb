@@ -41,6 +41,15 @@ Partial Public Class OprPermisos
     Protected WithEvents ManEmpleado As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control ManContratos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ManContratos As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''Control ManHorario.
     '''</summary>
     '''<remarks>
@@ -48,6 +57,15 @@ Partial Public Class OprPermisos
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ManHorario As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control ManTipoLicencia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ManTipoLicencia As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''Control OprAsistencia.
