@@ -1099,9 +1099,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.WebForm1._form1">
+<member name="F:attendanceSystemWeb1._0.WebForm1._formIncio">
 <summary>
-Control form1.
+Control formIncio.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1126,18 +1126,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.WebForm1._btnLogin">
+<member name="F:attendanceSystemWeb1._0.WebForm1._lblMensaje">
 <summary>
-Control btnLogin.
+Control lblMensaje.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.WebForm1._smPageScriptManage">
+<member name="F:attendanceSystemWeb1._0.WebForm1._btnLogin">
 <summary>
-Control smPageScriptManage.
+Control btnLogin.
 </summary>
 <remarks>
 Campo generado automáticamente.

@@ -1,26 +1,19 @@
 ﻿Imports capaNegocio
-Imports capaDatos
-
 Public Class WebForm1
     Inherits System.Web.UI.Page
-    Dim usuario As New clsUsuario
-    Private users As capaDatos.users
-    Protected Sub Btn_Login_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnLogin.Click
+    Dim objUsuario As New clsUsuario
+    Protected Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Try
-            User = New clsUsuario().Login(txtNombreUsuario.Text, txtContraseña.Text)
-            Response.Redirect("Index.aspx")
+            Dim user = objUsuario.Login(txtNombreUsuario.Text, txtContraseña.Text)
+            Dim nombre = user.employee.name + " " + user.employee.lastname
+            If user IsNot Nothing Then
+                lblMensaje.Text = "Bienvenido al Sistema " & nombre
+                'Response.Redirect("html/wbIndex.aspx")
+            Else
+                lblMensaje.Text = "Error de acceso!!"
+            End If
         Catch ex As Exception
-
+            Throw New Exception("Error al ingresar: " + ex.Message)
         End Try
     End Sub
-
-    Public Property User() As capaDatos.users
-        Get
-            Return users
-        End Get
-        Set(value As capaDatos.users)
-            users = value
-        End Set
-    End Property
-
 End Class
