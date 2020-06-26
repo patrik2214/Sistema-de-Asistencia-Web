@@ -8,7 +8,7 @@ Public Class WebForm1
             Dim nombre = user.employee.name + " " + user.employee.lastname
             If user IsNot Nothing Then
                 lblMensaje.Text = "Bienvenido al Sistema " & nombre
-                'Response.Redirect("html/wbIndex.aspx")
+                Response.Redirect("Index.aspx", False)
             Else
                 lblMensaje.Text = "Error de acceso!!"
             End If
