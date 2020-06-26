@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="OprPermisos.aspx.vb" Inherits="attendanceSystemWeb1._0.OprPermisos" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es">
   <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -9,27 +9,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Plataforma de Asistencia PanchitoLovers | </title>
+    <title>Sistema de Asistencia! | </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.min.css"/>
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../librerias/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <!-- NProgress -->
     <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css"/>
     <!-- FullCalendar -->
-    <link href="../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
-    <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
-    <!-- Custom Theme Style -->
-    <link href="../vendors/build/css/custom.min.css" rel="stylesheet"/>
+    <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
+    <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
+    <!-- Estilo de Tema Personalizado -->
+    <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
 
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
+          <div class="left_col scroll-view" style="background-color: #1C4E80">
+            <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
               <a href="index.html" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
             </div>
 
@@ -152,18 +152,18 @@
     </div>
     
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../librerias/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../librerias/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../librerias/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="../librerias/nprogress/nprogress.js"></script>
     <!-- FullCalendar -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-    <!-- Custom Theme Scripts -->
-    <script src="../vendors/build/js/custom.min.js"></script>
+    <script src="../librerias/moment/min/moment.min.js"></script>
+    <script src="../librerias/fullcalendar/dist/fullcalendar.min.js"></script>
+    <!--Scripts de Tema Personalizado-->
+    <script src="../librerias/build/js/custom.min.js"></script>
 	
   </body>
 </html>
