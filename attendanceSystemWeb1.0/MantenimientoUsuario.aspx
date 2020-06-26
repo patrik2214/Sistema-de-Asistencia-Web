@@ -170,14 +170,14 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Estado</label> 
                           <br/>
                         <div class="col-md-6 col-sm-6 ">
-                            <asp:CheckBox runat="server" TextAlign="right"  CssClass="form-check-input" Text="Activo" />
+                            <asp:CheckBox runat="server" TextAlign="right" ID="chkEstado" CssClass="form-check-input" Text="Activo" />
                         </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                           <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Button1" Text="Buscar" />
+                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Buscar" Text="Buscar" />
                           <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
                         </div>
                       </div>
