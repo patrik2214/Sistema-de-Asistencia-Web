@@ -25,6 +25,7 @@
   </head>
 
   <body class="nav-md">
+    <form runat="server">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">

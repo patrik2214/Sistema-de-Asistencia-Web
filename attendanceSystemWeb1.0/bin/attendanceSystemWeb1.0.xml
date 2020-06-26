@@ -172,15 +172,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._form1">
-<summary>
-Control form1.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:attendanceSystemWeb1._0.Contrato._ManUsuario">
 <summary>
 Control ManUsuario.
@@ -667,15 +658,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.MantenimientoEmpleado._form1">
-<summary>
-Control form1.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:attendanceSystemWeb1._0.MantenimientoEmpleado._ManUsuario">
 <summary>
 Control ManUsuario.
@@ -895,15 +877,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:attendanceSystemWeb1._0.MantenimientoEmpleado._tblEmpleado">
 <summary>
 Control tblEmpleado.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._form1">
-<summary>
-Control form1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1144,15 +1117,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprAsistencia._form1">
-<summary>
-Control form1.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:attendanceSystemWeb1._0.OprAsistencia._ManUsuario">
 <summary>
 Control ManUsuario.
@@ -1291,15 +1255,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:attendanceSystemWeb1._0.OprAsistencia._Guardar">
 <summary>
 Control Guardar.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:attendanceSystemWeb1._0.OprJustificacion._form1">
-<summary>
-Control form1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1489,15 +1444,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:attendanceSystemWeb1._0.OprJustificacion._Guardar">
 <summary>
 Control Guardar.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._form1">
-<summary>
-Control form1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1831,15 +1777,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:attendanceSystemWeb1._0.OprPermisos._Tardanzas">
 <summary>
 Control Tardanzas.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:attendanceSystemWeb1._0.RepAsistencia._form1">
-<summary>
-Control form1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -2371,15 +2308,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:attendanceSystemWeb1._0.RepTardanzas._Tardanzas">
 <summary>
 Control Tardanzas.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:attendanceSystemWeb1._0.TipoLicencia._form1">
-<summary>
-Control form1.
 </summary>
 <remarks>
 Campo generado automáticamente.

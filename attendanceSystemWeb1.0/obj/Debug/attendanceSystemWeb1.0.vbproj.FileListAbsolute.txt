@@ -51,8 +51,6 @@ D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\att
 D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\roslyn\vbc.rsp
 D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\roslyn\VBCSCompiler.exe
 D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\roslyn\VBCSCompiler.exe.config
-D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\capaDatos.dll
-D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\capaNegocio.dll
 D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\obj\Debug\attendanceSystemWeb1.0.vbprojAssemblyReference.cache
@@ -199,3 +197,7 @@ E:\SD\AppWebAsistencia\attendanceSystemWeb1.0\obj\Debug\attendanceSystemWeb1.0.v
 E:\SD\AppWebAsistencia\attendanceSystemWeb1.0\obj\Debug\attendanceSystemWeb1.0.dll
 E:\SD\AppWebAsistencia\attendanceSystemWeb1.0\obj\Debug\attendanceSystemWeb1.0.xml
 E:\SD\AppWebAsistencia\attendanceSystemWeb1.0\obj\Debug\attendanceSystemWeb1.0.pdb
+D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\EntityFramework.dll
+D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\EntityFramework.SqlServer.dll
+D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\EntityFramework.xml
+D:\UNIVERSIDAD_INGENIERÍA DE SISTEMAS Y COMPUTACIÓN\attendanceSystemWeb1.0\attendanceSystemWeb1.0\bin\EntityFramework.SqlServer.xml

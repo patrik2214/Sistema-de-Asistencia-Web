@@ -25,6 +25,7 @@
   </head>
 
   <body class="nav-md">
+    <form runat="server">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -212,7 +213,9 @@
                  
             </div>
           </div>
+          
         </div>
+        
         <!-- /page content -->
 
         <!-- footer content -->
@@ -225,7 +228,7 @@
         <!-- /footer content -->
         
       </div>
-  
+   
     
     <!-- jQuery -->
     <script src="../librerias/jquery/dist/jquery.min.js"></script>
@@ -240,6 +243,6 @@
     <script src="../librerias/fullcalendar/dist/fullcalendar.min.js"></script>
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
-	</form>
+    </form> 
   </body>
 </html>

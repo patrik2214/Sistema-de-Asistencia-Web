@@ -25,6 +25,7 @@
   </head>
 
   <body class="nav-md">
+    <form runat="server">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -49,7 +50,6 @@
             <br />
 
             <!-- sidebar menu -->
-            <form id="form1" runat="server">
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
@@ -98,7 +98,7 @@
                 </ul>
               </div>
             </div>
-            </form>
+            
             
           </div>
         </div>
@@ -164,6 +164,6 @@
     <script src="../librerias/fullcalendar/dist/fullcalendar.min.js"></script>
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
-	
+    </form>
   </body>
 </html>
