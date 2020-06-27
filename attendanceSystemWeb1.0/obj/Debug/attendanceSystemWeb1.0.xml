@@ -352,36 +352,54 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._Cancelar">
+<member name="F:attendanceSystemWeb1._0.Contrato._lblAviso">
 <summary>
-Control Cancelar.
+Control lblAviso.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._Modificar">
+<member name="F:attendanceSystemWeb1._0.Contrato._BtnClear">
 <summary>
-Control Modificar.
+Control BtnClear.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._Guardar">
+<member name="F:attendanceSystemWeb1._0.Contrato._BtnRegister">
 <summary>
-Control Guardar.
+Control BtnRegister.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._tblContrato">
+<member name="F:attendanceSystemWeb1._0.Contrato._txtBuscar">
 <summary>
-Control tblContrato.
+Control txtBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Contrato._BtnSearch">
+<summary>
+Control BtnSearch.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Contrato._DgvContract">
+<summary>
+Control DgvContract.
 </summary>
 <remarks>
 Campo generado automáticamente.

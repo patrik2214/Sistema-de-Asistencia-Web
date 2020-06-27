@@ -2,7 +2,6 @@
 Public Class MantenimientoUsuario
     Inherits System.Web.UI.Page
     Private user As capaDatos.users
-    Dim table As New DataTable
     Dim countE As Integer
     Dim Id_Usuario As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -88,10 +87,10 @@ Public Class MantenimientoUsuario
         ElseIf BtnRegister.Text = "Registrar" Then
             Try
                 countE = clsEmpleado.FindDni(txtDni.Text)
-                If txtNombre.Equals("") Or txtContraseña.Equals("") Or txtDni.Equals("") Then
+                If txtNombre.Text.Length = 0 Or txtContraseña.Text.Length = 0 Or txtDni.Text.Length = 0 Then
                     lblAviso.InnerText = "Es necesario completar todos los campos para registrar"
                     ClearControls()
-                ElseIf txtDni.MaxLength = 8 And countE = 1 Then
+                ElseIf txtDni.Text.Length = 8 And countE = 1 Then
                     SetNewUsers()
                     clsUsuario.RegisterUser(user)
                     ClearControls()

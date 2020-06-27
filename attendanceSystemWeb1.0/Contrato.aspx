@@ -190,12 +190,12 @@
                           <asp:CheckBox ID="chkEstado" CssClass="custom-checkbox" runat="server"  Width="400px" Height="40px"></asp:CheckBox>
                         </div>
                       </div>
+                      <label runat="server" ID="lblAviso" class="label-align">_</label>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Modificar" Text="Buscar" />
-                          <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegister" Text="Guardar" />
                         </div>
                       </div>
                   </div>
@@ -205,8 +205,46 @@
 
               <div class="row">
                   <div class="col-md-12 col-sm-12 ">
+                      <div class="x_panel"> 
+                          <div class="item form-group"> 
+                              <asp:TextBox ID="txtBuscar" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                              <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearch" Text="Buscar" />
+                          </div>
+                          
+                      </div>
+                      
                     <div class="x_panel">
-                  <asp:DataGrid runat="server" ID="tblContrato" CssClass="table"/>
+                        <asp:GridView 
+                            runat="server" ID="DgvContract" CssClass="table" OnRowCommand="DgvContract_RowCommand"
+                            GridLines="None"
+                            AutoGenerateColumns="False"
+                            >
+ 
+                            <RowStyle CssClass="even"/>
+                            <HeaderStyle CssClass="header" />
+                            <AlternatingRowStyle CssClass="odd"/>
+ 
+                            <Columns>
+                                <asp:BoundField HeaderText="ID" DataField="id"/>
+                                <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                <asp:BoundField HeaderText="Fecha Inicio" DataField="startdate"/>
+                                <asp:BoundField HeaderText="Fecha Fin" DataField="finishdate"/>
+                                <asp:BoundField HeaderText="Salario" DataField="mount"/>
+                                <asp:BoundField HeaderText="Horas Extra" DataField="extrahours"/>
+                                <asp:BoundField HeaderText="Estado" DataField="state"/>
+                                <asp:TemplateField HeaderText="Modificar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton runat="server" ID="BtnModify" ImageUrl="~/Resources/pencilx32.png" CommandName="Editar" CommandArgument='<%# Container.DataItemIndex.ToString() %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Desactivar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton runat="server" ID="BtnDown" ImageUrl="~/Resources/baja.png" CommandName="Desactivar" CommandArgument='<%# Container.DataItemIndex.ToString() %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+ 
+                        </asp:GridView>
                     </div>
                   </div>
               </div>
