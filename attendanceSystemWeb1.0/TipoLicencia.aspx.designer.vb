@@ -140,56 +140,65 @@ Partial Public Class TipoLicencia
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''Control txtDescripcion.
+    '''Control HiddenId.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtDescripcion As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents HiddenId As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''Control txtdias.
+    '''Control TxtDescription.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtdias As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TxtDescription As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control Cancelar.
+    '''Control NudMaxDays.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Cancelar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents NudMaxDays As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control Modificar.
+    '''Control lblAviso.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Modificar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control Guardar.
+    '''Control BtnClear.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Guardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnClear As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control tblTipoLicencia.
+    '''Control BtnRegister.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents tblTipoLicencia As Global.System.Web.UI.WebControls.DataGrid
+    Protected WithEvents BtnRegister As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control DgvTypeLicense.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DgvTypeLicense As Global.System.Web.UI.WebControls.GridView
 End Class
