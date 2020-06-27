@@ -174,7 +174,7 @@
                           <asp:CheckBox ID="chkEstado" TextAlign="right" CssClass="custom-checkbox" runat="server"  Width="400px" Height="30px"/>
                         </div>
                       </div>
-                      <label runat="server" ID="lblAviso" class="label-align">_</label>
+                      <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">

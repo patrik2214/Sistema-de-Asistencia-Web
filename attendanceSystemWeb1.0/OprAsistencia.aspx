@@ -148,9 +148,10 @@
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Dni</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtApellido" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
+                      <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">

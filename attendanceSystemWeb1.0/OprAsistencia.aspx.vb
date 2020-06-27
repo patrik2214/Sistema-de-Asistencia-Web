@@ -1,6 +1,7 @@
-﻿Public Class OprAsistencia
+﻿Imports capaNegocio
+Public Class OprAsistencia
     Inherits System.Web.UI.Page
-
+    Dim assistance As clsAsistencia
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -60,5 +61,68 @@
     Protected Sub Redirect_TipoLicencia(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("TipoLicencia.aspx")
     End Sub
+
+    Private Sub BtnAsis_Click(sender As Object, e As EventArgs) Handles Guardar.Click
+        Try
+
+            Dim sh As Boolean = clsAsistencia.ValidationShedule(txtDni.Text)
+            If sh Then
+                Dim c = clsContrato.ExtraTime(txtDni.Text)
+
+                If c Then
+                    If clsAsistencia.CountInNull(txtDni.Text) = 1 Then
+                        clsAsistencia.UpdateIn(txtDni.Text, DateTime.Now.TimeOfDay, DateTime.Now.Date)
+                        lblAviso.InnerText = "Bienvenido"
+                        Guardar.Text = "Salida"
+
+                    ElseIf (clsAsistencia.CountOutNull(txtDni.Text) = 1) Then
+
+                        clsAsistencia.UpdateOut(txtDni.Text, DateTime.Now.TimeOfDay, DateTime.Now.Date)
+                        lblAviso.InnerText = "Hasta Luego"
+                        Guardar.Text = "Entrada"
+                        Dispose()
+
+                    ElseIf (clsAsistencia.CountAsis(txtDni.Text) = 1) Then
+                        lblAviso.InnerText = "Solo puede registrar una entrada y una salida por dia"
+                    Else
+                        Dim new_asistance As New capaDatos.assistance()
+                        new_asistance.dni = txtDni.Text
+                        new_asistance.fecha = Today
+                        new_asistance.inHour = DateTime.Now.TimeOfDay
+                        new_asistance.outHour = Nothing
+                        clsAsistencia.RegisterAssistance(new_asistance)
+                        lblAviso.InnerText = "Bienvenido"
+                    End If
+                Else
+                    Dim time As Integer = DateTime.Today.DayOfWeek()
+                    Dim contador As Integer = clsHorario.ValidateDays(time)
+                    If (contador = 1) Then
+                        If (clsAsistencia.CountInNull(txtDni.Text) = 1) Then
+                            clsAsistencia.UpdateIn(txtDni.Text, DateTime.Now.TimeOfDay, DateTime.Now.Date)
+                            lblAviso.InnerText = "Bienvenido"
+                            Guardar.Text = "Salida"
+
+                        ElseIf (clsAsistencia.CountOutNull(txtDni.Text) = 1) Then
+                            clsAsistencia.UpdateOut(txtDni.Text, DateTime.Now.TimeOfDay, DateTime.Now.Date)
+                            lblAviso.InnerText = "Hasta Luego"
+                            Guardar.Text = "Entrada"
+
+                        ElseIf (clsAsistencia.CountAsis(txtDni.Text) = 1) Then
+                            lblAviso.InnerText = "Solo puede registrar una entrada y una salida por dia"
+                        End If
+                    Else
+                        lblAviso.InnerText = "El día de hoy no tiene que asistir"
+                    End If
+                End If
+            Else
+                lblAviso.InnerText = "Usted no tiene horarios de trabajo vigentes, contrato o el dni ingresado es incorrecto"
+            End If
+        Catch ex As Exception
+            lblAviso.InnerText = "Error al registrar: " + ex.Message
+        End Try
+
+
+    End Sub
+
 
 End Class
