@@ -176,38 +176,56 @@ Partial Public Class MantenimientoUsuario
     Protected WithEvents chkEstado As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''Control Cancelar.
+    '''Control lblAviso.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Cancelar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control Buscar.
+    '''Control BtnClear.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Buscar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnClear As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control Guardar.
+    '''Control BtnRegister.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Guardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnRegister As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control tblUsuario.
+    '''Control txtBuscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents tblUsuario As Global.System.Web.UI.WebControls.DataGrid
+    Protected WithEvents txtBuscar As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control BtnSearch.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnSearch As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control DgvUser.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DgvUser As Global.System.Web.UI.WebControls.GridView
 End Class

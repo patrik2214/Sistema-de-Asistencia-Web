@@ -170,15 +170,16 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Estado</label> 
                           <br/>
                         <div class="col-md-6 col-sm-6 ">
-                            <asp:CheckBox runat="server" TextAlign="right" ID="chkEstado" CssClass="form-check-input" Text="Activo" />
+                          <label class="form-check-label"></label>
+                          <asp:CheckBox ID="chkEstado" TextAlign="right" CssClass="custom-checkbox" runat="server"  Width="400px" Height="30px"/>
                         </div>
                       </div>
+                      <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Buscar" Text="Buscar" />
-                          <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegister" Text="Guardar" />
                         </div>
                       </div>
                   </div>
@@ -188,8 +189,49 @@
 
               <div class="row">
                   <div class="col-md-12 col-sm-12 ">
+                      <div class="x_panel"> 
+                          <div class="item form-group"> 
+                              <asp:TextBox ID="txtBuscar" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                              <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearch" Text="Buscar" />
+                          </div>
+                          
+                      </div>
+                      
                     <div class="x_panel">
-                  <asp:DataGrid runat="server" ID="tblUsuario" CssClass="table"/>
+                        <asp:GridView 
+                            runat="server" ID="DgvUser" CssClass="table" OnRowCommand="DgvUser_RowCommand"
+                            GridLines="None"
+                            AutoGenerateColumns="False"
+                            >
+ 
+                            <RowStyle CssClass="even"/>
+                            <HeaderStyle CssClass="header" />
+                            <AlternatingRowStyle CssClass="odd"/>
+ 
+                            <Columns>
+                                <asp:BoundField HeaderText="ID" DataField="userid"/>
+                                <asp:BoundField HeaderText="Nombre" DataField="username"/>
+                                <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                <asp:BoundField HeaderText="Contraseña" DataField="userpassword"/>
+                                <asp:BoundField HeaderText="Estado" DataField="userstate"/>
+                                <asp:TemplateField HeaderText="Modificar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton runat="server" ID="BtnModify" ImageUrl="~/Resources/pencilx32.png" CommandName="Editar" CommandArgument='<%# Container.DataItemIndex.ToString() %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Desactivar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton runat="server" ID="BtnDown" ImageUrl="~/Resources/baja.png" CommandName="Desactivar" CommandArgument='<%# Container.DataItemIndex.ToString() %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Borrar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton runat="server" ID="BtnDelete" ImageUrl="~/Resources/trashx32.png" CommandName="Borrar" CommandArgument='<%# Container.DataItemIndex.ToString() %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+ 
+                        </asp:GridView>
                     </div>
                   </div>
               </div>

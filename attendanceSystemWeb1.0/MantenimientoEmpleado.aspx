@@ -169,7 +169,7 @@
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Sexo</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:DropDownList ID="CbxSex" CssClass="form-control" runat="server"  Width="400px" Height="30px">
+                          <asp:DropDownList ID="CbxSex" CssClass="form-control" runat="server"  Width="400px" Height="35px">
                               <asp:ListItem Selected="True" Value="Seleccionar">-Seleccionar-</asp:ListItem>
                               <asp:ListItem Value="F">Femenino</asp:ListItem>
                               <asp:ListItem Value="M">Masculino</asp:ListItem>
@@ -198,7 +198,9 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Estado</label> 
                           <br/>
                         <div class="col-md-6 col-sm-6 ">
-                            <asp:CheckBox runat="server" TextAlign="right"  CssClass="form-check-input" Text="Activo" ID="chkEstado" />
+                          <label class="form-check-label"></label>
+                          <asp:CheckBox ID="chkEstado" TextAlign="right" CssClass="custom-checkbox" runat="server"  Width="400px" Height="30px"/>
+                          
                         </div>
                       </div>
                       <label runat="server" ID="lblAviso" class="label-align">_</label>

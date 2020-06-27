@@ -352,36 +352,54 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._Cancelar">
+<member name="F:attendanceSystemWeb1._0.Contrato._lblAviso">
 <summary>
-Control Cancelar.
+Control lblAviso.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._Modificar">
+<member name="F:attendanceSystemWeb1._0.Contrato._BtnClear">
 <summary>
-Control Modificar.
+Control BtnClear.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._Guardar">
+<member name="F:attendanceSystemWeb1._0.Contrato._BtnRegister">
 <summary>
-Control Guardar.
+Control BtnRegister.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.Contrato._tblContrato">
+<member name="F:attendanceSystemWeb1._0.Contrato._txtBuscar">
 <summary>
-Control tblContrato.
+Control txtBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Contrato._BtnSearch">
+<summary>
+Control BtnSearch.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.Contrato._DgvContract">
+<summary>
+Control DgvContract.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1074,34 +1092,61 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member>
 <member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._Cancelar">
 <summary>
-Control Cancelar.
+Control chkEstado.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._Buscar">
+<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._lblAviso">
 <summary>
-Control Buscar.
+Control lblAviso.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._Guardar">
+<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._BtnClear">
 <summary>
-Control Guardar.
+Control BtnClear.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._tblUsuario">
+<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._BtnRegister">
 <summary>
-Control tblUsuario.
+Control BtnRegister.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._txtBuscar">
+<summary>
+Control txtBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._BtnSearch">
+<summary>
+Control BtnSearch.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._DgvUser">
+<summary>
+Control DgvUser.
 </summary>
 <remarks>
 Campo generado automáticamente.

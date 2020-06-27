@@ -1,8 +1,10 @@
-﻿Public Class Contrato
+﻿Imports capaNegocio
+Public Class Contrato
     Inherits System.Web.UI.Page
-
+    Private contract As capaDatos.contract
+    Dim Id_Contract As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        ListAllContract(clsContrato.ListContrat())
     End Sub
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -59,6 +61,119 @@
 
     Protected Sub Redirect_TipoLicencia(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("TipoLicencia.aspx")
+    End Sub
+
+    Private Sub SetNewContrat()
+        contract = New capaDatos.contract
+        contract.dni = txtDni.Text
+        contract.mount = Decimal.Parse(txtSalario.Text)
+        contract.startDate = calInicio.SelectedDate
+        contract.finishDate = calFin.SelectedDate
+        contract.extraHours = chkHorasExtra.Checked
+        contract.state = chkEstado.Checked
+    End Sub
+
+    Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles BtnRegister.Click
+        If BtnRegister.Text = "Modificar" Then
+            clsContrato.Update(Id_Contract, calInicio.SelectedDate, calFin.SelectedDate, Decimal.Parse(txtSalario.Text), chkHorasExtra.Checked, chkEstado.Checked)
+            ClearControls()
+            ListAllContract(clsContrato.ListContrat())
+            BtnRegister.Text = "Registrar"
+
+        ElseIf BtnRegister.Text = "Registrar" Then
+            If (txtDni.Text.Length <> 8 Or txtSalario.Text.Length = 0) Then
+                lblAviso.InnerText = "Hay datos mal Ingresados"
+            Else
+                If (txtDni.Text.Length = 8) Then
+                    Try
+                        Dim count As Integer
+                        count = clsEmpleado.FindDni(txtDni.Text)
+                        If count = 1 Then
+                            SetNewContrat()
+                            clsContrato.RegisterContrat(contract)
+                            ClearControls()
+                            ListAllContract(clsContrato.ListContrat())
+
+                        Else
+                            lblAviso.InnerText = "Hay datos mal Ingresados"
+                        End If
+                    Catch ex As Exception
+                        Throw New Exception("Error" + ex.Message)
+                    End Try
+                Else
+                    lblAviso.InnerText = "Hay datos mal Ingresados"
+                End If
+            End If
+        End If
+
+    End Sub
+
+    Private Sub ListAllContract(list)
+        Try
+            DgvContract.DataSource = list
+            DgvContract.DataBind()
+        Catch ex As Exception
+            Throw New Exception("Error" + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub ClearControls()
+        txtBuscar.Text = ""
+        txtDni.Text = ""
+        txtSalario.Text = ""
+        chkHorasExtra.Checked = False
+        chkEstado.Checked = False
+
+    End Sub
+
+
+    Public Sub SetDataForEditing(i As Int32)
+        Id_Contract = Integer.Parse(DgvContract.Rows(i).Cells(0).Text)
+        txtDni.Text = DgvContract.Rows(i).Cells(1).Text
+        calInicio.SelectedDate = Date.Parse(DgvContract.Rows(i).Cells(2).Text)
+        calFin.SelectedDate = Date.Parse(DgvContract.Rows(i).Cells(3).Text)
+        txtSalario.Text = DgvContract.Rows(i).Cells(4).Text
+        chkHorasExtra.Checked = IIf(DgvContract.Rows(i).Cells(5).Text = "True", True, False)
+        chkEstado.Checked = IIf(DgvContract.Rows(i).Cells(6).Text = "True", True, False)
+        txtDni.Enabled = False
+        BtnRegister.Text = "Modificar"
+    End Sub
+
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+        Try
+            Dim dni = txtBuscar.Text
+            ListAllContract(clsContrato.FindContratByDni(dni))
+        Catch ex As Exception
+            Throw New Exception("Error" + ex.Message)
+        End Try
+    End Sub
+
+    Protected Sub DgvContract_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles DgvContract.RowCommand
+        Select Case e.CommandName
+            Case "Editar"
+                Try
+                    Dim i = Convert.ToInt32(e.CommandArgument)
+                    SetDataForEditing(i)
+                Catch ex As Exception
+                    lblAviso.InnerText = ex.Message
+                End Try
+        End Select
+        Select Case e.CommandName
+            Case "Desactivar"
+                Try
+                    Dim i = Convert.ToInt32(e.CommandArgument)
+                    Dim id = DgvContract.Rows(i).Cells(0).Text
+                    clsContrato.Down(id)
+                    ListAllContract(clsContrato.ListContrat())
+                Catch ex As Exception
+                    lblAviso.InnerText = ex.Message
+                End Try
+        End Select
+    End Sub
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+        ClearControls()
+        BtnRegister.Text = "Registrar"
     End Sub
 
 End Class

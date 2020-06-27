@@ -1,5 +1,7 @@
-﻿Public Class ConAsistencia
+﻿
+Public Class ConAsistencia
     Inherits System.Web.UI.Page
+
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoUsuario.aspx")
@@ -56,5 +58,9 @@
     Protected Sub Redirect_TipoLicencia(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("TipoLicencia.aspx")
     End Sub
+
+
+
+
 
 End Class

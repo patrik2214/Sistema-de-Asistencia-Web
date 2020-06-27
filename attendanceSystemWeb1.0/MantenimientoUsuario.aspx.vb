@@ -2,11 +2,10 @@
 Public Class MantenimientoUsuario
     Inherits System.Web.UI.Page
     Private user As capaDatos.users
-    Dim table As New DataTable
     Dim countE As Integer
     Dim Id_Usuario As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        ListAllUser(clsUsuario.ListUser())
     End Sub
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -66,8 +65,6 @@ Public Class MantenimientoUsuario
     End Sub
 
 
-
-
     Private Sub SetNewUsers()
         user = New capaDatos.users
         user.uSerName = txtNombre.Text
@@ -76,133 +73,109 @@ Public Class MantenimientoUsuario
         user.dni = txtDni.Text
     End Sub
 
-    Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles Guardar.Click
-        If Guardar.Text = "Modificar" Then
+    Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles BtnRegister.Click
+        If BtnRegister.Text = "Modificar" Then
             Try
                 clsUsuario.Update(Id_Usuario, txtNombre.Text, txtContraseña.Text, txtDni.Text, chkEstado.Checked)
-                Guardar.Text = "Registrar"
+                BtnRegister.Text = "Registrar"
                 ClearControls()
-                ListTable()
+                ListAllUser(clsUsuario.ListUser())
 
             Catch ex As Exception
-
+                Throw New Exception("Error" + ex.Message)
             End Try
-        Else
+        ElseIf BtnRegister.Text = "Registrar" Then
             Try
                 countE = clsEmpleado.FindDni(txtDni.Text)
-                If txtNombre.Equals("") Or txtContraseña.Equals("") Or txtDni.Equals("") Then
-
+                If txtNombre.Text.Length = 0 Or txtContraseña.Text.Length = 0 Or txtDni.Text.Length = 0 Then
+                    lblAviso.InnerText = "Es necesario completar todos los campos para registrar"
                     ClearControls()
-                ElseIf txtDni.MaxLength = 8 And countE = 1 Then
+                ElseIf txtDni.Text.Length = 8 And countE = 1 Then
                     SetNewUsers()
                     clsUsuario.RegisterUser(user)
                     ClearControls()
-                    ListTable()
-
+                    ListAllUser(clsUsuario.ListUser())
                 Else
-
+                    lblAviso.InnerText = "Es necesario completar todos los campos"
                 End If
             Catch ex As Exception
-
+                Throw New Exception("Error" + ex.Message)
             End Try
         End If
 
     End Sub
 
-
+    Private Sub ListAllUser(list)
+        Try
+            DgvUser.DataSource = list
+            DgvUser.DataBind()
+        Catch ex As Exception
+            Throw New Exception("Error" + ex.Message)
+        End Try
+    End Sub
     Private Sub ClearControls()
-
+        txtBuscar.Text = ""
+        txtContraseña.Text = ""
+        txtDni.Text = ""
+        txtNombre.Text = ""
+        chkEstado.Checked = False
     End Sub
-
-
-    Private Sub ListTable()
-        Try
-            tblUsuario.Columns.Clear()
-            tblUsuario.DataSource = clsUsuario.ListUser()
-
-        Catch ex As Exception
-
-        End Try
-
-
+    Public Sub SetDataForEditing(i As Int32)
+        Id_Usuario = Integer.Parse(DgvUser.Rows(i).Cells(0).Text)
+        txtNombre.Text = DgvUser.Rows(i).Cells(1).Text
+        txtDni.Text = DgvUser.Rows(i).Cells(2).Text
+        txtContraseña.Text = DgvUser.Rows(i).Cells(3).Text
+        chkEstado.Checked = IIf(DgvUser.Rows(i).Cells(4).Text = "True", True, False)
+        txtDni.Enabled = False
+        BtnRegister.Text = "Modificar"
     End Sub
-
-    Private Sub ListUserByDNI()
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
         Try
-            tblUsuario.Columns.Clear()
-            tblUsuario.DataSource = clsUsuario.ListUserByDni(Id_Usuario)
-
+            Dim dni = txtBuscar.Text
+            ListAllUser(clsUsuario.ListUserByDni(dni))
         Catch ex As Exception
-
+            Throw New Exception("Error" + ex.Message)
         End Try
     End Sub
 
-    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles Buscar.Click
+    Protected Sub DgvUser_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles DgvUser.RowCommand
 
-        Try
-            If (Id_Usuario > 0) Then
-
-                ListUserByDNI()
-
-            End If
-
-        Catch ex As Exception
-
-        End Try
+        Select Case e.CommandName
+            Case "Editar"
+                Try
+                    Dim i = Convert.ToInt32(e.CommandArgument)
+                    SetDataForEditing(i)
+                Catch ex As Exception
+                    lblAviso.InnerText = ex.Message
+                End Try
+        End Select
+        Select Case e.CommandName
+            Case "Desactivar"
+                Try
+                    Dim i = Convert.ToInt32(e.CommandArgument)
+                    Dim id = DgvUser.Rows(i).Cells(0).Text
+                    clsUsuario.Down(id)
+                    ListAllUser(clsUsuario.ListUser())
+                Catch ex As Exception
+                    lblAviso.InnerText = ex.Message
+                End Try
+        End Select
+        Select Case e.CommandName
+            Case "Borrar"
+                Try
+                    Dim i = Convert.ToInt32(e.CommandArgument)
+                    Dim id = DgvUser.Rows(i).Cells(0).Text
+                    clsUsuario.Delete(id)
+                    ListAllUser(clsUsuario.ListUser())
+                Catch ex As Exception
+                    lblAviso.InnerText = ex.Message
+                End Try
+        End Select
     End Sub
-
-
-    Private Sub UpdateUser()
-        Try
-            If Id_Usuario > 0 Then
-
-                Dim c = clsUsuario.FindUser(Id_Usuario)
-                txtNombre.Text = c.uSerName
-                txtDni.Text = c.dni
-                txtContraseña.Text = c.userPassword
-                chkEstado.Checked = c.userState
-                Guardar.Text = "Modificar"
-            End If
-        Catch ex As Exception
-
-        End Try
-
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+        ClearControls()
+        BtnRegister.Text = "Registrar"
     End Sub
-
-    Private Sub Delete()
-        Try
-            If (Id_Usuario > 0) Then
-                clsUsuario.Delete(Id_Usuario)
-                ClearControls()
-                ListTable()
-
-            Else
-
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub Down()
-        Try
-            If (Id > 0) Then
-                clsUsuario.Down(Id)
-                ClearControls()
-                ListTable()
-
-            End If
-        Catch ex As Exception
-
-        End Try
-
-    End Sub
-
-    'Private Sub table_CellClick(sender As Object, e As DataGrid) Handles tblUsuario.
-    '      Integer.parse(table.CurrentRow.Cells(0).Value)
-    '    Dim senderGrid = DirectCast(sender, DataGrid)
-
-    'End Sub
 
 
 End Class
