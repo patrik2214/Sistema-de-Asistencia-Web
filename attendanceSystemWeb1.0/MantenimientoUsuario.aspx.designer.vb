@@ -167,6 +167,15 @@ Partial Public Class MantenimientoUsuario
     Protected WithEvents txtDni As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control chkEstado.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkEstado As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Control Cancelar.
     '''</summary>
     '''<remarks>
@@ -176,13 +185,13 @@ Partial Public Class MantenimientoUsuario
     Protected WithEvents Cancelar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control Button1.
+    '''Control Buscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Buscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control Guardar.
