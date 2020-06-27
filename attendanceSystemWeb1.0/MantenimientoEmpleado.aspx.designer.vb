@@ -167,13 +167,13 @@ Partial Public Class MantenimientoEmpleado
     Protected WithEvents txtApellido As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control dpSexo.
+    '''Control CbxSex.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dpSexo As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents CbxSex As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control txtDireccion.
@@ -203,38 +203,65 @@ Partial Public Class MantenimientoEmpleado
     Protected WithEvents txtCorreo As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control Cancelar.
+    '''Control chkEstado.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Cancelar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents chkEstado As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''Control Button1.
+    '''Control lblAviso.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control Guardar.
+    '''Control BtnClear.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Guardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnClear As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control tblEmpleado.
+    '''Control BtnRegister.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents tblEmpleado As Global.System.Web.UI.WebControls.DataGrid
+    Protected WithEvents BtnRegister As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control txtBuscar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtBuscar As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control BtnSearch.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnSearch As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control DgvEmpl.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DgvEmpl As Global.System.Web.UI.WebControls.GridView
 End Class
