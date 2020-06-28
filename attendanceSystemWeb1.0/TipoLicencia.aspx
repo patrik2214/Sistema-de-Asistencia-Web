@@ -144,28 +144,28 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <br />
-
+                    <br/>
+                      <asp:HiddenField id="HiddenId" runat="server" value=""/>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Descripción<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtDescripcion" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="TxtDescription" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Cantidad máxima de Dias<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtdias" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="NudMaxDays" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="ln_solid"></div>
+                      <label runat="server" ID="lblAviso" class="label-align">_</label>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Modificar" Text="Modificar" />
-                          <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegister" Text="Registrar" />
                         </div>
                       </div>
                   </div>
@@ -176,7 +176,29 @@
               <div class="row">
                   <div class="col-md-12 col-sm-12 ">
                     <div class="x_panel">
-                  <asp:DataGrid runat="server" ID="tblTipoLicencia" CssClass="table"/>
+                        <asp:GridView 
+                            runat="server" ID="DgvTypeLicense" CssClass="table" OnRowCommand="DgvTypeLicense_RowCommand"
+                            GridLines="None"
+                            AutoGenerateColumns="False">
+ 
+                            <RowStyle CssClass="even"/>
+                            <HeaderStyle CssClass="header" />
+                            <AlternatingRowStyle CssClass="odd"/>
+ 
+                            <Columns>
+                                <asp:BoundField HeaderText="Id" DataField="licenseTypeId"/>
+                                <asp:BoundField HeaderText="Descripcion" DataField="description"/>
+                                <asp:BoundField HeaderText="Dias Max" DataField="maxDias"/>
+                                <asp:TemplateField HeaderText="Modificar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton runat="server" ID="BtnModify" ImageUrl="~/Resources/pencilx32.png" CommandName="Editar" CommandArgument='<%# Container.DataItemIndex.ToString() %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                
+                            </Columns>
+ 
+                        </asp:GridView>
+                  
                     </div>
                   </div>
               </div>

@@ -1090,6 +1090,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._Cancelar">
+<summary>
+Control chkEstado.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._lblAviso">
 <summary>
 Control lblAviso.
@@ -2521,54 +2530,63 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.TipoLicencia._txtDescripcion">
+<member name="F:attendanceSystemWeb1._0.TipoLicencia._HiddenId">
 <summary>
-Control txtDescripcion.
+Control HiddenId.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.TipoLicencia._txtdias">
+<member name="F:attendanceSystemWeb1._0.TipoLicencia._TxtDescription">
 <summary>
-Control txtdias.
+Control TxtDescription.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.TipoLicencia._Cancelar">
+<member name="F:attendanceSystemWeb1._0.TipoLicencia._NudMaxDays">
 <summary>
-Control Cancelar.
+Control NudMaxDays.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.TipoLicencia._Modificar">
+<member name="F:attendanceSystemWeb1._0.TipoLicencia._lblAviso">
 <summary>
-Control Modificar.
+Control lblAviso.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.TipoLicencia._Guardar">
+<member name="F:attendanceSystemWeb1._0.TipoLicencia._BtnClear">
 <summary>
-Control Guardar.
+Control BtnClear.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.TipoLicencia._tblTipoLicencia">
+<member name="F:attendanceSystemWeb1._0.TipoLicencia._BtnRegister">
 <summary>
-Control tblTipoLicencia.
+Control BtnRegister.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.TipoLicencia._DgvTypeLicense">
+<summary>
+Control DgvTypeLicense.
 </summary>
 <remarks>
 Campo generado automáticamente.
