@@ -5,5 +5,5 @@
     2. Paola Castro Fernández
     3. Cinthya Yomona Parraguez
 # Usuario de referencia:
-    nombre:admin
-    contraseña : admin
+    nombre:Juanpc
+    contraseña : 123456
