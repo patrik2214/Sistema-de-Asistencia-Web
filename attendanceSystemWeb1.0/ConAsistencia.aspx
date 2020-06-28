@@ -153,7 +153,7 @@
                       
                     <div class="x_panel">
                         <asp:GridView 
-                            runat="server" ID="DgvAssitance" CssClass="table" OnRowCommand="DgvAssitance_RowCommand"
+                            runat="server" ID="DgvAssitance" CssClass="table"
                             GridLines="None"
                             AutoGenerateColumns="False"
                             >
