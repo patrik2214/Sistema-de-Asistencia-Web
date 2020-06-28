@@ -75,7 +75,6 @@ Public Class ConAsistencia
             Else
                 lblAviso.InnerText = "El dni ingresado no existe"
             End If
-
         Else
             lblAviso.InnerText = "Error al ingresar Dni"
         End If
