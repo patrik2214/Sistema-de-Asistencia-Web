@@ -1,7 +1,7 @@
-﻿
+﻿Imports capaNegocio
 Public Class ConAsistencia
     Inherits System.Web.UI.Page
-
+    Dim assitance As capaDatos.assistance
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoUsuario.aspx")
@@ -59,7 +59,31 @@ Public Class ConAsistencia
         Response.Redirect("TipoLicencia.aspx")
     End Sub
 
+    Private Sub ListAssistance(list)
+        Try
+            DgvAssitance.DataSource = list
+            DgvAssitance.DataBind()
+        Catch ex As Exception
+            Throw New Exception("Error" + ex.Message)
+        End Try
+    End Sub
 
+    Private Sub BtnSearchDni_Click(sender As Object, e As EventArgs) Handles BtnSearchDni.Click
+        If txtDni.Text.Length = 8 Then
+            If clsEmpleado.FindDni(txtDni.Text) = 1 Then
+                ListAssistance(clsAsistencia.List(txtDni.Text))
+            Else
+                lblAviso.InnerText = "El dni ingresado no existe"
+            End If
+
+        Else
+            lblAviso.InnerText = "Error al ingresar Dni"
+        End If
+    End Sub
+
+    Private Sub BtnSearchFecha_Click(sender As Object, e As EventArgs) Handles BtnSearchFecha.Click
+        ListAssistance(clsAsistencia.ListDate(calFecha.SelectedDate))
+    End Sub
 
 
 

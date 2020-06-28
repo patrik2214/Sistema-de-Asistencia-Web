@@ -172,6 +172,51 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:attendanceSystemWeb1._0.ConAsistencia._txtFecha">
+<summary>
+Control txtFecha.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.ConAsistencia._BtnSearchFecha">
+<summary>
+Control BtnSearchFecha.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.ConAsistencia._txtDni">
+<summary>
+Control txtDni.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.ConAsistencia._BtnSearchDni">
+<summary>
+Control BtnSearchDni.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.ConAsistencia._DgvAssitance">
+<summary>
+Control DgvAssitance.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:attendanceSystemWeb1._0.Contrato._ManUsuario">
 <summary>
 Control ManUsuario.
@@ -1090,15 +1135,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._Cancelar">
-<summary>
-Control chkEstado.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:attendanceSystemWeb1._0.MantenimientoUsuario._lblAviso">
 <summary>
 Control lblAviso.
@@ -1867,6 +1903,105 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:attendanceSystemWeb1._0.OprPermisos._Tardanzas">
 <summary>
 Control Tardanzas.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._calPresentacion">
+<summary>
+Control calPresentacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._calPermiso">
+<summary>
+Control calPermiso.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._txtMotivo">
+<summary>
+Control txtMotivo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._txtDni">
+<summary>
+Control txtDni.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._chkEstado">
+<summary>
+Control chkEstado.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._lblAviso">
+<summary>
+Control lblAviso.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._BtnClear">
+<summary>
+Control BtnClear.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._BtnRegister">
+<summary>
+Control BtnRegister.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._txtBuscar">
+<summary>
+Control txtBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._BtnSearch">
+<summary>
+Control BtnSearch.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprPermisos._DgvPermission">
+<summary>
+Control DgvPermission.
 </summary>
 <remarks>
 Campo generado automáticamente.

@@ -135,6 +135,44 @@
                 <h3>Consultar Asistencias</h3>
               </div>
             </div>
+            <div class="row">
+                  <div class="col-md-12 col-sm-12 ">
+                      <div class="x_panel"> 
+                          <div class="item form-group"> 
+                              <asp:Calendar ID="calFecha" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:Calendar>
+                              <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchFecha" Text="Buscar" />
+                          </div>
+                      </div>
+                      <div class="x_panel"> 
+                          <div class="item form-group"> 
+                              <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                              <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchDni" Text="Buscar" />
+                          </div>
+                          <label runat="server" ID="lblAviso" class="label-align"></label>
+                      </div>
+                      
+                    <div class="x_panel">
+                        <asp:GridView 
+                            runat="server" ID="DgvAssitance" CssClass="table" OnRowCommand="DgvAssitance_RowCommand"
+                            GridLines="None"
+                            AutoGenerateColumns="False"
+                            >
+ 
+                            <RowStyle CssClass="even"/>
+                            <HeaderStyle CssClass="header" />
+                            <AlternatingRowStyle CssClass="odd"/>
+ 
+                            <Columns>
+                                <asp:BoundField HeaderText="Fecha" DataField="fecha"/>
+                                <asp:BoundField HeaderText="Hora de Entrada" DataField="inhour"/>
+                                <asp:BoundField HeaderText="Hora de Salida" DataField="outhour"/>
+                                <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                            </Columns>
+ 
+                        </asp:GridView>
+                    </div>
+                  </div>
+              </div>
           </div>
         </div>
         <!-- /page content -->
