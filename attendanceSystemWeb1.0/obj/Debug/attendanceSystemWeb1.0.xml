@@ -172,9 +172,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.ConAsistencia._txtFecha">
+<member name="F:attendanceSystemWeb1._0.ConAsistencia._calFecha">
 <summary>
-Control txtFecha.
+Control calFecha.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -202,6 +202,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:attendanceSystemWeb1._0.ConAsistencia._BtnSearchDni">
 <summary>
 Control BtnSearchDni.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.ConAsistencia._lblAviso">
+<summary>
+Control lblAviso.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1702,72 +1711,90 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._ddlTipoLicencia">
+<member name="F:attendanceSystemWeb1._0.OprLicencias._TxtDni">
 <summary>
-Control ddlTipoLicencia.
+Control TxtDni.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._calFechaPresentacion">
+<member name="F:attendanceSystemWeb1._0.OprLicencias._CbxTypeLicense">
 <summary>
-Control calFechaPresentacion.
+Control CbxTypeLicense.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._calFechaInicio">
+<member name="F:attendanceSystemWeb1._0.OprLicencias._DtpPresentation">
 <summary>
-Control calFechaInicio.
+Control DtpPresentation.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._CalFechaFin">
+<member name="F:attendanceSystemWeb1._0.OprLicencias._DtpStartDate">
 <summary>
-Control CalFechaFin.
+Control DtpStartDate.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._txtDocumento">
+<member name="F:attendanceSystemWeb1._0.OprLicencias._DtpEndDate">
 <summary>
-Control txtDocumento.
+Control DtpEndDate.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._Cancelar">
+<member name="F:attendanceSystemWeb1._0.OprLicencias._TxtDocument">
 <summary>
-Control Cancelar.
+Control TxtDocument.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._Button1">
+<member name="F:attendanceSystemWeb1._0.OprLicencias._lblAviso">
 <summary>
-Control Button1.
+Control lblAviso.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:attendanceSystemWeb1._0.OprLicencias._Guardar">
+<member name="F:attendanceSystemWeb1._0.OprLicencias._BtnClear">
 <summary>
-Control Guardar.
+Control BtnClear.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprLicencias._BtnRegisterLicense">
+<summary>
+Control BtnRegisterLicense.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:attendanceSystemWeb1._0.OprLicencias._DgvLicense">
+<summary>
+Control DgvLicense.
 </summary>
 <remarks>
 Campo generado automáticamente.

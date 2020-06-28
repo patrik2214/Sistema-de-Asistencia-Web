@@ -140,74 +140,92 @@ Partial Public Class OprLicencias
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''Control ddlTipoLicencia.
+    '''Control TxtDni.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ddlTipoLicencia As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents TxtDni As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control calFechaPresentacion.
+    '''Control CbxTypeLicense.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents calFechaPresentacion As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents CbxTypeLicense As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control calFechaInicio.
+    '''Control DtpPresentation.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents calFechaInicio As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents DtpPresentation As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control CalFechaFin.
+    '''Control DtpStartDate.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents CalFechaFin As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents DtpStartDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtDocumento.
+    '''Control DtpEndDate.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtDocumento As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents DtpEndDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control Cancelar.
+    '''Control TxtDocument.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Cancelar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents TxtDocument As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control Button1.
+    '''Control lblAviso.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control Guardar.
+    '''Control BtnClear.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Guardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnClear As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control BtnRegisterLicense.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnRegisterLicense As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control DgvLicense.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DgvLicense As Global.System.Web.UI.WebControls.GridView
 End Class

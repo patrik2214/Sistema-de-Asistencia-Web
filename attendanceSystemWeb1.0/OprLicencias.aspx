@@ -145,52 +145,82 @@
                   </div>
                   <div class="x_content">
                     <br />
-
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Dni Empleado:</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                        </div>
+                      </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Tipo de Licencia<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:DropDownList ID="ddlTipoLicencia" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:DropDownList>
+                          <asp:DropDownList ID="CbxTypeLicense" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:DropDownList>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha de Presentación<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:Calendar ID="calFechaPresentacion" CssClass="" runat="server"  Width="400px" Height="300px"></asp:Calendar>
+                          <asp:TextBox ID="DtpPresentation" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha de Inicio</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:Calendar ID="calFechaInicio" CssClass="" runat="server"  Width="400px" Height="300px"></asp:Calendar>
+                          <asp:TextBox ID="DtpStartDate" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha de Fin<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:Calendar ID="CalFechaFin" CssClass="" runat="server"  Width="400px" Height="300px"></asp:Calendar>
+                          <asp:TextBox ID="DtpEndDate" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Documento</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtDocumento" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="TxtDocument" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="ln_solid"></div>
+                      <label runat="server" ID="lblAviso" class="label-align">_</label>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Button1" Text="Buscar" />
-                          <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegisterLicense" Text="Guardar" />
                         </div>
                       </div>
                   </div>
                 </div>
               </div>
             </div>
+              <div class="row">
+                  <div class="col-md-12 col-sm-12 ">
+                    <div class="x_panel">
+                        <asp:GridView 
+                            runat="server" ID="DgvLicense" CssClass="table" 
+                            GridLines="None"
+                            AutoGenerateColumns="False">
+ 
+                            <RowStyle CssClass="even"/>
+                            <HeaderStyle CssClass="header" />
+                            <AlternatingRowStyle CssClass="odd"/>
+ 
+                            <Columns>
+                                <asp:BoundField HeaderText="Id" DataField="lincenseId"/>
+                                <asp:BoundField HeaderText="Empleado" DataField="employee.name"/>
+                                <asp:BoundField HeaderText="Apellido" DataField="employee.lastname"/>
+                                <asp:BoundField HeaderText="Tipo" DataField="licenseType.description"/>
+                                <asp:BoundField HeaderText="Fin de la licencia" DataField="endDate"/>
+                            </Columns>
+ 
+                        </asp:GridView>
+                  
+                    </div>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
