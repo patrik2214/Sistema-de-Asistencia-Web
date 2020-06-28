@@ -83,7 +83,7 @@ Public Class OprAsistencia
                         Dispose()
 
                     ElseIf (clsAsistencia.CountAsis(txtDni.Text) = 1) Then
-                        lblAviso.InnerText = "Solo puede registrar una entrada y una salida por dia"
+                        lblAviso.InnerText = "Solo puede Guardar una entrada y una salida por dia"
                     Else
                         Dim new_asistance As New capaDatos.assistance()
                         new_asistance.dni = txtDni.Text
@@ -108,7 +108,7 @@ Public Class OprAsistencia
                             Guardar.Text = "Entrada"
 
                         ElseIf (clsAsistencia.CountAsis(txtDni.Text) = 1) Then
-                            lblAviso.InnerText = "Solo puede registrar una entrada y una salida por dia"
+                            lblAviso.InnerText = "Solo puede Guardar una entrada y una salida por dia"
                         End If
                     Else
                         lblAviso.InnerText = "El día de hoy no tiene que asistir"
@@ -118,7 +118,7 @@ Public Class OprAsistencia
                 lblAviso.InnerText = "Usted no tiene horarios de trabajo vigentes, contrato o el dni ingresado es incorrecto"
             End If
         Catch ex As Exception
-            lblAviso.InnerText = "Error al registrar: " + ex.Message
+            lblAviso.InnerText = "Error al Guardar: " + ex.Message
         End Try
 
 

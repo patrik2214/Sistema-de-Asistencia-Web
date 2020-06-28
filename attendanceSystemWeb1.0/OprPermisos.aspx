@@ -133,11 +133,116 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Operación Permisos</h3>
+                <h3>Contrato</h3>
               </div>
             </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2><small>Mantenimiento</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Presentación<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:Calendar ID="calPresentacion" CssClass="" runat="server"  Width="400px" Height="400px"></asp:Calendar>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Permiso<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:Calendar ID="calPermiso" CssClass="" runat="server"  Width="400px" Height="400px"></asp:Calendar>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Motivo<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:TextBox ID="txtMotivo" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">DNI<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Estado<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                           <label class="form-check-label"></label>
+                          <asp:CheckBox ID="chkEstado" CssClass="custom-checkbox" runat="server"  Width="400px" Height="40px"></asp:CheckBox>
+                        </div>
+                      </div>
+                      <label runat="server" ID="lblAviso" class="label-align">_</label>
+                      <div class="ln_solid"></div>
+                      <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegister" Text="Guardar" />
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="row">
+                  <div class="col-md-12 col-sm-12 ">
+                      <div class="x_panel"> 
+                          <div class="item form-group"> 
+                              <asp:TextBox ID="txtBuscar" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                              <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearch" Text="Buscar" />
+                          </div>
+                          
+                      </div>
+                      
+                    <div class="x_panel">
+                        <asp:GridView 
+                            runat="server" ID="DgvPermission" CssClass="table" OnRowCommand="DgvPermission_RowCommand"
+                            GridLines="None"
+                            AutoGenerateColumns="False"
+                            >
+ 
+                            <RowStyle CssClass="even"/>
+                            <HeaderStyle CssClass="header" />
+                            <AlternatingRowStyle CssClass="odd"/>
+ 
+                            <Columns>
+                                <asp:BoundField HeaderText="ID" DataField="permissionid"/>
+                                <asp:BoundField HeaderText="Día de Presentación" DataField="presentationdate"/>
+                                <asp:BoundField HeaderText="Día de Permiso" DataField="startdate"/>
+                                <asp:BoundField HeaderText="Motivo" DataField="reason"/>
+                                <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                <asp:BoundField HeaderText="Estado" DataField="state"/>
+                                <asp:TemplateField HeaderText="Modificar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton runat="server" ID="BtnModify" ImageUrl="~/Resources/pencilx32.png" CommandName="Editar" CommandArgument='<%# Container.DataItemIndex.ToString() %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Borrar">
+                                    <ItemTemplate>
+                                        <asp:ImageButton runat="server" ID="BtnDelete" ImageUrl="~/Resources/trashx32.png" CommandName="Borrar" CommandArgument='<%# Container.DataItemIndex.ToString() %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+ 
+                        </asp:GridView>
+                    </div>
+                  </div>
+              </div>
+                 
+            </div>
           </div>
-        </div>
         <!-- /page content -->
 
         <!-- footer content -->

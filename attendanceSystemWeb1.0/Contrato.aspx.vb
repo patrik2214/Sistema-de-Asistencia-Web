@@ -78,9 +78,9 @@ Public Class Contrato
             clsContrato.Update(Id_Contract, calInicio.SelectedDate, calFin.SelectedDate, Decimal.Parse(txtSalario.Text), chkHorasExtra.Checked, chkEstado.Checked)
             ClearControls()
             ListAllContract(clsContrato.ListContrat())
-            BtnRegister.Text = "Registrar"
+            BtnRegister.Text = "Guardar"
 
-        ElseIf BtnRegister.Text = "Registrar" Then
+        ElseIf BtnRegister.Text = "Guardar" Then
             If (txtDni.Text.Length <> 8 Or txtSalario.Text.Length = 0) Then
                 lblAviso.InnerText = "Hay datos mal Ingresados"
             Else
@@ -173,7 +173,7 @@ Public Class Contrato
     End Sub
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         ClearControls()
-        BtnRegister.Text = "Registrar"
+        BtnRegister.Text = "Guardar"
     End Sub
 
 End Class

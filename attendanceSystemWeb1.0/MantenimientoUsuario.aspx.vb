@@ -77,18 +77,18 @@ Public Class MantenimientoUsuario
         If BtnRegister.Text = "Modificar" Then
             Try
                 clsUsuario.Update(Id_Usuario, txtNombre.Text, txtContraseña.Text, txtDni.Text, chkEstado.Checked)
-                BtnRegister.Text = "Registrar"
+                BtnRegister.Text = "Guardar"
                 ClearControls()
                 ListAllUser(clsUsuario.ListUser())
 
             Catch ex As Exception
                 Throw New Exception("Error" + ex.Message)
             End Try
-        ElseIf BtnRegister.Text = "Registrar" Then
+        ElseIf BtnRegister.Text = "Guardar" Then
             Try
                 countE = clsEmpleado.FindDni(txtDni.Text)
                 If txtNombre.Text.Length = 0 Or txtContraseña.Text.Length = 0 Or txtDni.Text.Length = 0 Then
-                    lblAviso.InnerText = "Es necesario completar todos los campos para registrar"
+                    lblAviso.InnerText = "Es necesario completar todos los campos para Guardar"
                     ClearControls()
                 ElseIf txtDni.Text.Length = 8 And countE = 1 Then
                     SetNewUsers()
@@ -174,7 +174,7 @@ Public Class MantenimientoUsuario
     End Sub
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         ClearControls()
-        BtnRegister.Text = "Registrar"
+        BtnRegister.Text = "Guardar"
     End Sub
 
 
