@@ -2,7 +2,6 @@
 Public Class OprPermisos
     Inherits System.Web.UI.Page
     Dim permission As capaDatos.permission
-    Dim id_permission As String
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
@@ -76,7 +75,7 @@ Public Class OprPermisos
     Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles BtnRegister.Click
         If BtnRegister.Text = "Modificar" Then
             Try
-                clsPermiso.Update(id_permission, calPresentacion.SelectedDate, calPermiso.SelectedDate, txtMotivo.Text, chkEstado.Checked, txtDni.Text)
+                clsPermiso.Update(HiddenId.Value, calPresentacion.SelectedDate, calPermiso.SelectedDate, txtMotivo.Text, chkEstado.Checked, txtDni.Text)
                 BtnRegister.Text = "Guardar"
                 ClearControls()
                 'listPermission()
@@ -105,7 +104,7 @@ Public Class OprPermisos
     End Sub
 
     Public Sub SetDataForEditing(i As Int32)
-        id_permission = DgvPermission.Rows(i).Cells(0).Text
+        HiddenId.Value = DgvPermission.Rows(i).Cells(0).Text
         calPresentacion.SelectedDate = Date.Parse(DgvPermission.Rows(i).Cells(1).Text)
         calPermiso.SelectedDate = Date.Parse(DgvPermission.Rows(i).Cells(2).Text)
         txtMotivo.Text = DgvPermission.Rows(i).Cells(3).Text
@@ -120,6 +119,7 @@ Public Class OprPermisos
         txtMotivo.Text = ""
         txtBuscar.Text = ""
         chkEstado.Checked = False
+        HiddenId.Value = ""
     End Sub
 
     Private Sub ListAllPermission(list)
