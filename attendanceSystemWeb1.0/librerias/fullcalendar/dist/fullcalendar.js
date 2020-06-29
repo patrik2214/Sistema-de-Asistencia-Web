@@ -51,6 +51,7 @@ $.fn.fullCalendar = function(options) {
 			calendar = new Calendar(element, options);
 			element.data('fullCalendar', calendar);
 			calendar.render();
+			
 		}
 	});
 

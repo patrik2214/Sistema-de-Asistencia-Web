@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <head runat="server">
+     <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8"/>
@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Sistema de Asistencia! | </title>
-
+    <!-- jQuery -->
+    <script src="../librerias/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.min.css"/>
     <!-- Font Awesome -->
@@ -20,11 +21,21 @@
     <!-- FullCalendar -->
     <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            // page is now ready, initialize the calendar...
+            $('#calendar').fullCalendar({
+                // put your options and callbacks here
+                weekends: false
+            })
+        });
+    </script>
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
 
   <body class="nav-md">
+    <form runat="server">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -49,7 +60,7 @@
             <br />
 
             <!-- sidebar menu -->
-            <form id="form1" runat="server">
+            
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
@@ -98,7 +109,7 @@
                 </ul>
               </div>
             </div>
-            </form>
+            
             
           </div>
         </div>
@@ -135,6 +146,40 @@
                 <h3>Horario</h3>
               </div>
             </div>
+              <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2><small>Horario</small></h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Dni Empleado:</label>
+                            <div class="col-md-6 col-sm-6 ">
+                              <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha de Inicio</label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <asp:TextBox ID="DtpStartDate" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha de Fin<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                              <asp:TextBox ID="DtpEndDate" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- /page content -->
@@ -151,8 +196,7 @@
       </div>
     </div>
     
-    <!-- jQuery -->
-    <script src="../librerias/jquery/dist/jquery.min.js"></script>
+    
     <!-- Bootstrap -->
     <script src="../librerias/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
@@ -161,9 +205,11 @@
     <script src="../librerias/nprogress/nprogress.js"></script>
     <!-- FullCalendar -->
     <script src="../librerias/moment/min/moment.min.js"></script>
-    <script src="../librerias/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="../librerias/fullcalendar/dist/fullcalendar.js"></script>
+ 
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
 	
+    </form>
   </body>
 </html>

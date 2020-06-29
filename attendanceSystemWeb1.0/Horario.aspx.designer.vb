@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class Horario
 
     '''<summary>
-    '''Control form1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-    '''<summary>
     '''Control ManUsuario.
     '''</summary>
     '''<remarks>
@@ -147,4 +138,31 @@ Partial Public Class Horario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control TxtDni.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TxtDni As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control DtpStartDate.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DtpStartDate As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control DtpEndDate.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DtpEndDate As Global.System.Web.UI.WebControls.TextBox
 End Class
