@@ -17,9 +17,6 @@
     <link href="../librerias/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <!-- NProgress -->
     <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css"/>
-    <!-- FullCalendar -->
-    <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
-    <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
