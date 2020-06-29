@@ -25,6 +25,7 @@
   </head>
 
   <body class="nav-md">
+    <form id="form1" runat="server">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -49,7 +50,7 @@
             <br />
 
             <!-- sidebar menu -->
-            <form id="form1" runat="server">
+            
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
@@ -98,7 +99,7 @@
                 </ul>
               </div>
             </div>
-            </form>
+            
             
           </div>
         </div>
@@ -128,31 +129,44 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
+          <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Consultar Asistencias</h3>
+                <h3>Asistencia</h3>
               </div>
             </div>
+            <div class="clearfix"></div>
             <div class="row">
-                  <div class="col-md-12 col-sm-12 ">
-                      <div class="x_panel"> 
-                          <div class="item form-group"> 
-                              <asp:Calendar ID="calFecha" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:Calendar>
-                              <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchFecha" Text="Buscar" />
-                          </div>
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2><small>Consulta</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                      <div class="item form-group"> 
+                          <asp:Calendar ID="calFecha" runat="server" CssClass="" Width="1200px" Height="400px"></asp:Calendar>
+                          <br />
+                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchFecha" Text="Buscar" />
+                       </div>
+                      <div class="item form-group"> 
+                         <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un dni" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                         <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchDni" Text="Buscar" />
                       </div>
-                      <div class="x_panel"> 
-                          <div class="item form-group"> 
-                              <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
-                              <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchDni" Text="Buscar" />
-                          </div>
-                          <label runat="server" ID="lblAviso" class="label-align"></label>
-                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                 
+            </div>
+          </div>
+        </div>
+        <div class="row">
+             <div class="col-md-12 col-sm-12 ">
                       
-                    <div class="x_panel">
-                        <asp:GridView 
+                      <asp:GridView 
                             runat="server" ID="DgvAssitance" CssClass="table"
                             GridLines="None"
                             AutoGenerateColumns="False"
@@ -170,11 +184,9 @@
                             </Columns>
  
                         </asp:GridView>
-                    </div>
+                   
                   </div>
               </div>
-          </div>
-        </div>
         <!-- /page content -->
 
         <!-- footer content -->
@@ -187,7 +199,6 @@
         <!-- /footer content -->
         
       </div>
-    </div>
     
     <!-- jQuery -->
     <script src="../librerias/jquery/dist/jquery.min.js"></script>
@@ -202,7 +213,7 @@
     <script src="../librerias/fullcalendar/dist/fullcalendar.min.js"></script>
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
-	
+</form>
   </body>
 </html>
 
