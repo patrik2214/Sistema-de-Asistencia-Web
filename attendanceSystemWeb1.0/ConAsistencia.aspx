@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ConAsistencia.aspx.vb" Inherits="attendanceSystemWeb1._0.ConAsistencia" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ConAsistencia.aspx.vb" Inherits="attendanceSystemWeb1._0.ConAsistencia" EnableEventValidation="true" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -42,7 +42,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>Marina</h2>
+                <h2> <%Response.Write(Session("usuario")) %></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -114,7 +114,7 @@
               <nav class="nav navbar-nav">
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">Marina</a>
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;">
                         <span>Settings</span>
@@ -149,8 +149,9 @@
                     <br />
                       <div class="item form-group"> 
                           <asp:Calendar ID="calFecha" runat="server" CssClass="" Width="1200px" Height="400px"></asp:Calendar>
-                          <br />
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchFecha" Text="Buscar" />
+                       </div>
+                      <div class="item form-group"> 
+                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Button1" Text="Buscar" />
                        </div>
                       <div class="item form-group"> 
                          <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un dni" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
@@ -163,10 +164,9 @@
                  
             </div>
           </div>
-        </div>
+        
         <div class="row">
              <div class="col-md-12 col-sm-12 ">
-                      
                       <asp:GridView 
                             runat="server" ID="DgvAssitance" CssClass="table"
                             GridLines="None"
@@ -188,6 +188,7 @@
                    
                   </div>
               </div>
+           </div>
         <!-- /page content -->
 
         <!-- footer content -->
@@ -198,7 +199,7 @@
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
-        
+       
       </div>
     
     <!-- jQuery -->
