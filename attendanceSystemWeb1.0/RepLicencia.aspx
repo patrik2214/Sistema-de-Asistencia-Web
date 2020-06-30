@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="RepLicencia.aspx.vb" Inherits="attendanceSystemWeb1._0.RepLicencia" %>
 
 <!DOCTYPE html>
+<%@ Register assembly="Stimulsoft.Report.Web, Version=2020.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a" namespace="Stimulsoft.Report.Web" tagprefix="cc1" %>
 <html lang="es">
   <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -9,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Sistema de Asistencia! | </title>
+    <title>Sistema de Asistencia! | Reporte de Licencias</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.min.css"/>
@@ -128,14 +129,10 @@
         </div>
         <!-- /top navigation -->
 
-        <!-- page content -->
+         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Reporte de Licencias</h3>
-              </div>
-            </div>
+          <div class="">            
+               <cc1:StiWebViewer ID="StiWebViewer1" runat="server" OnGetReport="StiWebViewer1_GetReport"></cc1:StiWebViewer>                          
           </div>
         </div>
         <!-- /page content -->

@@ -1,4 +1,7 @@
-﻿Public Class RepTardanzas
+﻿Imports Stimulsoft.Report
+Imports Stimulsoft.Report.Dictionary
+Imports Stimulsoft.Report.Web
+Public Class RepTardanzas
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -7,6 +10,12 @@
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoUsuario.aspx")
+    End Sub
+    Protected Sub StiWebViewer1_GetReport(ByVal sender As Object, ByVal e As StiReportDataEventArgs)
+        Dim report = StiReport.CreateNewReport()
+        Dim path = Server.MapPath("Reports/Reporte_Tardanzas.mrt")
+        report.Load(path)
+        e.Report = report
     End Sub
 
     Protected Sub Redirect_Empleado(ByVal sender As Object, ByVal e As System.EventArgs)

@@ -1,8 +1,17 @@
-﻿Public Class RepLicencia
+﻿Imports Stimulsoft.Report
+Imports Stimulsoft.Report.Dictionary
+Imports Stimulsoft.Report.Web
+Public Class RepLicencia
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+    End Sub
+    Protected Sub StiWebViewer1_GetReport(ByVal sender As Object, ByVal e As StiReportDataEventArgs)
+        Dim report = StiReport.CreateNewReport()
+        Dim path = Server.MapPath("Reports/Reporte_Licencias.mrt")
+        report.Load(path)
+        e.Report = report
     End Sub
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
