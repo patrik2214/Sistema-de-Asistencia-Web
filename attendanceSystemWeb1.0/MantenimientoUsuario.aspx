@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="MantenimientoUsuario.aspx.vb" Inherits="attendanceSystemWeb1._0.MantenimientoUsuario" EnableEventValidation="true" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="MantenimientoUsuario.aspx.vb" Inherits="attendanceSystemWeb1._0.MantenimientoUsuario"  %>
 
 <!DOCTYPE html>
 <html lang="es">
