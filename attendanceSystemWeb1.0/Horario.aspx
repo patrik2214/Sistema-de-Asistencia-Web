@@ -21,14 +21,82 @@
     <!-- FullCalendar -->
     <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
-    <script language="javascript" type="text/javascript">
+    <script type="text/javascript">
+        var dias = [];
+        var JSON = [];
         $(document).ready(function () {
             // page is now ready, initialize the calendar...
+            $('#calendar').fullCalendar('destroy');
             $('#calendar').fullCalendar({
                 // put your options and callbacks here
-                weekends: false
+                contentHeight: 400,
+                customButtons: {
+                    addEventButton: {
+                        text: 'Agregar dia',
+                        click: function () {
+                            
+                        }
+                    }
+                },
+                defaultView: 'agendaWeek',
+                header: {
+                    right: 'addEventButton'
+                },
+                events: [
+                    {
+                        title: 'event1',
+                        start: '2020-06-29T08:00:00',
+                        end: '2020-06-29T16:00:00'
+                    }
+                ],
+                eventClick: function (calEvent, jsEvent, view) {
+                    //$('#myModal #eventTitle').text(calEvent.title);
+                    //var $description = $('<div/>');
+                    //$description.append($('<p/>').html('<b>Start:</b>' + calEvent.start.format("DD-MMM-YYYY HH:mm a")));
+                    //if (calEvent.end != null) {
+                    //    $description.append($('<p/>').html('<b>End:</b>' + calEvent.end.format("DD-MMM-YYYY HH:mm a")));
+                    //}
+                    //$description.append($('<p/>').html('<b>Description:</b>' + calEvent.description));
+                    //$('#myModal #pDetails').empty().html($description);
+
+                    //$('#myModalSave').modal();
+                }
+                
             })
         });
+        function agregarDia() {
+            
+            var hinicio = $('#hora_inicio').val();
+            var hfin = $('#hora_fin').val();
+            var select = $('#dias').val();
+            dias.push({ select, hinicio, hfin });
+            var hoy = new Date();
+            var dd = hoy.getDate();
+            var n = hoy.getUTCDay();
+            if (n = 0) {
+                n = 7;
+            };
+            alert(n)
+            var sobrante = select - n;
+            alert(sobrante);
+            if (sobrante < 0) {
+                hoy.setDate(dd + sobrante);
+            } else if (sobrante > 0) {
+                hoy.setDate(dd - sobrante);
+            } 
+            hoy = hoy.toISOString().slice(0, 10);
+            var starting = moment(hoy + "T" + hinicio + ":00:00");
+            var ending = moment(hoy + "T" + hfin + ":00:00");
+            JSON = {
+                "title": "Horario laboral", // Required
+                "start": starting
+            };
+            $("#calendar").fullCalendar('removeEvents');
+            $("#calendar").fullCalendar('addEventSource', JSON, true); 
+            $('#closemodal').click();
+            alert(hoy + "T0" + hinicio + ":00:00")
+            
+        }
     </script>
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
@@ -175,7 +243,56 @@
                               <asp:TextBox ID="DtpEndDate" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                             </div>
                         </div>
-                        <div id="calendar"></div>
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalSave" >Agregar dia</button>
+                        <div id="calendar">
+                            
+                        </div>
+                        <!-- modal -->
+                        <div id="myModalSave" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Agregar dia</h4>
+                                        <button type="button" class="close" id="closemodal" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label>Dia</label>
+                                                <div class="input-group date" >
+                                                    <select id="dias" name="dias">
+                                                        <option value="" disabled selected>Seleccione un dia...</option>
+                                                        <option value="1">Lunes</option>
+                                                        <option value="2">Martes</option>
+                                                        <option value="3">Miercoles</option>
+                                                        <option value="4">Jueves</option>
+                                                        <option value="5">Viernes</option>
+                                                        <option value="6">Sabado</option>
+                                                        <option value="7">Domingo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label>Hora inicio</label>
+                                                <div class="input-group date" >
+                                                    <input type="text" class="form-control" id="hora_inicio">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Hora salida</label>
+                                                <div class="input-group date" id="dtp2">
+                                                    <input type="text" class="form-control" id="hora_fin">
+                                                </div>
+                                            </div>
+                                            <button type="button" id="btnSave" onclick="agregarDia()" class="btn btn-success">Save</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- /modal -->
                     </div>
                 </div>
               </div>

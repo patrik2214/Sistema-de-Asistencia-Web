@@ -1,10 +1,12 @@
 ﻿Imports capaNegocio
 Public Class MantenimientoUsuario
     Inherits System.Web.UI.Page
-    Private user As capaDatos.users
+    Private userr As capaDatos.users
     Dim countE As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        ListAllUser(clsUsuario.ListUser())
+        If Not Page.IsPostBack Then
+            ListAllUser(clsUsuario.ListUser())
+        End If
     End Sub
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -65,11 +67,11 @@ Public Class MantenimientoUsuario
 
 
     Private Sub SetNewUsers()
-        user = New capaDatos.users
-        user.uSerName = txtNombre.Text
-        user.userPassword = txtContraseña.Text
-        user.userState = chkEstado.Checked
-        user.dni = txtDni.Text
+        userr = New capaDatos.users
+        userr.uSerName = txtNombre.Text
+        userr.userPassword = txtContraseña.Text
+        userr.userState = chkEstado.Checked
+        userr.dni = txtDni.Text
     End Sub
 
     Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles BtnRegister.Click
@@ -91,7 +93,7 @@ Public Class MantenimientoUsuario
                     ClearControls()
                 ElseIf txtDni.Text.Length = 8 And countE = 1 Then
                     SetNewUsers()
-                    clsUsuario.RegisterUser(user)
+                    clsUsuario.RegisterUser(userr)
                     ClearControls()
                     ListAllUser(clsUsuario.ListUser())
                 Else
@@ -121,7 +123,7 @@ Public Class MantenimientoUsuario
         HiddenId.Value = ""
     End Sub
     Public Sub SetDataForEditing(i As Int32)
-        HiddenId.Value = Integer.Parse(DgvUser.Rows(i).Cells(0).Text)
+        HiddenId.Value = Convert.ToInt32(DgvUser.Rows(i).Cells(0).Text)
         txtNombre.Text = DgvUser.Rows(i).Cells(1).Text
         txtDni.Text = DgvUser.Rows(i).Cells(2).Text
         txtContraseña.Text = DgvUser.Rows(i).Cells(3).Text

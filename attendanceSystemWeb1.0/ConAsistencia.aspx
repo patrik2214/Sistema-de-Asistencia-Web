@@ -144,6 +144,7 @@
                     <h2><small>Consulta</small></h2>
                     <div class="clearfix"></div>
                   </div>
+                    <label runat="server" ID="lblAviso" class="label-align">_</label>
                   <div class="x_content">
                     <br />
                       <div class="item form-group"> 

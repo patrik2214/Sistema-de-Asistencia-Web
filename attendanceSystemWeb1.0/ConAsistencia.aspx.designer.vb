@@ -149,6 +149,15 @@ Partial Public Class ConAsistencia
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control lblAviso.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''Control calFecha.
     '''</summary>
     '''<remarks>
