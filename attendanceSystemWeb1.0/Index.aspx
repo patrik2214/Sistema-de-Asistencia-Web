@@ -142,9 +142,7 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_content">
-
-                    <div id='calendar'></div>
-
+                      <img src="Resources/authentication_isometric.png" class="img-responsive" />
                   </div>
                 </div>
               </div>

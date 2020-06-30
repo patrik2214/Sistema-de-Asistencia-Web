@@ -252,7 +252,10 @@
     <Content Include="RepFaltas.aspx" />
     <Content Include="RepLicencia.aspx" />
     <Content Include="RepTardanzas.aspx" />
+    <Content Include="Resources\authentication_isometric.png" />
+    <Content Include="Resources\baja.png" />
     <Content Include="Resources\pencilx32.png" />
+    <Content Include="Resources\trashx32.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
