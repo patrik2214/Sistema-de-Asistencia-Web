@@ -4,7 +4,9 @@ Public Class OprPermisos
     Dim permission As capaDatos.permission
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        If Not Page.IsPostBack Then
+            ListAllPermission(clsPermiso.ListPermissions())
+        End If
     End Sub
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -78,7 +80,7 @@ Public Class OprPermisos
                 clsPermiso.Update(HiddenId.Value, calPresentacion.SelectedDate, calPermiso.SelectedDate, txtMotivo.Text, chkEstado.Checked, txtDni.Text)
                 BtnRegister.Text = "Guardar"
                 ClearControls()
-                'listPermission()
+                ListAllPermission(clsPermiso.ListPermissions())
 
             Catch ex As Exception
                 lblAviso.InnerText = "Error: " + ex.Message
@@ -93,7 +95,7 @@ Public Class OprPermisos
                     setNewPermission()
                     clsPermiso.Register(permission)
                     ClearControls()
-                    'listPermission()
+                    ListAllPermission(clsPermiso.ListPermissions())
                 Else
                     lblAviso.InnerText = "El DNI no ha sido ingresado correctamente"
                 End If
