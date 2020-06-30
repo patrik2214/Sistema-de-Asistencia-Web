@@ -3,7 +3,9 @@ Public Class Contrato
     Inherits System.Web.UI.Page
     Private contract As capaDatos.contract
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        ListAllContract(clsContrato.ListContrat())
+        If Not Page.IsPostBack Then
+            ListAllContract(clsContrato.ListContrat())
+        End If
     End Sub
 
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
