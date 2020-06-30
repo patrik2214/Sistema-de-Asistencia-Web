@@ -42,7 +42,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2> <%Response.Write(Session("usuario")) %></h2>
+                <h2> <%Response.Write(Session("usuario"))%></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -147,12 +147,6 @@
                     <label runat="server" ID="lblAviso" class="label-align">_</label>
                   <div class="x_content">
                     <br />
-                      <div class="item form-group"> 
-                          <asp:Calendar ID="calFecha" runat="server" CssClass="" Width="1200px" Height="400px"></asp:Calendar>
-                       </div>
-                      <div class="item form-group"> 
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Button1" Text="Buscar" />
-                       </div>
                       <div class="item form-group"> 
                          <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un dni" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchDni" Text="Buscar" />

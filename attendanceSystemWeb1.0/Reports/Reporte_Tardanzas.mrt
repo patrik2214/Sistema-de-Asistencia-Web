@@ -6,29 +6,27 @@
       <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
         <Alias>MS SQL</Alias>
         <ConnectionStringEncrypted>9Fj1AshMk/XpTKCYZ0zgZsTytU5HVkmd4gahmGNsdxfcVNXC3kvTjGhYpexJBK2v9j51CeZZS5zAd+3JZ1iiEo14zQtQDBOBekal+GdM4BeQWsGjRgX7zeFaoaXJAGUH+VT5od5W+s3hCM3Myh1uj9nWcclfa3uJy1ywgfuEJT/2WtnrS3FL8UV3xZRhFLRn0nBl68Vd01lBQbyFZz3ge8R4gUjNV3OkahioneVwIE/0GN0C1VXz</ConnectionStringEncrypted>
-        <Key>d65dc06802a74d1abbb127dc3bc7c0fd</Key>
+        <Key>d05cf34410bc411b8757bba32fd427e5</Key>
         <Name>MS SQL</Name>
       </MS_x0020_SQL>
     </Databases>
-    <DataSources isList="true" count="11">
+    <DataSources isList="true" count="10">
       <assistance Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>assistance</Alias>
         <Columns isList="true" count="5">
-          <value>ORIGINAL,assistanceId,assistanceId,assistanceId,System.Int32,a0a939ff7de6406bbc705c75051b5121</value>
-          <value>ORIGINAL,fecha,fecha,fecha,System.DateTime,_x0031_583786b2c8f4f3690881f9ea4ebe456</value>
-          <value>ORIGINAL,inHour,inHour,inHour,System.TimeSpan,_x0035_8fa76e02eb14990aab5bcec4977a225</value>
-          <value>ORIGINAL,outHour,outHour,outHour,System.DateTime,_x0034_82afeb25a9040c289e2f3449cb9a5f8</value>
-          <value>ORIGINAL,dni,dni,dni,System.String,_x0035_7aae634d06c4e5da9dfa70145defb48</value>
+          <value>dni,System.String</value>
+          <value>assistanceId,System.Int32</value>
+          <value>fecha,System.DateTime</value>
+          <value>inHour,System.DateTime</value>
+          <value>outHour,System.DateTime</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>3af7f904e8e74015ae5f67779e97b81a</Key>
+        <Key>dc593460838d4883979c07bbcb24d405</Key>
         <Name>assistance</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
-        <SqlCommand>SELECT employee.lastname, employee.name, assistance .* 
-FROM assistance INNER JOIN employee ON assistance.dni = employee.dni
-WHERE fecha &lt; GETDATE() AND inHour Is Null </SqlCommand>
+        <SqlCommand>select * from assistance</SqlCommand>
       </assistance>
       <contract Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>contract</Alias>
@@ -43,7 +41,7 @@ WHERE fecha &lt; GETDATE() AND inHour Is Null </SqlCommand>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>2fed45c8b04d4b29b9db190eaa6a13ac</Key>
+        <Key>b70d146223f746a9bfbe37254e0fa8d2</Key>
         <Name>contract</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
@@ -52,18 +50,18 @@ WHERE fecha &lt; GETDATE() AND inHour Is Null </SqlCommand>
       <employee Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>employee</Alias>
         <Columns isList="true" count="8">
-          <value>ORIGINAL,dni,dni,dni,System.String,d331bda0987040e0b6cc6192e46fb665</value>
-          <value>ORIGINAL,name,name,name,System.String,f1aa95830b69414da03e1f16b7fbf68d</value>
-          <value>ORIGINAL,genre,genre,genre,System.String,_x0035_bd8eb60d1b448ea901b449b3dc0b648</value>
-          <value>ORIGINAL,lastname,lastname,lastname,System.String,e6c59ef383b049aeba183ff2648b7529</value>
-          <value>ORIGINAL,address,address,address,System.String,b4db2b90255b4ffab3b935631021aaa2</value>
-          <value>ORIGINAL,phone,phone,phone,System.String,b19bfb699c004c84b2400aea36239f28</value>
-          <value>ORIGINAL,state,state,state,System.Boolean,_x0036_bb5c3a909d743d6a72b3d3d4b6a7ea7</value>
-          <value>ORIGINAL,email,email,email,System.String,_x0037_b24e4952d89473ba42aeeb6a6aea159</value>
+          <value>dni,System.String</value>
+          <value>name,System.String</value>
+          <value>lastname,System.String</value>
+          <value>genre,System.String</value>
+          <value>address,System.String</value>
+          <value>phone,System.String</value>
+          <value>state,System.Boolean</value>
+          <value>email,System.String</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>a3c337dc053049c5a5f09ba570044f46</Key>
+        <Key>06229654b7dc44ce9f10a2cfd3091695</Key>
         <Name>employee</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
@@ -80,7 +78,7 @@ WHERE fecha &lt; GETDATE() AND inHour Is Null </SqlCommand>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>72c7a6d7aa2245c38185246b08ffa5b6</Key>
+        <Key>0668eb1eaa524856a8943a706cc77e67</Key>
         <Name>justification</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
@@ -100,7 +98,7 @@ WHERE fecha &lt; GETDATE() AND inHour Is Null </SqlCommand>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>53def5b7a7d44b65a071d884a0d75749</Key>
+        <Key>d0215afe8c494472a2f07aacd08b0cc9</Key>
         <Name>license</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
@@ -115,7 +113,7 @@ WHERE fecha &lt; GETDATE() AND inHour Is Null </SqlCommand>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>161df2f04a9d4bd6ba6a40eb855dbd48</Key>
+        <Key>a90bda846d7c4cbea997d40c53e9da2e</Key>
         <Name>licenseType</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
@@ -133,7 +131,7 @@ WHERE fecha &lt; GETDATE() AND inHour Is Null </SqlCommand>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>972ad9593b5b404f896f430f7c62e4ee</Key>
+        <Key>259965347eae49d2b7ce9bf52a545957</Key>
         <Name>permission</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
@@ -142,41 +140,55 @@ WHERE fecha &lt; GETDATE() AND inHour Is Null </SqlCommand>
       <schedule Ref="10" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>schedule</Alias>
         <Columns isList="true" count="5">
-          <value>id,System.Int32</value>
-          <value>startDate,System.DateTime</value>
           <value>state,System.Boolean</value>
           <value>dni,System.String</value>
+          <value>id,System.Int32</value>
+          <value>startDate,System.DateTime</value>
           <value>finishDate,System.DateTime</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>80096c24ff0c4d48a6c25ea704c8cffd</Key>
+        <Key>bfa775d5ac804ef0addc9da16c5de7c1</Key>
         <Name>schedule</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
-        <SqlCommand>SELECT	schedule.dni, employee.name, employee.lastname, assistance.fecha, scheduleDetail.inHour, assistance.inHour, DATEDIFF(Minute,scheduleDetail.inHour,assistance.inHour) AS 'Minutos'
-FROM	schedule INNER JOIN scheduleDetail ON schedule.id = scheduleDetail.scheduleId
-		INNER JOIN assistance ON assistance.dni = schedule.dni
-		INNER JOIN employee ON employee.dni = schedule.dni
-WHERE	schedule.state = 1 AND  assistance.fecha &lt; GETDATE() AND assistance.inHour IS NOT NULL</SqlCommand>
+        <SqlCommand>select * from schedule</SqlCommand>
       </schedule>
-      <scheduleDetail Ref="11" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
-        <Alias>scheduleDetail</Alias>
-        <Columns isList="true" count="5">
-          <value>ORIGINAL,id,id,id,System.Int32,bb7ddaf3db1345ac97997fc52aa1e6f7</value>
-          <value>ORIGINAL,scheduleId,scheduleId,scheduleId,System.Int32,b2ee4871d3164b658e1fd678ad1c0f27</value>
-          <value>ORIGINAL,day,day,day,System.Byte,ab9857ec71814dd7be727be9e943ec9d</value>
-          <value>ORIGINAL,inHour,inHour,inHour,System.TimeSpan,_x0036_58bb318d26f42ac8dfb98295bea1269</value>
-          <value>ORIGINAL,outHour,outHour,outHour,System.Byte,_x0037_cbd0a5ff6064d989d08ecf421529cb0</value>
+      <tardanza Ref="11" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>tardanza</Alias>
+        <Columns isList="true" count="12">
+          <value>ORIGINAL,id,id,id,System.Int32,_x0032_7c3b26bbfca4c0097fb37b44f6ae046</value>
+          <value>ORIGINAL,scheduleId,scheduleId,scheduleId,System.Int32,_x0030_22083251c6447939f86b9380eb12353</value>
+          <value>ORIGINAL,day,day,day,System.DateTime,_x0035_b948219444c4991bc5fb506dfe2e808</value>
+          <value>ORIGINAL,inHour,inHour,inHour,System.TimeSpan,_x0038_c692bbfeb14488a9961c3097e8cdede</value>
+          <value>ORIGINAL,outHour,outHour,outHour,System.Byte,d8da4220bba047bd9d707bbd57a523b1</value>
+          <value>ORIGINAL,dni,dni,dni,System.String,_x0039_7e78cf0325147a38249567eefa9f6d8</value>
+          <value>ORIGINAL,name,name,name,System.String,_x0032_23f7a49f3584a739e8e7d1c7b822c32</value>
+          <value>ORIGINAL,lastname,lastname,lastname,System.String,_x0036_7938ab7f40e42bda15c419fdef35155</value>
+          <value>ORIGINAL,fecha,fecha,fecha,System.DateTime,_x0035_3f0d9f5996444f2a0f99c863418fdec</value>
+          <value>ORIGINAL,HoraEntrada,HoraEntrada,HoraEntrada,System.Byte,_x0036_d13f83d563f4a0699e19aa892c2094b</value>
+          <value>state,System.Boolean</value>
+          <value>Minutos,System.Int32</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>261844adf6c843a59f7dca60bb8e58af</Key>
-        <Name>scheduleDetail</Name>
+        <Key>26ebb1df8c23488ba15b24ba79cbebd9</Key>
+        <Name>tardanza</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
-        <SqlCommand>select * from scheduleDetail</SqlCommand>
-      </scheduleDetail>
+        <SqlCommand>SELECT schedule.dni, employee.name, employee.lastname, assistance.fecha,
+  scheduleDetail.inHour AS HoraEntrada, assistance.inHour, schedule.state,
+  DATEDIFF(Minute, assistance.inHour, scheduleDetail.inHour) AS Minutos
+FROM scheduleDetail INNER JOIN
+  schedule ON schedule.id = scheduleDetail.scheduleId INNER JOIN
+  assistance ON schedule.dni = assistance.dni INNER JOIN
+  employee ON employee.dni = schedule.dni AND employee.dni = assistance.dni
+WHERE assistance.fecha &lt; getdate() AND assistance.inHour IS NOT NULL AND
+  schedule.state = 1
+GROUP BY schedule.dni, employee.name, employee.lastname, scheduleDetail.inHour,
+  DATEDIFF(Minute, assistance.inHour, scheduleDetail.inHour), assistance.fecha,
+  assistance.inHour, schedule.state</SqlCommand>
+      </tardanza>
       <users Ref="12" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>users</Alias>
         <Columns isList="true" count="5">
@@ -188,65 +200,14 @@ WHERE	schedule.state = 1 AND  assistance.fecha &lt; GETDATE() AND assistance.inH
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
-        <Key>f6327c39d6b64e29831e70e650088cc6</Key>
+        <Key>b35433509833498389b8f2d523c0893f</Key>
         <Name>users</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
         <SqlCommand>select * from users</SqlCommand>
       </users>
-      <Datos1 Ref="13" type="Stimulsoft.Report.Dictionary.StiDataTransformation" isKey="true">
-        <Actions isList="true" count="0" />
-        <Alias>Datos1</Alias>
-        <Columns isList="true" count="8">
-          <value>TRANSFORM,dni,dni,System.String,schedule.dni,_x0030_ddd3f4db5f74d25b00cedd062d0836f,Dimension</value>
-          <value>TRANSFORM,name,name,System.String,employee.name,a1fd8da824b84f3aae33263be3a923b1,Dimension</value>
-          <value>TRANSFORM,lastname,lastname,System.String,employee.lastname,_x0037_8249220d8a04675a414fd09117cf301,Dimension</value>
-          <value>TRANSFORM,fecha,fecha,System.DateTime,Day_x0028_assistance.fecha_x0029_,_x0038_707a9c735ca41c7988e43e4fd02567b,Dimension</value>
-          <value>TRANSFORM,horaEntrada,horaEntrada,System.TimeSpan,Time_x0028_scheduleDetail.inHour_x0029_,c061d958385746099deb3e881eda2aa8,Dimension</value>
-          <value>TRANSFORM,inHour,inHour,System.TimeSpan,Time_x0028_assistance.inHour_x0029_,babc169d01f54fa194e9a9310dfb2e4e,Dimension</value>
-          <value>TRANSFORM,Minutos,Minutos,System.TimeSpan,DATEDIFF_x0028_Minute_x002C_scheduleDetail.inHour_x002C_assistance.inHour_x0029_,_x0037_e8a246053b64b799332f987febdf175,Dimension</value>
-          <value>TRANSFORM,state,state,System.Boolean,employee.state_x0020__x003D__x0020_true,_x0037_8a45795fc834f63b064b9f8e8d58dae,Dimension</value>
-        </Columns>
-        <Dictionary isRef="1" />
-        <Filters isList="true" count="0" />
-        <Key>bb7c36b6ce824ddb97198d6cd7096f7d</Key>
-        <Name>Datos1</Name>
-        <NameInSource>Categoría</NameInSource>
-        <Sorts isList="true" count="0" />
-      </Datos1>
     </DataSources>
-    <Relations isList="true" count="2">
-      <ReportLicense_Typed Ref="14" type="DataRelation" isKey="true">
-        <Alias>ReportLicense_Typed</Alias>
-        <ChildColumns isList="true" count="1">
-          <value>typeId</value>
-        </ChildColumns>
-        <ChildSource isRef="7" />
-        <Dictionary isRef="1" />
-        <Key>40a58064a8e34f2292a9cacdb896faa2</Key>
-        <Name>ReportLicense_Typed</Name>
-        <NameInSource>ReportLicense_Typed</NameInSource>
-        <ParentColumns isList="true" count="1">
-          <value>licenseTypeId</value>
-        </ParentColumns>
-        <ParentSource isRef="8" />
-      </ReportLicense_Typed>
-      <ReportEmployee Ref="15" type="DataRelation" isKey="true">
-        <Alias>ReportEmployee</Alias>
-        <ChildColumns isList="true" count="1">
-          <value>dni</value>
-        </ChildColumns>
-        <ChildSource isRef="7" />
-        <Dictionary isRef="1" />
-        <Key>87f9c9887854492d833456669c267c9e</Key>
-        <Name>ReportEmployee</Name>
-        <NameInSource>ReportEmployee</NameInSource>
-        <ParentColumns isList="true" count="1">
-          <value>dni</value>
-        </ParentColumns>
-        <ParentSource isRef="5" />
-      </ReportEmployee>
-    </Relations>
+    <Relations isList="true" count="0" />
     <Report isRef="0" />
     <Resources isList="true" count="0" />
     <Variables isList="true" count="0" />
@@ -256,23 +217,23 @@ WHERE	schedule.state = 1 AND  assistance.fecha &lt; GETDATE() AND assistance.inH
   <Key>81771e7086654aebba6acdff3a884bbf</Key>
   <MetaTags isList="true" count="0" />
   <Pages isList="true" count="1">
-    <Page1 Ref="16" type="Page" isKey="true">
+    <Page1 Ref="13" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="4">
-        <PageHeaderBand1 Ref="17" type="PageHeaderBand" isKey="true">
+        <PageHeaderBand1 Ref="14" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,19,0.6</ClientRectangle>
           <Components isList="true" count="1">
-            <Text2 Ref="18" type="Text" isKey="true">
+            <Text2 Ref="15" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.2,0,5.4,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Segoe UI,10,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text2</Name>
-              <Page isRef="16" />
-              <Parent isRef="17" />
+              <Page isRef="13" />
+              <Parent isRef="14" />
               <Text>{Today}</Text>
               <TextBrush>[198:217:240]</TextBrush>
               <Type>SystemVariables</Type>
@@ -281,14 +242,14 @@ WHERE	schedule.state = 1 AND  assistance.fecha &lt; GETDATE() AND assistance.inH
           </Components>
           <Conditions isList="true" count="0" />
           <Name>PageHeaderBand1</Name>
-          <Page isRef="16" />
-          <Parent isRef="16" />
+          <Page isRef="13" />
+          <Parent isRef="13" />
         </PageHeaderBand1>
-        <ReportTitleBand1 Ref="19" type="ReportTitleBand" isKey="true">
+        <ReportTitleBand1 Ref="16" type="ReportTitleBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,1.8,19,2</ClientRectangle>
           <Components isList="true" count="2">
-            <Text1 Ref="20" type="Text" isKey="true">
+            <Text1 Ref="17" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>4.8,0.6,10.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -296,14 +257,14 @@ WHERE	schedule.state = 1 AND  assistance.fecha &lt; GETDATE() AND assistance.inH
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text1</Name>
-              <Page isRef="16" />
-              <Parent isRef="19" />
+              <Page isRef="13" />
+              <Parent isRef="16" />
               <Text>REPORTE DE TARDANZAS</Text>
               <TextBrush>[0:112:192]</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text1>
-            <Image1 Ref="21" type="Image" isKey="true">
+            <Image1 Ref="18" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>2.6,0.2,1.8,1.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -374,75 +335,74 @@ mj+5C+AOENEDVhPT/dvpgdKwSI0AFi4AS2YDsz19dPPofAQhRtRHDJdCc95LnQ83ROLx/4NGZecH
 pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <Margins>0,0,0,0</Margins>
               <Name>Image1</Name>
-              <Page isRef="16" />
-              <Parent isRef="19" />
+              <Page isRef="13" />
+              <Parent isRef="16" />
               <VertAlignment>Center</VertAlignment>
             </Image1>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>ReportTitleBand1</Name>
-          <Page isRef="16" />
-          <Parent isRef="16" />
+          <Page isRef="13" />
+          <Parent isRef="13" />
         </ReportTitleBand1>
-        <GroupHeaderBand1 Ref="22" type="GroupHeaderBand" isKey="true">
+        <GroupHeaderBand1 Ref="19" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,4.6,19,1.8</ClientRectangle>
           <Components isList="true" count="3">
-            <Text4 Ref="23" type="Text" isKey="true">
+            <Text4 Ref="20" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.2,0.6,4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Segoe UI,11,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text4</Name>
-              <Page isRef="16" />
-              <Parent isRef="22" />
+              <Page isRef="13" />
+              <Parent isRef="19" />
               <Text>Apellidos y Nombre:</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text4>
-            <Text11 Ref="24" type="Text" isKey="true">
+            <Text8 Ref="21" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>4.4,0.8,10.2,0.6</ClientRectangle>
+              <ClientRectangle>4.2,0.6,14.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,11</Font>
               <Margins>0,0,0,0</Margins>
-              <Name>Text11</Name>
-              <Page isRef="16" />
-              <Parent isRef="22" />
-              <Text>{Datos1.lastname},{Datos1.name}</Text>
+              <Name>Text8</Name>
+              <Page isRef="13" />
+              <Parent isRef="19" />
+              <Text>{tardanza.lastname} , {tardanza.name}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
-            </Text11>
-            <HorizontalLinePrimitive1 Ref="25" type="HorizontalLinePrimitive" isKey="true">
+            </Text8>
+            <HorizontalLinePrimitive1 Ref="22" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.4,19,0.0254</ClientRectangle>
               <Color>Black</Color>
               <Conditions isList="true" count="0" />
-              <EndCap Ref="26" type="Cap" isKey="true">
+              <EndCap Ref="23" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Name>HorizontalLinePrimitive1</Name>
-              <Page isRef="16" />
-              <Parent isRef="22" />
-              <StartCap Ref="27" type="Cap" isKey="true">
+              <Page isRef="13" />
+              <Parent isRef="19" />
+              <StartCap Ref="24" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive1>
           </Components>
-          <Condition>{Datos1.lastname}</Condition>
+          <Condition>{tardanza.lastname}</Condition>
           <Conditions isList="true" count="0" />
           <Name>GroupHeaderBand1</Name>
-          <Page isRef="16" />
-          <Parent isRef="16" />
-          <SummaryExpression>{Datos1.lastname}</SummaryExpression>
+          <Page isRef="13" />
+          <Parent isRef="13" />
         </GroupHeaderBand1>
-        <DataBand1 Ref="28" type="DataBand" isKey="true">
+        <DataBand1 Ref="25" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,7.2,19,1.8</ClientRectangle>
+          <ClientRectangle>0,7.2,19,1.4</ClientRectangle>
           <Components isList="true" count="8">
-            <Text7 Ref="29" type="Text" isKey="true">
+            <Text7 Ref="26" type="Text" isKey="true">
               <Border>All;White;1;Solid;False;4;Black</Border>
               <Brush>[54:96:146]</Brush>
               <ClientRectangle>2,0,3.2,0.8</ClientRectangle>
@@ -451,14 +411,14 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text7</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
+              <Page isRef="13" />
+              <Parent isRef="25" />
               <Text>FECHA</Text>
               <TextBrush>White</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text7>
-            <Text3 Ref="30" type="Text" isKey="true">
+            <Text3 Ref="27" type="Text" isKey="true">
               <Border>All;White;1;Solid;False;4;Black</Border>
               <Brush>[54:96:146]</Brush>
               <ClientRectangle>5.2,0,3.8,0.8</ClientRectangle>
@@ -467,14 +427,14 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text3</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
+              <Page isRef="13" />
+              <Parent isRef="25" />
               <Text>HORA</Text>
               <TextBrush>White</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text3>
-            <Text5 Ref="31" type="Text" isKey="true">
+            <Text5 Ref="28" type="Text" isKey="true">
               <Border>All;White;1;Solid;False;4;Black</Border>
               <Brush>[54:96:146]</Brush>
               <ClientRectangle>9,0,3.6,0.8</ClientRectangle>
@@ -483,14 +443,14 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text5</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
+              <Page isRef="13" />
+              <Parent isRef="25" />
               <Text>HORA ENTRADA</Text>
               <TextBrush>White</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text5>
-            <Text6 Ref="32" type="Text" isKey="true">
+            <Text6 Ref="29" type="Text" isKey="true">
               <Border>All;White;1;Solid;False;4;Black</Border>
               <Brush>[54:96:146]</Brush>
               <ClientRectangle>12.6,0,3.6,0.8</ClientRectangle>
@@ -499,77 +459,80 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text6</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
+              <Page isRef="13" />
+              <Parent isRef="25" />
               <Text>MINUTOS</Text>
               <TextBrush>White</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text6>
-            <Text8 Ref="33" type="Text" isKey="true">
+            <Text9 Ref="30" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>2,0.8,3.2,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,11</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text8</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
-              <Text>{Datos1.fecha}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text8>
-            <Text9 Ref="34" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
-              <ClientRectangle>9,0.8,3.6,0.6</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,11</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text9</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
-              <Text>{Datos1.horaEntrada}</Text>
+              <Page isRef="13" />
+              <Parent isRef="25" />
+              <Text>{tardanza.fecha}</Text>
               <TextBrush>Black</TextBrush>
+              <TextFormat Ref="31" type="DateFormat" isKey="true" />
               <VertAlignment>Center</VertAlignment>
             </Text9>
-            <Text10 Ref="35" type="Text" isKey="true">
+            <Text10 Ref="32" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>5.2,0.8,3.8,0.6</ClientRectangle>
+              <ClientRectangle>9,0.8,3.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,11</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text10</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
-              <Text>{Datos1.inHour}</Text>
+              <Page isRef="13" />
+              <Parent isRef="25" />
+              <Text>{tardanza.HoraEntrada}</Text>
               <TextBrush>Black</TextBrush>
+              <TextFormat Ref="33" type="TimeFormat" isKey="true" />
               <VertAlignment>Center</VertAlignment>
             </Text10>
+            <Text11 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.2,0.8,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="13" />
+              <Parent isRef="25" />
+              <Text>{tardanza.inHour}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="35" type="TimeFormat" isKey="true" />
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
             <Text12 Ref="36" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>12.6,0.8,3.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,11</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text12</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
-              <Text>{Datos1.Minutos}</Text>
+              <Page isRef="13" />
+              <Parent isRef="25" />
+              <Text>{tardanza.Minutos}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </Text12>
           </Components>
           <Conditions isList="true" count="0" />
           <DataRelationName isNull="true" />
-          <DataSourceName>Datos1</DataSourceName>
+          <DataSourceName>tardanza</DataSourceName>
           <Filters isList="true" count="0" />
           <Name>DataBand1</Name>
-          <Page isRef="16" />
-          <Parent isRef="16" />
+          <Page isRef="13" />
+          <Parent isRef="13" />
           <Sort isList="true" count="0" />
         </DataBand1>
       </Components>
@@ -593,10 +556,10 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/29/2020 9:56:02 PM</ReportChanged>
+  <ReportChanged>6/30/2020 5:42:24 PM</ReportChanged>
   <ReportCreated>6/6/2020 8:24:20 PM</ReportCreated>
   <ReportFile>C:\Users\LISSETH\Documents\MEGA\Lisseth\CICLO VII\Sistemas Distribuidos\Proyecto\Sistema-de-Asistencia-Web\attendanceSystemWeb1.0\Reports\Reporte_Tardanzas.mrt</ReportFile>
-  <ReportGuid>f9e12605a95842b6b53c9c57b91f7296</ReportGuid>
+  <ReportGuid>dc09650c9e844679b081066facdb79a0</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2020.3.2.0</ReportVersion>
