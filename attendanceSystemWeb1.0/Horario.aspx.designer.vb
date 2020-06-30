@@ -165,4 +165,31 @@ Partial Public Class Horario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DtpEndDate As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control HiddenDias.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HiddenDias As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''Control BtnClear.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnClear As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control BtnRegisterSchedule.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnRegisterSchedule As Global.System.Web.UI.WebControls.Button
 End Class
