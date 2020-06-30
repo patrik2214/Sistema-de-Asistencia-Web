@@ -1,8 +1,12 @@
-﻿Imports capaDatos
+﻿Imports System.Web.Services
+Imports capaDatos
 Imports capaNegocio
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+Imports System.Web.UI
 Public Class Horario
     Inherits System.Web.UI.Page
-    Dim day As List(Of Object) = New List(Of Object)
+    Dim day As IEnumerable(Of Object)
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -102,11 +106,14 @@ Public Class Horario
         Next
     End Sub
     Private Sub BtnRegisterSchedule_Click(sender As Object, e As EventArgs) Handles BtnRegisterSchedule.Click
+        Dim funcion = "setDias();"
+        ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "setea", funcion, True)
         Try
             Dim span As TimeSpan = TimeSpan.FromDays(1)
             If Date.Parse(DtpEndDate.Text) - Date.Parse(DtpStartDate.Text) < span Then
-
+                Console.Write("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH me quiero morirrrrrrrrrrrrrrrrrr")
             Else
+
                 Using DB = New BDAsistenciaEntities()
                     Using dbContextTransaction = DB.Database.BeginTransaction()
                         Try
@@ -114,17 +121,19 @@ Public Class Horario
                             SetNewSchedule(schedu)
                             Dim id_hor = clsHorario.Register(schedu, DB)
                             Dim sche_details As New capaDatos.scheduleDetail
-                            ScriptManager.RegisterStartupScript(Me, Me.Page.GetType, "setDias", "setDias();", True)
-                            'day = JsonConvert.DeserializeObject(responseFromServer)
-                            'For i = 0 To DgvDetails.Rows.Count - 1
-                            '    SetNewDetailSchedule(sche_details, day(i), id_hor)
-                            '    clsDetalleHorario.Register(sche_details, DB)
-                            'Next
+
+                            Dim aver = HiddenDias.Value
+                            day = JsonConvert.DeserializeObject(Of IEnumerable(Of Object))(HiddenDias.Value)
+                            For i = 0 To day.Count - 1
+                                SetNewDetailSchedule(sche_details, day(i), id_hor)
+                                clsDetalleHorario.Register(sche_details, DB)
+                            Next
                             RegisterAsistances(DB)
                             dbContextTransaction.Commit()
                             ClearControls()
                         Catch ex As Exception
                             dbContextTransaction.Rollback()
+                            Throw ex
                         End Try
 
                     End Using
@@ -133,7 +142,11 @@ Public Class Horario
 
             End If
         Catch ex As Exception
-
+            Throw ex
         End Try
+    End Sub
+    <WebMethod>
+    Public Sub registrarHorario(ddias As JObject)
+
     End Sub
 End Class

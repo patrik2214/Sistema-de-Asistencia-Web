@@ -21,7 +21,7 @@
     <!-- FullCalendar -->
     <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
-    <script type="text/javascript">
+    <script  type="text/javascript">
         var dias = [];
         $(document).ready(function () {
             // page is now ready, initialize the calendar...
@@ -69,16 +69,14 @@
                 $('#closemodal').click();
                 alert(starting);
                 alert(ending);
-            }
+            };
             
         };
-        function setDias() {
-            $('#<%= HiddenDias.ClientID %>').val(dias);
-            alert(dias);
-        }
+        
     </script>
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
+    
   </head>
 
   <body class="nav-md" style="background-color: #1C4E80">
@@ -228,6 +226,7 @@
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                           <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
+                            <button type="button" id="suicidio" onclick="setDias()" class="btn btn-success">dia</button>
                           <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegisterSchedule" Text="Registrar" />
                         </div>
                       </div>
@@ -313,7 +312,12 @@
  
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
-	
+       <script type="text/javascript">
+           function setDias() {
+               alert('no te suicides');
+               $('#<%= HiddenDias.ClientID %>').val(dias);
+           }
+       </script>
     </form>
   </body>
 </html>
