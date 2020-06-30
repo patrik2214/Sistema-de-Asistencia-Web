@@ -140,6 +140,15 @@ Partial Public Class Horario
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control ScriptManager1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
     '''Control TxtDni.
     '''</summary>
     '''<remarks>
@@ -165,15 +174,6 @@ Partial Public Class Horario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DtpEndDate As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control HiddenDias.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents HiddenDias As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
     '''Control BtnClear.

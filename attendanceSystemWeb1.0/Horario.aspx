@@ -8,7 +8,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+         
     <title>Sistema de Asistencia! | </title>
     <!-- jQuery -->
     <script src="../librerias/jquery/dist/jquery.min.js"></script>
@@ -23,6 +23,9 @@
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <script  type="text/javascript">
         var dias = [];
+        var hinicio;
+        var hfin;
+        var select;
         $(document).ready(function () {
             // page is now ready, initialize the calendar...
             $('#calendar').fullCalendar('destroy');
@@ -33,9 +36,9 @@
             })
         });
         function agregarDia() {
-            var hinicio = $('#hora_inicio').val();
-            var hfin = $('#hora_fin').val();
-            var select = $('#dias').val();
+            hinicio = $('#hora_inicio').val();
+            hfin = $('#hora_fin').val();
+            select = $('#dias').val();
             if (isNaN(hinicio) || isNaN(hfin)) {
                 alert("Ingrese numeros por favor");
             } else if (hinicio > 24 || hinicio < 0 || hfin > 24 || hfin < 0) {
@@ -43,7 +46,7 @@
             } else {
                 hinicio = Math.floor(hinicio);
                 hfin = Math.floor(hfin);
-                dias.push({ select, hinicio, hfin });
+                dias.push([ select, hinicio, hfin ]);
                 var hoy = new Date();
                 var dd = hoy.getDate();
                 var n = hoy.getUTCDay();
@@ -58,6 +61,7 @@
                 }
                 hoy = hoy.toISOString().slice(0, 10);
                 hinicio = (hinicio < 10) ? "0" + hinicio : hinicio;
+                hfin = (hfin  < 10) ? "0" + hfin : hfin;
                 var starting = moment(hoy + "T" + hinicio + ":00:00");
                 var ending = moment(hoy + "T" + hfin + ":00:00");
 
@@ -67,10 +71,18 @@
                     end: ending
                 }, true);
                 $('#closemodal').click();
-                alert(starting);
-                alert(ending);
+                save();
             };
-            
+            function save() {
+                var values = [];
+                values = [select, hinicio, hfin]
+                var userContext = null; // You can use this for whatever you want, or leave it out
+                PageMethods.SetearDias(values, function (result) {
+                    alert("Values have been saved");
+                }, function (err) {
+                    alert("Error");
+                }, userContext);
+            }
         };
         
     </script>
@@ -192,7 +204,7 @@
               </div>
             </div>
               <div class="clearfix"></div>
-
+              <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"/>
             <div class="row">
               <div class="col-md-12">
                 <div class="x_panel">
@@ -222,11 +234,9 @@
                         </div>
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalSave" >Agregar dia</button>
                         <div class="ln_solid"></div>
-                        <asp:HiddenField ID="HiddenDias" runat="server" value=""/>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                           <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
-                            <button type="button" id="suicidio" onclick="setDias()" class="btn btn-success">dia</button>
                           <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegisterSchedule" Text="Registrar" />
                         </div>
                       </div>
@@ -313,10 +323,11 @@
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
        <script type="text/javascript">
-           function setDias() {
-               alert('no te suicides');
-               $('#<%= HiddenDias.ClientID %>').val(dias);
+           function setearDentroDays() {
+               
            }
+           
+           
        </script>
     </form>
   </body>

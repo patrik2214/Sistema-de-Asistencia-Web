@@ -6,7 +6,7 @@ Imports Newtonsoft.Json.Linq
 Imports System.Web.UI
 Public Class Horario
     Inherits System.Web.UI.Page
-    Dim day As IEnumerable(Of Object)
+    Shared day As List(Of Object) = New List(Of Object)
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -121,9 +121,6 @@ Public Class Horario
                             SetNewSchedule(schedu)
                             Dim id_hor = clsHorario.Register(schedu, DB)
                             Dim sche_details As New capaDatos.scheduleDetail
-
-                            Dim aver = HiddenDias.Value
-                            day = JsonConvert.DeserializeObject(Of IEnumerable(Of Object))(HiddenDias.Value)
                             For i = 0 To day.Count - 1
                                 SetNewDetailSchedule(sche_details, day(i), id_hor)
                                 clsDetalleHorario.Register(sche_details, DB)
@@ -146,7 +143,7 @@ Public Class Horario
         End Try
     End Sub
     <WebMethod>
-    Public Sub registrarHorario(ddias As JObject)
-
+    Public Shared Sub SetearDias(vals As List(Of String))
+        day.Add({vals(0), vals(1), vals(2)})
     End Sub
 End Class
