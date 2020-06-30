@@ -23,11 +23,11 @@
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
-
-  <body class="nav-md">
+    
+  <body class="nav-md" style="background-color: #1C4E80">
     <div class="container body">
       <div class="main_container">
-        <div class="col-md-3 left_col">
+        <div class="col-md-3 left_col">           
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
               <a href="index.html" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
@@ -41,7 +41,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>Marina</h2>
+                <h2> <%Response.Write(Session("usuario")) %></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -113,7 +113,7 @@
               <nav class="nav navbar-nav">
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">Marina</a>
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;">
                         <span>Settings</span>

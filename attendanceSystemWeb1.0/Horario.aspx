@@ -8,7 +8,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+         
     <title>Sistema de Asistencia! | </title>
     <!-- jQuery -->
     <script src="../librerias/jquery/dist/jquery.min.js"></script>
@@ -21,88 +21,77 @@
     <!-- FullCalendar -->
     <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
-    <script type="text/javascript">
+    <script  type="text/javascript">
         var dias = [];
-        var JSON = [];
+        var hinicio;
+        var hfin;
+        var select;
         $(document).ready(function () {
             // page is now ready, initialize the calendar...
             $('#calendar').fullCalendar('destroy');
             $('#calendar').fullCalendar({
                 // put your options and callbacks here
                 contentHeight: 400,
-                customButtons: {
-                    addEventButton: {
-                        text: 'Agregar dia',
-                        click: function () {
-                            
-                        }
-                    }
-                },
-                defaultView: 'agendaWeek',
-                header: {
-                    right: 'addEventButton'
-                },
-                events: [
-                    {
-                        title: 'event1',
-                        start: '2020-06-29T08:00:00',
-                        end: '2020-06-29T16:00:00'
-                    }
-                ],
-                eventClick: function (calEvent, jsEvent, view) {
-                    //$('#myModal #eventTitle').text(calEvent.title);
-                    //var $description = $('<div/>');
-                    //$description.append($('<p/>').html('<b>Start:</b>' + calEvent.start.format("DD-MMM-YYYY HH:mm a")));
-                    //if (calEvent.end != null) {
-                    //    $description.append($('<p/>').html('<b>End:</b>' + calEvent.end.format("DD-MMM-YYYY HH:mm a")));
-                    //}
-                    //$description.append($('<p/>').html('<b>Description:</b>' + calEvent.description));
-                    //$('#myModal #pDetails').empty().html($description);
-
-                    //$('#myModalSave').modal();
-                }
-                
+                defaultView: 'agendaWeek'                
             })
         });
         function agregarDia() {
-            
-            var hinicio = $('#hora_inicio').val();
-            var hfin = $('#hora_fin').val();
-            var select = $('#dias').val();
-            dias.push({ select, hinicio, hfin });
-            var hoy = new Date();
-            var dd = hoy.getDate();
-            var n = hoy.getUTCDay();
-            if (n = 0) {
-                n = 7;
+            hinicio = $('#hora_inicio').val();
+            hfin = $('#hora_fin').val();
+            select = $('#dias').val();
+            if (isNaN(hinicio) || isNaN(hfin)) {
+                alert("Ingrese numeros por favor");
+            } else if (hinicio > 24 || hinicio < 0 || hfin > 24 || hfin < 0) {
+                alert("Coloque las horas en un formato de 24 horas");
+            } else {
+                hinicio = Math.floor(hinicio);
+                hfin = Math.floor(hfin);
+                dias.push([ select, hinicio, hfin ]);
+                var hoy = new Date();
+                var dd = hoy.getDate();
+                var n = hoy.getUTCDay();
+                if (n == 0) {
+                    n = 7;
+                };
+                var sobrante = select - n;
+                if (sobrante < 0) {
+                    hoy.setDate(dd - sobrante);
+                } else if (sobrante > 0) {
+                    hoy.setDate(dd + sobrante);
+                }
+                hoy = hoy.toISOString().slice(0, 10);
+                hinicio = (hinicio < 10) ? "0" + hinicio : hinicio;
+                hfin = (hfin  < 10) ? "0" + hfin : hfin;
+                var starting = moment(hoy + "T" + hinicio + ":00:00");
+                var ending = moment(hoy + "T" + hfin + ":00:00");
+
+                $("#calendar").fullCalendar('renderEvent', {
+                    title: 'Horario laboral',
+                    start: starting,
+                    end: ending
+                }, true);
+                $('#closemodal').click();
+                save();
             };
-            alert(n)
-            var sobrante = select - n;
-            alert(sobrante);
-            if (sobrante < 0) {
-                hoy.setDate(dd + sobrante);
-            } else if (sobrante > 0) {
-                hoy.setDate(dd - sobrante);
-            } 
-            hoy = hoy.toISOString().slice(0, 10);
-            var starting = moment(hoy + "T" + hinicio + ":00:00");
-            var ending = moment(hoy + "T" + hfin + ":00:00");
-            JSON = {
-                "title": "Horario laboral", // Required
-                "start": starting
-            };
-            $("#calendar").fullCalendar('removeEvents');
-            $("#calendar").fullCalendar('addEventSource', JSON, true); 
-            $('#closemodal').click();
-            alert(hoy + "T0" + hinicio + ":00:00")
-            
-        }
+            function save() {
+                var values = [];
+                values = [select, hinicio, hfin]
+                var userContext = null; // You can use this for whatever you want, or leave it out
+                PageMethods.SetearDias(values, function (result) {
+                    alert("Values have been saved");
+                }, function (err) {
+                    alert("Error");
+                }, userContext);
+            }
+        };
+        
     </script>
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
+    
   </head>
 
-  <body class="nav-md">
+  <body class="nav-md" style="background-color: #1C4E80">
     <form runat="server">
     <div class="container body">
       <div class="main_container">
@@ -215,7 +204,7 @@
               </div>
             </div>
               <div class="clearfix"></div>
-
+              <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"/>
             <div class="row">
               <div class="col-md-12">
                 <div class="x_panel">
@@ -244,6 +233,13 @@
                             </div>
                         </div>
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalSave" >Agregar dia</button>
+                        <div class="ln_solid"></div>
+                      <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegisterSchedule" Text="Registrar" />
+                        </div>
+                      </div>
                         <div id="calendar">
                             
                         </div>
@@ -274,13 +270,13 @@
                                             </div>
                                             
                                             <div class="form-group">
-                                                <label>Hora inicio</label>
+                                                <label>Hora inicio (24h) *Solo se aceptan horas exactas</label>
                                                 <div class="input-group date" >
                                                     <input type="text" class="form-control" id="hora_inicio">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Hora salida</label>
+                                                <label>Hora salida (24h) *Solo se aceptan horas exactas</label>
                                                 <div class="input-group date" id="dtp2">
                                                     <input type="text" class="form-control" id="hora_fin">
                                                 </div>
@@ -326,7 +322,13 @@
  
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
-	
+       <script type="text/javascript">
+           function setearDentroDays() {
+               
+           }
+           
+           
+       </script>
     </form>
   </body>
 </html>

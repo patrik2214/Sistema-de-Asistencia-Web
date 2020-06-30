@@ -140,6 +140,15 @@ Partial Public Class Horario
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control ScriptManager1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
     '''Control TxtDni.
     '''</summary>
     '''<remarks>
@@ -165,4 +174,22 @@ Partial Public Class Horario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DtpEndDate As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control BtnClear.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnClear As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control BtnRegisterSchedule.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnRegisterSchedule As Global.System.Web.UI.WebControls.Button
 End Class

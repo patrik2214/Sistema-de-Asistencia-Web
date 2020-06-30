@@ -6,6 +6,7 @@ Public Class WebForm1
         Try
             Dim user = objUsuario.Login(txtNombreUsuario.Text, txtContraseña.Text)
             Dim nombre = user.employee.name + " " + user.employee.lastname
+            Session("usuario") = nombre
             If user IsNot Nothing Then
                 lblMensaje.Text = "Bienvenido al Sistema " & nombre
                 Response.Redirect("Index.aspx", False)

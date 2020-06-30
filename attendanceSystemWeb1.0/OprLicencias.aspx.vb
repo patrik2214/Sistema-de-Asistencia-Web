@@ -3,9 +3,14 @@ Public Class OprLicencias
     Inherits System.Web.UI.Page
     Dim span As New TimeSpan
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
         If Not Page.IsPostBack Then
-            SetLicensesTypeCombo()
-            ListAllLicencesType(clsLicencia.ListLicenses())
+            If Session("usuario") Is Nothing Then
+                Response.Redirect("Login.aspx", False)
+            Else
+                SetLicensesTypeCombo()
+                ListAllLicencesType(clsLicencia.ListLicenses())
+            End If
         End If
 
     End Sub
