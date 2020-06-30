@@ -4,7 +4,12 @@ Public Class Contrato
     Private contract As capaDatos.contract
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
-            ListAllContract(clsContrato.ListContrat())
+
+            If Session("usuario") Is Nothing Then
+                Response.Redirect("Login.aspx", False)
+            Else
+                ListAllContract(clsContrato.ListContrat())
+            End If
         End If
     End Sub
 

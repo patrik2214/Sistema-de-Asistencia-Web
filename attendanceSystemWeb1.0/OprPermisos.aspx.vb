@@ -5,7 +5,11 @@ Public Class OprPermisos
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
-            ListAllPermission(clsPermiso.ListPermissions())
+            If Session("usuario") Is Nothing Then
+                Response.Redirect("Login.aspx", False)
+            Else
+                ListAllPermission(clsPermiso.ListPermissions())
+            End If
         End If
     End Sub
 

@@ -5,7 +5,12 @@ Public Class MantenimientoUsuario
     Dim countE As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
-            ListAllUser(clsUsuario.ListUser())
+            If Session("usuario") Is Nothing Then
+                Response.Redirect("Login.aspx", False)
+            Else
+                ListAllUser(clsUsuario.ListUser())
+            End If
+
         End If
     End Sub
 
