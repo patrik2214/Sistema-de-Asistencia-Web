@@ -147,4 +147,13 @@ Partial Public Class RepLicencia
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control StiWebViewer1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents StiWebViewer1 As Global.Stimulsoft.Report.Web.StiWebViewer
 End Class

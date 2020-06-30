@@ -81,7 +81,7 @@
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
 
-  <body class="nav-md">
+  <body class="nav-md" style="background-color: #1C4E80">
     <form runat="server">
     <div class="container body">
       <div class="main_container">

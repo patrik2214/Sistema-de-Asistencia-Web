@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9Fj1AshMk/XpTKCYZ0zgZsTytU5HVkmd4gahmGNsdxfcVNXC3kvTjGhYpexJBK2v9j51CeZZS5zAd+3JZ1iiEo14zQtQDBOBekal+GdM4BeQWsGjRgX7zeFaoaXJAGUH+VT5od5W+s3hCM3Myh1uj9nWcclfa3uJy1ywgfuEJT/2WtnrS3FL8UV3xZRhFLRn0nBl68Vd01lBQbyFZz3ge8R4gUjNV3OkahioneVwIE/0GN0C1VXz</ConnectionStringEncrypted>
+        <Key>d65dc06802a74d1abbb127dc3bc7c0fd</Key>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+    </Databases>
+    <DataSources isList="true" count="10">
+      <assistance Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>assistance</Alias>
+        <Columns isList="true" count="5">
+          <value>assistanceId,System.Int32</value>
+          <value>fecha,System.DateTime</value>
+          <value>inHour,System.DateTime</value>
+          <value>outHour,System.DateTime</value>
+          <value>dni,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>3af7f904e8e74015ae5f67779e97b81a</Key>
+        <Name>assistance</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT assistance.dni,employee.lastname,employee.name,assistance.fecha,assistance.inHour
+FROM assistance INNER JOIN employee ON assistance.dni = employee.dni
+WHERE fecha &lt; GETDATE() - 1 AND inHour Is Null </SqlCommand>
+      </assistance>
+      <contract Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>contract</Alias>
+        <Columns isList="true" count="7">
+          <value>id,System.Int32</value>
+          <value>startDate,System.DateTime</value>
+          <value>finishDate,System.DateTime</value>
+          <value>mount,System.Decimal</value>
+          <value>state,System.Boolean</value>
+          <value>extraHours,System.Boolean</value>
+          <value>dni,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>2fed45c8b04d4b29b9db190eaa6a13ac</Key>
+        <Name>contract</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from contract</SqlCommand>
+      </contract>
+      <employee Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>employee</Alias>
+        <Columns isList="true" count="8">
+          <value>dni,System.String</value>
+          <value>name,System.String</value>
+          <value>lastname,System.String</value>
+          <value>genre,System.String</value>
+          <value>address,System.String</value>
+          <value>phone,System.String</value>
+          <value>state,System.Boolean</value>
+          <value>email,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>a3c337dc053049c5a5f09ba570044f46</Key>
+        <Name>employee</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from employee</SqlCommand>
+      </employee>
+      <justification Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>justification</Alias>
+        <Columns isList="true" count="5">
+          <value>justificationId,System.Int32</value>
+          <value>fecha,System.DateTime</value>
+          <value>reason,System.String</value>
+          <value>state,System.Boolean</value>
+          <value>assistanceId,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>72c7a6d7aa2245c38185246b08ffa5b6</Key>
+        <Name>justification</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from justification</SqlCommand>
+      </justification>
+      <license Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>license</Alias>
+        <Columns isList="true" count="8">
+          <value>lincenseId,System.Int32</value>
+          <value>startDate,System.DateTime</value>
+          <value>endDate,System.DateTime</value>
+          <value>state,System.Boolean</value>
+          <value>dni,System.String</value>
+          <value>typeId,System.Byte</value>
+          <value>PresentationDate,System.DateTime</value>
+          <value>document,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>53def5b7a7d44b65a071d884a0d75749</Key>
+        <Name>license</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from license</SqlCommand>
+      </license>
+      <licenseType Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>licenseType</Alias>
+        <Columns isList="true" count="3">
+          <value>licenseTypeId,System.Byte</value>
+          <value>description,System.String</value>
+          <value>maxDias,System.Int16</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>161df2f04a9d4bd6ba6a40eb855dbd48</Key>
+        <Name>licenseType</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from licenseType</SqlCommand>
+      </licenseType>
+      <permission Ref="9" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>permission</Alias>
+        <Columns isList="true" count="6">
+          <value>permissionId,System.Int32</value>
+          <value>presentationDate,System.DateTime</value>
+          <value>permissionDate,System.DateTime</value>
+          <value>reason,System.String</value>
+          <value>state,System.Boolean</value>
+          <value>dni,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>972ad9593b5b404f896f430f7c62e4ee</Key>
+        <Name>permission</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from permission</SqlCommand>
+      </permission>
+      <schedule Ref="10" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>schedule</Alias>
+        <Columns isList="true" count="5">
+          <value>id,System.Int32</value>
+          <value>startDate,System.DateTime</value>
+          <value>state,System.Boolean</value>
+          <value>dni,System.String</value>
+          <value>finishDate,System.DateTime</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>80096c24ff0c4d48a6c25ea704c8cffd</Key>
+        <Name>schedule</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from schedule</SqlCommand>
+      </schedule>
+      <scheduleDetail Ref="11" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>scheduleDetail</Alias>
+        <Columns isList="true" count="5">
+          <value>id,System.Int32</value>
+          <value>scheduleId,System.Int32</value>
+          <value>day,System.Byte</value>
+          <value>inHour,System.Byte</value>
+          <value>outHour,System.Byte</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>261844adf6c843a59f7dca60bb8e58af</Key>
+        <Name>scheduleDetail</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from scheduleDetail</SqlCommand>
+      </scheduleDetail>
+      <users Ref="12" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>users</Alias>
+        <Columns isList="true" count="5">
+          <value>userId,System.Int32</value>
+          <value>uSerName,System.String</value>
+          <value>userPassword,System.String</value>
+          <value>dni,System.String</value>
+          <value>userState,System.Boolean</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>f6327c39d6b64e29831e70e650088cc6</Key>
+        <Name>users</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from users</SqlCommand>
+      </users>
+    </DataSources>
+    <Relations isList="true" count="3">
+      <ReportLicense_Typed Ref="13" type="DataRelation" isKey="true">
+        <Alias>ReportLicense_Typed</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>typeId</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>ReportLicense_Typed</Name>
+        <NameInSource>ReportLicense_Typed</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>licenseTypeId</value>
+        </ParentColumns>
+        <ParentSource isRef="8" />
+      </ReportLicense_Typed>
+      <ReportEmployee Ref="14" type="DataRelation" isKey="true">
+        <Alias>ReportEmployee</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>dni</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>ReportEmployee</Name>
+        <NameInSource>ReportEmployee</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>dni</value>
+        </ParentColumns>
+        <ParentSource isRef="5" />
+      </ReportEmployee>
+      <assistance_employee Ref="15" type="DataRelation" isKey="true">
+        <Alias>assistance_employee</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>dni</value>
+        </ChildColumns>
+        <ChildSource isRef="3" />
+        <Dictionary isRef="1" />
+        <Name>assistance_employee</Name>
+        <NameInSource>assistance</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>dni</value>
+        </ParentColumns>
+        <ParentSource isRef="5" />
+      </assistance_employee>
+    </Relations>
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>81771e7086654aebba6acdff3a884bbf</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="16" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <PageHeaderBand1 Ref="17" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,0.2</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text2 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0,5.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Segoe UI,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="16" />
+              <Parent isRef="17" />
+              <Text>{Today}</Text>
+              <TextBrush>[198:217:240]</TextBrush>
+              <Type>SystemVariables</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </PageHeaderBand1>
+        <ReportTitleBand1 Ref="19" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.4,19,2</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text1 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,0.6,9.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Segoe UI,25,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="16" />
+              <Parent isRef="19" />
+              <Text>REPORTE DE FALTAS</Text>
+              <TextBrush>[0:112:192]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Image1 Ref="21" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.6,0.2,1.8,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <HorAlignment>Center</HorAlignment>
+              <ImageBytes>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</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="16" />
+              <Parent isRef="19" />
+              <VertAlignment>Center</VertAlignment>
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </ReportTitleBand1>
+        <GroupHeaderBand1 Ref="22" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.2,19,1.8</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text4 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0.8,4.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Segoe UI,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="16" />
+              <Parent isRef="22" />
+              <Text>Apellidos y Nombre:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text4>
+            <Text9 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.8,14.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Segoe UI,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="16" />
+              <Parent isRef="22" />
+              <Text>{assistance.assistance_employee.lastname}, {assistance.assistance_employee.name}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text9>
+            <HorizontalLinePrimitive2 Ref="25" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,0.6,19,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <Conditions isList="true" count="0" />
+              <EndCap Ref="26" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="16" />
+              <Parent isRef="22" />
+              <StartCap Ref="27" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+          </Components>
+          <Condition>{assistance.assistance_employee.lastname}and {assistance.assistance_employee.name}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </GroupHeaderBand1>
+        <DataBand1 Ref="28" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,6.8,19,1.4</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text7 Ref="29" type="Text" isKey="true">
+              <Border>All;White;1;Solid;False;4;Black</Border>
+              <Brush>[54:96:146]</Brush>
+              <ClientRectangle>2,0,3.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Segoe UI,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="16" />
+              <Parent isRef="28" />
+              <Text>DNI</Text>
+              <TextBrush>White</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="30" type="Text" isKey="true">
+              <Border>All;White;1;Solid;False;4;Black</Border>
+              <Brush>[54:96:146]</Brush>
+              <ClientRectangle>5.8,0,5,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Segoe UI,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="16" />
+              <Parent isRef="28" />
+              <Text>Fecha Inicio</Text>
+              <TextBrush>White</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text5 Ref="31" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.8,0.8,5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Segoe UI,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="16" />
+              <Parent isRef="28" />
+              <Text>{assistance.fecha}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="32" type="DateFormat" isKey="true">
+                <StringFormat>dd/MM/yyyy</StringFormat>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0.8,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Segoe UI,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="16" />
+              <Parent isRef="28" />
+              <Text>{assistance.assistance_employee.dni}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>assistance</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>9e1e8ddc4c5545f1b0b5b788e70190d4</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>6/29/2020 9:00:11 PM</ReportChanged>
+  <ReportCreated>6/6/2020 8:24:20 PM</ReportCreated>
+  <ReportFile>C:\Users\LISSETH\Documents\MEGA\Lisseth\CICLO VII\Sistemas Distribuidos\Proyecto\Sistema-de-Asistencia-Web\attendanceSystemWeb1.0\Reports\Reporte_Faltas.mrt</ReportFile>
+  <ReportGuid>5fe3b149239f487e957b1c9143116a6a</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2020.3.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
