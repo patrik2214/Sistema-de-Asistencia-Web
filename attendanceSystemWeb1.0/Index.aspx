@@ -30,7 +30,7 @@
         <div class="col-md-3 left_col">           
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
-              <a href="index.html" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
+              <a href="Index.aspx" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
             </div>
 
             <div class="clearfix"></div>
