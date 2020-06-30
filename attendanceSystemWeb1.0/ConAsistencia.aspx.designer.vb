@@ -158,13 +158,13 @@ Partial Public Class ConAsistencia
     Protected WithEvents calFecha As Global.System.Web.UI.WebControls.Calendar
 
     '''<summary>
-    '''Control BtnSearchFecha.
+    '''Control Button1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents BtnSearchFecha As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control txtDni.

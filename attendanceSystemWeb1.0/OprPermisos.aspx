@@ -218,9 +218,9 @@
                             <AlternatingRowStyle CssClass="odd"/>
  
                             <Columns>
-                                <asp:BoundField HeaderText="ID" DataField="permissionid"/>
-                                <asp:BoundField HeaderText="Día de Presentación" DataField="presentationdate"/>
-                                <asp:BoundField HeaderText="Día de Permiso" DataField="startdate"/>
+                                <asp:BoundField HeaderText="ID" DataField="permissionId"/>
+                                <asp:BoundField HeaderText="Día de Presentación" DataField="presentationDate"/>
+                                <asp:BoundField HeaderText="Día de Permiso" DataField="permissionDate"/>
                                 <asp:BoundField HeaderText="Motivo" DataField="reason"/>
                                 <asp:BoundField HeaderText="Dni" DataField="dni"/>
                                 <asp:BoundField HeaderText="Estado" DataField="state"/>

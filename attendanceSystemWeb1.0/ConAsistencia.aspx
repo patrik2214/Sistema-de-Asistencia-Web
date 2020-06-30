@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ConAsistencia.aspx.vb" Inherits="attendanceSystemWeb1._0.ConAsistencia" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ConAsistencia.aspx.vb" Inherits="attendanceSystemWeb1._0.ConAsistencia" EnableEventValidation="true" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -148,8 +148,9 @@
                     <br />
                       <div class="item form-group"> 
                           <asp:Calendar ID="calFecha" runat="server" CssClass="" Width="1200px" Height="400px"></asp:Calendar>
-                          <br />
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchFecha" Text="Buscar" />
+                       </div>
+                      <div class="item form-group"> 
+                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Button1" Text="Buscar" />
                        </div>
                       <div class="item form-group"> 
                          <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un dni" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
@@ -162,10 +163,9 @@
                  
             </div>
           </div>
-        </div>
+        
         <div class="row">
              <div class="col-md-12 col-sm-12 ">
-                      
                       <asp:GridView 
                             runat="server" ID="DgvAssitance" CssClass="table"
                             GridLines="None"
@@ -187,6 +187,7 @@
                    
                   </div>
               </div>
+           </div>
         <!-- /page content -->
 
         <!-- footer content -->
@@ -197,7 +198,7 @@
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
-        
+       
       </div>
     
     <!-- jQuery -->
