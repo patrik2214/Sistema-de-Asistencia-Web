@@ -146,7 +146,7 @@
                   </div>
                   <div class="x_content">
                     <br />
-
+                      <asp:HiddenField id="HiddenId" runat="server" value=""/>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Presentación<span class="required">*</span>
                         </label>
@@ -200,7 +200,7 @@
                   <div class="col-md-12 col-sm-12 ">
                       <div class="x_panel"> 
                           <div class="item form-group"> 
-                              <asp:TextBox ID="txtBuscar" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                              <asp:TextBox ID="txtBuscar" placeholder="Ingrese un dni"  CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
                               <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearch" Text="Buscar" />
                           </div>
                           

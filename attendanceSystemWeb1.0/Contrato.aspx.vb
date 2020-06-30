@@ -2,7 +2,6 @@
 Public Class Contrato
     Inherits System.Web.UI.Page
     Private contract As capaDatos.contract
-    Dim Id_Contract As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ListAllContract(clsContrato.ListContrat())
     End Sub
@@ -75,7 +74,7 @@ Public Class Contrato
 
     Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles BtnRegister.Click
         If BtnRegister.Text = "Modificar" Then
-            clsContrato.Update(Id_Contract, calInicio.SelectedDate, calFin.SelectedDate, Decimal.Parse(txtSalario.Text), chkHorasExtra.Checked, chkEstado.Checked)
+            clsContrato.Update(HiddenId.Value, calInicio.SelectedDate, calFin.SelectedDate, Decimal.Parse(txtSalario.Text), chkHorasExtra.Checked, chkEstado.Checked)
             ClearControls()
             ListAllContract(clsContrato.ListContrat())
             BtnRegister.Text = "Guardar"
@@ -123,12 +122,12 @@ Public Class Contrato
         txtSalario.Text = ""
         chkHorasExtra.Checked = False
         chkEstado.Checked = False
-
+        HiddenId.Value = ""
     End Sub
 
 
     Public Sub SetDataForEditing(i As Int32)
-        Id_Contract = Integer.Parse(DgvContract.Rows(i).Cells(0).Text)
+        HiddenId.Value = Integer.Parse(DgvContract.Rows(i).Cells(0).Text)
         txtDni.Text = DgvContract.Rows(i).Cells(1).Text
         calInicio.SelectedDate = Date.Parse(DgvContract.Rows(i).Cells(2).Text)
         calFin.SelectedDate = Date.Parse(DgvContract.Rows(i).Cells(3).Text)

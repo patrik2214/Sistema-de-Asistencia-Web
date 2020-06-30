@@ -185,15 +185,6 @@ Partial Public Class ConAsistencia
     Protected WithEvents BtnSearchDni As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control lblAviso.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
     '''Control DgvAssitance.
     '''</summary>
     '''<remarks>

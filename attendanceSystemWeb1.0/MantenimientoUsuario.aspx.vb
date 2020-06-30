@@ -3,7 +3,6 @@ Public Class MantenimientoUsuario
     Inherits System.Web.UI.Page
     Private user As capaDatos.users
     Dim countE As Integer
-    Dim Id_Usuario As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ListAllUser(clsUsuario.ListUser())
     End Sub
@@ -76,7 +75,7 @@ Public Class MantenimientoUsuario
     Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles BtnRegister.Click
         If BtnRegister.Text = "Modificar" Then
             Try
-                clsUsuario.Update(Id_Usuario, txtNombre.Text, txtContraseña.Text, txtDni.Text, chkEstado.Checked)
+                clsUsuario.Update(HiddenId.Value, txtNombre.Text, txtContraseña.Text, txtDni.Text, chkEstado.Checked)
                 BtnRegister.Text = "Guardar"
                 ClearControls()
                 ListAllUser(clsUsuario.ListUser())
@@ -119,9 +118,10 @@ Public Class MantenimientoUsuario
         txtDni.Text = ""
         txtNombre.Text = ""
         chkEstado.Checked = False
+        HiddenId.Value = ""
     End Sub
     Public Sub SetDataForEditing(i As Int32)
-        Id_Usuario = Integer.Parse(DgvUser.Rows(i).Cells(0).Text)
+        HiddenId.Value = Integer.Parse(DgvUser.Rows(i).Cells(0).Text)
         txtNombre.Text = DgvUser.Rows(i).Cells(1).Text
         txtDni.Text = DgvUser.Rows(i).Cells(2).Text
         txtContraseña.Text = DgvUser.Rows(i).Cells(3).Text
