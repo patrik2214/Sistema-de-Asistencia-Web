@@ -98,7 +98,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
-              <a href="index.html" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
+              <a href="Index.aspx" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -109,7 +109,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>Marina</h2>
+                <h2><%Response.Write(Session("usuario")) %></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -165,9 +165,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            
-            
+            </div>            
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -181,7 +179,7 @@
               <nav class="nav navbar-nav">
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">Marina</a>
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;">
                         <span>Settings</span>
@@ -323,11 +321,6 @@
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
        <script type="text/javascript">
-           function setearDentroDays() {
-               
-           }
-           
-           
        </script>
     </form>
   </body>

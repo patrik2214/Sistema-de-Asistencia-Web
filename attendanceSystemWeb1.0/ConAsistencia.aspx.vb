@@ -70,6 +70,7 @@ Public Class ConAsistencia
 
     Private Sub BtnSearchDni_Click(sender As Object, e As EventArgs) Handles BtnSearchDni.Click
         If txtDni.Text.Length = 8 Then
+
             If clsEmpleado.FindDni(txtDni.Text) = 1 Then
                 ListAssistance(clsAsistencia.List(txtDni.Text))
             Else
@@ -80,9 +81,7 @@ Public Class ConAsistencia
         End If
     End Sub
 
-    Private Sub BtnSearchFecha_Click(sender As Object, e As EventArgs) Handles BtnSearchFecha.Click
-        ListAssistance(clsAsistencia.ListDate(calFecha.SelectedDate))
-    End Sub
+
 
 
 

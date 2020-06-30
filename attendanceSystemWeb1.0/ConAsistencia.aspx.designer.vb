@@ -158,24 +158,6 @@ Partial Public Class ConAsistencia
     Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control calFecha.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents calFecha As Global.System.Web.UI.WebControls.Calendar
-
-    '''<summary>
-    '''Control BtnSearchFecha.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents BtnSearchFecha As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''Control txtDni.
     '''</summary>
     '''<remarks>
