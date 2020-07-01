@@ -84,7 +84,6 @@
                 }, userContext);
             }
         };
-        
     </script>
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
@@ -134,7 +133,8 @@
                   </li>
                   <li><a><i class="fa fa-table"></i>Horarios<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Mantenimiento</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Mantenimiento</asp:LinkButton></li>  
+                        <li><asp:LinkButton runat="server" ID="ModHorario" OnClick="Redirect_ModHorario">Modificar horario</asp:LinkButton></li>         
                     </ul>
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
@@ -181,10 +181,7 @@
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;">
-                        <span>Settings</span>
-                      </a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <a class="dropdown-item"  href="Login.aspx"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </div>
                 </li>
               </ul>
@@ -214,8 +211,7 @@
                         <div class="item form-group">
                             <label class="col-form-label col-md-3 col-sm-3 label-align">Dni Empleado:</label>
                             <div class="col-md-6 col-sm-6 ">
-                              <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
-                                <asp:Button  runat="server" CssClass="btn btn-info" ID="BtnBuscar" Text="Buscar" />
+                              <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server" class="col-md-6" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="item form-group">

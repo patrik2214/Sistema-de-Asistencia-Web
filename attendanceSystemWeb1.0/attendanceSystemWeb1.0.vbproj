@@ -244,6 +244,7 @@
     <Content Include="Localization\zh-CHT.xml" />
     <Content Include="MantenimientoEmpleado.aspx" />
     <Content Include="MantenimientoUsuario.aspx" />
+    <Content Include="ModificarHorario.aspx" />
     <Content Include="OprAsistencia.aspx" />
     <Content Include="OprJustificacion.aspx" />
     <Content Include="OprLicencias.aspx" />
@@ -401,6 +402,13 @@
     </Compile>
     <Compile Include="MantenimientoUsuario.aspx.vb">
       <DependentUpon>MantenimientoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ModificarHorario.aspx.designer.vb">
+      <DependentUpon>ModificarHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarHorario.aspx.vb">
+      <DependentUpon>ModificarHorario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />

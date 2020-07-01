@@ -1,16 +1,16 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="RepFaltas.aspx.vb" Inherits="attendanceSystemWeb1._0.RepFaltas" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ModificarHorario.aspx.vb" Inherits="attendanceSystemWeb1._0.ModificarHorario" %>
 
 <!DOCTYPE html>
-<%@ Register assembly="Stimulsoft.Report.Web, Version=2020.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a" namespace="Stimulsoft.Report.Web" tagprefix="cc1" %>
-<html lang="es">
-  <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Sistema de Asistencia! | Reporte de Faltas</title>
+    <title>Sistema de Asistencia! | Modificar Horario </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.min.css"/>
@@ -18,17 +18,13 @@
     <link href="../librerias/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <!-- NProgress -->
     <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css"/>
-    <!-- FullCalendar -->
-    <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
-    <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
-  </head>
-
-  <body class="nav-md" style="background-color: #1C4E80">
+</head>
+<body class="nav-md" style="background-color: #1C4E80">
     <form id="form1" runat="server">
-    <div class="container body">
-      <div class="main_container">
+        <div class="container body">
+            <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
@@ -43,7 +39,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>Marina</h2>
+                <h2><%Response.Write(Session("usuario")) %></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -68,8 +64,8 @@
                   </li>
                   <li><a><i class="fa fa-table"></i>Horarios<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Mantenimiento</asp:LinkButton></li>   
-                        <li><asp:LinkButton runat="server" ID="ModHorario" OnClick="Redirect_ModHorario">Modificar horario</asp:LinkButton></li>         
+                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Registrar horario</asp:LinkButton></li>
+                        <li><asp:LinkButton runat="server" ID="ModHorario" OnClick="Redirect_ModHorario">Modificar horario</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
@@ -102,7 +98,6 @@
               </div>
             </div>
             
-            
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -116,12 +111,9 @@
               <nav class="nav navbar-nav">
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">Marina</a>
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;">
-                        <span>Settings</span>
-                      </a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <a class="dropdown-item"  href="Login.aspx"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </div>
                 </li>
               </ul>
@@ -130,10 +122,62 @@
         </div>
         <!-- /top navigation -->
 
-         <!-- page content -->
+        <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">            
-               <cc1:StiWebViewer ID="StiWebViewer1" runat="server" OnGetReport="StiWebViewer1_GetReport"></cc1:StiWebViewer>                          
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Asistencia</h3>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2><small>Modificar Horario</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                      <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Dni Empleado:</label>
+                            <div class="col-md-6 col-sm-6 ">
+                              <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server" class="col-md-6" ></asp:TextBox>
+                                <asp:Button  runat="server" CssClass="btn btn-info" ID="BtnBuscar" Text="Buscar" />
+                            </div>
+                        </div>                       
+                        <div class="ln_solid"></div>
+                        <label runat="server" ID="lblAviso" class="label-align">_</label>
+                      <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
+                          <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnUpdateSchedule" Text="Registrar" />
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="x_panel">
+                        <asp:GridView 
+                            runat="server" ID="DgvScheduleDetails" CssClass="table" 
+                            AutoGenerateEditButton="True" 
+                            AllowPaging="true"
+                            OnRowEditing="DgvScheduleDetails_RowEditing"         
+                            OnRowCancelingEdit="DgvScheduleDetails_RowCancelingEdit" 
+                            OnRowUpdating="DgvScheduleDetails_RowUpdating"
+                            OnPageIndexChanging="DgvScheduleDetails_PageIndexChanging"
+                            >
+ 
+                        </asp:GridView>
+                    </div>
+                    </div>
+                </div>
+                 
+            </div>
           </div>
         </div>
         <!-- /page content -->
@@ -146,23 +190,17 @@
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
-        
-      </div>
-    </div>
-    
-    <!-- jQuery -->
-    <script src="../librerias/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../librerias/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="../librerias/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../librerias/nprogress/nprogress.js"></script>
-    <!-- FullCalendar -->
-    <script src="../librerias/moment/min/moment.min.js"></script>
-    <script src="../librerias/fullcalendar/dist/fullcalendar.min.js"></script>
-    <!--Scripts de Tema Personalizado-->
-    <script src="../librerias/build/js/custom.min.js"></script>
-	</form>
-  </body>
+        </div>
+           <!-- jQuery -->
+            <script src="../librerias/jquery/dist/jquery.min.js"></script>
+            <!-- Bootstrap -->
+            <script src="../librerias/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- FastClick -->
+            <script src="../librerias/fastclick/lib/fastclick.js"></script>
+            <!-- NProgress -->
+            <script src="../librerias/nprogress/nprogress.js"></script>
+            <!--Scripts de Tema Personalizado-->
+            <script src="../librerias/build/js/custom.min.js"></script>
+    </form>
+</body>
 </html>

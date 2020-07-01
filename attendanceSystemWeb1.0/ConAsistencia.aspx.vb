@@ -10,6 +10,9 @@ Public Class ConAsistencia
     Protected Sub Redirect_Empleado(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoEmpleado.aspx")
     End Sub
+    Protected Sub Redirect_ModHorario(ByVal sender As Object, ByVal e As System.EventArgs)
+        Response.Redirect("ModificarHorario.aspx")
+    End Sub
 
     Protected Sub Redirect_Horario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("Horario.aspx")

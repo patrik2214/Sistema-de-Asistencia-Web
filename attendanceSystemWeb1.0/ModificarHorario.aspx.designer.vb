@@ -11,7 +11,16 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class OprAsistencia
+Partial Public Class ModificarHorario
+
+    '''<summary>
+    '''Control form1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
     '''Control ManUsuario.
@@ -149,13 +158,22 @@ Partial Public Class OprAsistencia
     Protected WithEvents Tardanzas As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''Control txtDni.
+    '''Control TxtDni.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtDni As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TxtDni As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control BtnBuscar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnBuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control lblAviso.
@@ -167,11 +185,29 @@ Partial Public Class OprAsistencia
     Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control Guardar.
+    '''Control BtnClear.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Guardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnClear As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control BtnUpdateSchedule.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnUpdateSchedule As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control DgvScheduleDetails.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DgvScheduleDetails As Global.System.Web.UI.WebControls.GridView
 End Class

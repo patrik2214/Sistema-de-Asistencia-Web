@@ -13,7 +13,9 @@ Public Class OprAsistencia
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoUsuario.aspx")
     End Sub
-
+    Protected Sub Redirect_ModHorario(ByVal sender As Object, ByVal e As System.EventArgs)
+        Response.Redirect("ModificarHorario.aspx")
+    End Sub
     Protected Sub Redirect_Empleado(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoEmpleado.aspx")
     End Sub

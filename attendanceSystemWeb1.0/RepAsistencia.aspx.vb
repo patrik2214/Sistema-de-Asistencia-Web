@@ -26,7 +26,9 @@ Public Class RepAsistencia
     Protected Sub Redirect_Horario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("Horario.aspx")
     End Sub
-
+    Protected Sub Redirect_ModHorario(ByVal sender As Object, ByVal e As System.EventArgs)
+        Response.Redirect("ModificarHorario.aspx")
+    End Sub
     Protected Sub Redirect_OprAsistencia(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("OprAsistencia.aspx")
     End Sub
