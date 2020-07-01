@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
          
-    <title>Sistema de Asistencia! | </title>
+    <title>Sistema de Asistencia! | Horario </title>
     <!-- jQuery -->
     <script src="../librerias/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -184,7 +184,7 @@
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="Login.aspx"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <asp:LinkButton runat="server" class="dropdown-item" ID="Logout" OnClick="Redirect_Login">Cerrar sesion</asp:LinkButton>
                   </div>
                 </li>
               </ul>
@@ -212,7 +212,7 @@
                     </div>
                     <div class="x_content">
                         <div class="item form-group">
-                            <label class="col-form-label col-md-3 col-sm-3 label-align">Dni Empleado:</label>
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">DNI Empleado:</label>
                             <div class="col-md-6 col-sm-6 ">
                               <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server" class="col-md-6" ></asp:TextBox>
                             </div>

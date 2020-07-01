@@ -23,7 +23,14 @@ Public Class RepTardanzas
     Protected Sub Redirect_Empleado(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoEmpleado.aspx")
     End Sub
-
+    Protected Sub Redirect_Login(ByVal sender As Object, ByVal e As System.EventArgs)
+        Try
+            Session("usuario") = Nothing
+            Response.Redirect("Login.aspx", False)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
     Protected Sub Redirect_Horario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("Horario.aspx")
     End Sub

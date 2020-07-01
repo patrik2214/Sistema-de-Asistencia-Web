@@ -9,7 +9,14 @@ Public Class OprAsistencia
             End If
         End If
     End Sub
-
+    Protected Sub Redirect_Login(ByVal sender As Object, ByVal e As System.EventArgs)
+        Try
+            Session("usuario") = Nothing
+            Response.Redirect("Login.aspx", False)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
     Protected Sub Redirect_Usuario(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("MantenimientoUsuario.aspx")
     End Sub

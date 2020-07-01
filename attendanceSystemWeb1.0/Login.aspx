@@ -20,9 +20,9 @@
       <div class="login_wrapper animate-pop-in">
         <div class="animate form login_form">
           <section class="login_content">
-              <div class="row">
-                    <img src="Resources/innovation__monochromatic.png" height="300" width="350" />
-                </div>
+              <div class="row m-o p-0">
+                    <img src="Resources/innovation__monochromatic.png" width="70%" />
+               </div>
             <form id="formIncio" runat="server">
                 
                 <h1 style="color: #ffffff">Iniciar Sesión</h1>

@@ -113,7 +113,7 @@
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="Login.aspx"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <asp:LinkButton runat="server" class="dropdown-item" ID="Logout" OnClick="Redirect_Login">Cerrar sesion</asp:LinkButton>
                   </div>
                 </li>
               </ul>
@@ -127,7 +127,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Asistencia</h3>
+                <h3>Horario</h3>
               </div>
             </div>
             <div class="clearfix"></div>
@@ -135,13 +135,13 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2><small>Modificar Horario</small></h2>
+                    <h2><small>Modificar</small></h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
                       <div class="item form-group">
-                            <label class="col-form-label col-md-3 col-sm-3 label-align">Dni Empleado:</label>
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">DNI Empleado:</label>
                             <div class="col-md-6 col-sm-6 ">
                               <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server" class="col-md-6" ></asp:TextBox>
                                 <asp:Button  runat="server" CssClass="btn btn-info" ID="BtnBuscar" Text="Buscar" />

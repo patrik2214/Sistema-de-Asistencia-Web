@@ -4,7 +4,7 @@
 <html lang="es">
   <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!-- Meta, title, CSS, favicons, etc. -->
+    <%--<!-- Meta, title, CSS, favicons, etc. -->--%>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -128,7 +128,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Calendario</h3>
+                <h3>Bienvenido!!</h3>
               </div>
             </div>
 
@@ -138,7 +138,7 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_content">
-                      <img src="Resources/authentication_isometric.png" class="col-md-12" />
+                      <img src="Resources/authentication_isometric.png" class="col-md-12" height="80%" width="80%" />
                   </div>
                 </div>
               </div>

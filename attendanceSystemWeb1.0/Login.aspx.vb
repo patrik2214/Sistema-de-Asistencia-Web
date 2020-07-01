@@ -17,5 +17,4 @@ Public Class WebForm1
             lblMensaje.Text = "CREDENCIALES NO VALIDAS"
         End Try
     End Sub
-
 End Class

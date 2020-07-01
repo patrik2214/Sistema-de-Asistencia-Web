@@ -115,10 +115,7 @@
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;">
-                        <span>Settings</span>
-                      </a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <asp:LinkButton runat="server" class="dropdown-item" ID="Logout" OnClick="Redirect_Login">Cerrar sesion</asp:LinkButton>
                   </div>
                 </li>
               </ul>
@@ -146,7 +143,7 @@
                   <div class="x_content">
                     <br />
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Dni</label>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">DNI</label>
                         <div class="col-md-6 col-sm-6 ">
                           <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
