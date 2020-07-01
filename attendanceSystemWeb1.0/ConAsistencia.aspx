@@ -107,9 +107,9 @@
         <!-- end sidebar menu -->
 
         <!-- top navigation -->
-        <div class="top_nav animate-pop-in">
-          <div class="nav_menu animate-pop-in">
-              <div class="nav toggle animate-pop-in">
+        <div class="top_nav">
+          <div class="nav_menu">
+              <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
               <nav class="nav navbar-nav">
