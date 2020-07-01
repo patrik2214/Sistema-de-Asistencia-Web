@@ -14,7 +14,14 @@ Public Class WebForm1
                 lblMensaje.Text = "Error de acceso!!"
             End If
         Catch ex As Exception
-            Throw New Exception("Error al ingresar: " + ex.Message)
+            lblMensaje.Text = "CREDENCIALES NO VALIDAS"
+        End Try
+    End Sub
+    Protected Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Try
+
+        Catch ex As Exception
+
         End Try
     End Sub
 End Class
