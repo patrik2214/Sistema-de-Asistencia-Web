@@ -22,6 +22,7 @@
   </head>
     
   <body class="nav-md" style="background-color: #1C4E80">
+      <form id="form1" runat="server">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">           
@@ -46,7 +47,7 @@
             <br />
 
             <!-- sidebar menu -->
-            <form id="form1" runat="server">
+            
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
@@ -96,7 +97,7 @@
                 </ul>
               </div>
             </div>
-            </form>
+            
             
           </div>
         </div>
@@ -113,10 +114,7 @@
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false"><%Response.Write(Session("usuario")) %></a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;">
-                        <span>Settings</span>
-                      </a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <asp:LinkButton runat="server" class="dropdown-item" ID="Logout" OnClick="Redirect_Login">Cerrar sesion</asp:LinkButton>
                   </div>
                 </li>
               </ul>
@@ -174,7 +172,7 @@
     <script src="../librerias/fullcalendar/dist/fullcalendar.min.js"></script>
     <!--Scripts de Tema Personalizado-->
     <script src="../librerias/build/js/custom.min.js"></script>
-	
+	</form>
   </body>
 </html>
 
