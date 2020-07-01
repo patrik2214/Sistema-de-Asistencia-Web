@@ -254,6 +254,7 @@
     <Content Include="RepTardanzas.aspx" />
     <Content Include="Resources\authentication_isometric.png" />
     <Content Include="Resources\baja.png" />
+    <Content Include="Resources\innovation__monochromatic.png" />
     <Content Include="Resources\pencilx32.png" />
     <Content Include="Resources\trashx32.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />

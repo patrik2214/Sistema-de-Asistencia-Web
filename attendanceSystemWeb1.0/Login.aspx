@@ -19,9 +19,14 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
+              <div class="row">
+                    <img src="Resources/innovation__monochromatic.png" height="300" width="350" />
+                </div>
             <form id="formIncio" runat="server">
+                
                 <h1 style="color: #ffffff">Iniciar Sesión</h1>
                 <div class="form-group" style="clip: rect(5px, auto, 5px, auto)">                   
+                    
                     <asp:TextBox ID="txtNombreUsuario" CssClass="form-control" runat="server" placeholder=" Usuario" Width="300px" Height="30px"></asp:TextBox> <br/>                    
                     <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server" TextMode="Password" placeholder=" Contraseña"  Width="300px" Height="30px"></asp:TextBox><br />
                     <asp:Label runat="server" ForeColor="White" ID="lblMensaje"></asp:Label><br /><br />
