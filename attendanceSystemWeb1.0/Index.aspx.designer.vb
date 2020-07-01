@@ -59,6 +59,15 @@ Partial Public Class Index
     Protected WithEvents ManHorario As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control ModHorario.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ModHorario As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''Control ManTipoLicencia.
     '''</summary>
     '''<remarks>
