@@ -158,6 +158,15 @@ Partial Public Class Horario
     Protected WithEvents TxtDni As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control BtnBuscar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnBuscar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control DtpStartDate.
     '''</summary>
     '''<remarks>
@@ -174,6 +183,15 @@ Partial Public Class Horario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DtpEndDate As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblAviso.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''Control BtnClear.

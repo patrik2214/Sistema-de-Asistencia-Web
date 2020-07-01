@@ -150,4 +150,19 @@ Public Class Horario
     Public Shared Sub SetearDias(vals As List(Of String))
         day.Add({vals(0), vals(1), vals(2)})
     End Sub
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Try
+            If TxtDni.Text.Length = 8 Then
+                Dim schedule_list = clsHorario.SearchScheduleForDNI(TxtDni.Text)
+                Dim last_schedule = schedule_list.Last()
+
+            Else
+                lblAviso.InnerText = "Este DNI no tiene horarios asociados"
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Sub
+
 End Class
