@@ -125,7 +125,7 @@ Public Class Horario
         Try
             Dim span As TimeSpan = TimeSpan.FromDays(1)
             If Date.Parse(DtpEndDate.Text) - Date.Parse(DtpStartDate.Text) < span Then
-                Console.Write("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH me quiero morirrrrrrrrrrrrrrrrrr")
+                lblAviso.InnerText = "No se permiten fechas tan cercanas"
             Else
 
                 Using DB = New BDAsistenciaEntities()
