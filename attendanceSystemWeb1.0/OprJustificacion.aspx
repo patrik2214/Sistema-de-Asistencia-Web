@@ -142,20 +142,43 @@
                   </div>
                   <div class="x_content">
                     <br />
-
+                      <asp:HiddenField id="HiddenId" runat="server" value=""/>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">DNI<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                           <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BuscarDni" Text="Buscar" />
                         </div>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:DataGrid ID="tblDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:DataGrid>
+                          <div class="x_panel">
+                            <asp:GridView 
+                                runat="server" ID="DgvJustify" CssClass="table" OnRowCommand="DgvJustify_RowCommand" 
+                                GridLines="None"
+                                AutoGenerateColumns="False"
+                                >
+     
+                                <RowStyle CssClass="even"/>
+                                <HeaderStyle CssClass="header" />
+                                <AlternatingRowStyle CssClass="odd"/>
+     
+                                <Columns>
+                                    <asp:BoundField HeaderText="ID" DataField="id"/>
+                                    <asp:BoundField HeaderText="Fecha" DataField="fecha"/>
+                                    <asp:BoundField HeaderText="Hora de Entrada" DataField="inhour"/>
+                                    <asp:BoundField HeaderText="Hora de Salida" DataField="outhour"/>
+                                    <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                </Columns>
+                            </asp:GridView>
+                          </div>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha<span class="required">*</span>
                         </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <asp:TextBox ID="DtpFecha" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                        </div>
                         <div class="col-md-6 col-sm-6 ">
                           <asp:DataGrid ID="txtTardanza" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:DataGrid>
                         </div>
@@ -163,14 +186,14 @@
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Motivo</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtApellido" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtMotivo" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
                       </div>
+                      <label runat="server" ID="lblAviso" class="label-align">_</label>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="Button1" Text="Buscar" />
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" /> />
                           <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
                         </div>
                       </div>
