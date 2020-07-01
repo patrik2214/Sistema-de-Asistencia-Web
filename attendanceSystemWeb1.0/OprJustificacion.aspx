@@ -179,9 +179,6 @@
                         <div class="col-md-6 col-sm-6 ">
                           <asp:TextBox ID="DtpFecha" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
                         </div>
-                        <div class="col-md-6 col-sm-6 ">
-                          <asp:DataGrid ID="txtTardanza" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:DataGrid>
-                        </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Motivo</label>

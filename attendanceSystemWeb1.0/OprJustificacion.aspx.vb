@@ -102,7 +102,7 @@ Public Class OprJustificacion
     End Sub
 
     Private Sub SetNewJustification(j As capaDatos.justification)
-        j.fecha = DateTime.Now()
+        j.fecha = Date.Parse(DtpFecha.Text)
         j.reason = txtMotivo.Text
         j.state = True
         j.AssistanceId = HiddenId.Value
