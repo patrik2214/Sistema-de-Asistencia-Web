@@ -10,13 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de Asistencia! | Iniciar Sesión</title>    
     <!-- Estilo de Tema Personalizado -->
+    <link href="../librerias/animate/animate.css" rel="stylesheet"/>
     <link href="../css/custom.min.css" rel="stylesheet">
 
   </head>
 
   <body class="login" style="background-color: #1C4E80" >
     <div>
-      <div class="login_wrapper">
+      <div class="login_wrapper animate-pop-in">
         <div class="animate form login_form">
           <section class="login_content">
               <div class="row">
