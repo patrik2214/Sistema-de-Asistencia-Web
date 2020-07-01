@@ -54,10 +54,10 @@
                     n = 7;
                 };
                 var sobrante = select - n;
-                if (sobrante < 0) {
-                    hoy.setDate(dd - sobrante);
-                } else if (sobrante > 0) {
-                    hoy.setDate(dd + sobrante);
+                if (select < n) {
+                    hoy.setDate(dd - Math.abs(sobrante) );
+                } else if (select > n) {
+                    hoy.setDate(dd + Math.abs(sobrante));
                 }
                 hoy = hoy.toISOString().slice(0, 10);
                 hinicio = (hinicio < 10) ? "0" + hinicio : hinicio;
@@ -215,6 +215,7 @@
                             <label class="col-form-label col-md-3 col-sm-3 label-align">Dni Empleado:</label>
                             <div class="col-md-6 col-sm-6 ">
                               <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                                <asp:Button  runat="server" CssClass="btn btn-info" ID="BtnBuscar" Text="Buscar" />
                             </div>
                         </div>
                         <div class="item form-group">
@@ -232,6 +233,7 @@
                         </div>
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalSave" >Agregar dia</button>
                         <div class="ln_solid"></div>
+                        <label runat="server" ID="lblAviso" class="label-align">_</label>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                           <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
