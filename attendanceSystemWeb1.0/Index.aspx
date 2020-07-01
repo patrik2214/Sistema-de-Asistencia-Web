@@ -138,7 +138,7 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_content">
-                      <img src="Resources/authentication_isometric.png" class="col-md-12" height="80%" width="80%" />
+                      <img src="Resources/authentication_isometric.png" class="col-md-12"  />
                   </div>
                 </div>
               </div>
