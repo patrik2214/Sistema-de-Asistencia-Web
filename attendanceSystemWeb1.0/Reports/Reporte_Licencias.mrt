@@ -86,7 +86,7 @@
       </justification>
       <license Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>license</Alias>
-        <Columns isList="true" count="8">
+        <Columns isList="true" count="17">
           <value>lincenseId,System.Int32</value>
           <value>startDate,System.DateTime</value>
           <value>endDate,System.DateTime</value>
@@ -95,6 +95,15 @@
           <value>typeId,System.Byte</value>
           <value>PresentationDate,System.DateTime</value>
           <value>document,System.String</value>
+          <value>name,System.String</value>
+          <value>lastname,System.String</value>
+          <value>genre,System.String</value>
+          <value>address,System.String</value>
+          <value>phone,System.String</value>
+          <value>email,System.String</value>
+          <value>licenseTypeId,System.Byte</value>
+          <value>description,System.String</value>
+          <value>maxDias,System.Int16</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
@@ -105,8 +114,7 @@
         <SqlCommand>SELECT employee.*, license.*, licenseType.*
 FROM license INNER JOIN
   employee ON employee.dni = license.dni INNER JOIN
-  licenseType ON licenseType.licenseTypeId = license.typeId
-WHERE license.state = 1</SqlCommand>
+  licenseType ON licenseType.licenseTypeId = license.typeId</SqlCommand>
       </license>
       <licenseType Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>licenseType</Alias>
@@ -602,10 +610,10 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/30/2020 5:44:53 PM</ReportChanged>
+  <ReportChanged>7/1/2020 12:02:29 PM</ReportChanged>
   <ReportCreated>6/6/2020 8:24:20 PM</ReportCreated>
   <ReportFile>C:\Users\LISSETH\Documents\MEGA\Lisseth\CICLO VII\Sistemas Distribuidos\Proyecto\Sistema-de-Asistencia-Web\attendanceSystemWeb1.0\Reports\Reporte_Licencias.mrt</ReportFile>
-  <ReportGuid>93ece11c543c451f9af1525245d44ac1</ReportGuid>
+  <ReportGuid>1ee96fc003484c05897941649d267c21</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2020.3.2.0</ReportVersion>
