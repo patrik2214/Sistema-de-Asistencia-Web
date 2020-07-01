@@ -21,6 +21,7 @@
     <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <!-- Estilo de Tema Personalizado -->
+    <link href="../librerias/animate.css/animate.css" rel="stylesheet"/>
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
 
