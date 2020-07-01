@@ -21,7 +21,7 @@
     <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <!-- Estilo de Tema Personalizado -->
-    <link href="../librerias/animate.css/animate.css" rel="stylesheet"/>
+    <link href="../librerias/animate/animate.css" rel="stylesheet"/>
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
 
@@ -147,7 +147,6 @@
                   </div>
                     <label runat="server" ID="lblAviso" class="label-align">_</label>
                   <div class="x_content animate-pop-in">
-                    <br />
                       <div class="item form-group animate-pop-in"> 
                          <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un dni" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchDni" Text="Buscar" />
@@ -156,33 +155,35 @@
                 </div>
               </div>
             </div>
-                 
+               
+            <div class="row">
+              <div class="col-md-12 col-sm-12 animate-pop-in">
+                       <asp:GridView 
+                             runat="server" ID="DgvAssitance" CssClass="table"
+                             GridLines="None"
+                             AutoGenerateColumns="False"
+                             >
+  
+                             <RowStyle CssClass="even"/>
+                             <HeaderStyle CssClass="header" />
+                             <AlternatingRowStyle CssClass="odd"/>
+  
+                             <Columns>
+                                 <asp:BoundField HeaderText="Fecha" DataField="fecha"/>
+                                 <asp:BoundField HeaderText="Hora de Entrada" DataField="inhour"/>
+                                 <asp:BoundField HeaderText="Hora de Salida" DataField="outhour"/>
+                                 <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                             </Columns>
+  
+                         </asp:GridView>
+                    
+                   </div>
+               </div>
+
             </div>
           </div>
         
-        <div class="row">
-             <div class="col-md-12 col-sm-12 animate-pop-in">
-                      <asp:GridView 
-                            runat="server" ID="DgvAssitance" CssClass="table"
-                            GridLines="None"
-                            AutoGenerateColumns="False"
-                            >
- 
-                            <RowStyle CssClass="even"/>
-                            <HeaderStyle CssClass="header" />
-                            <AlternatingRowStyle CssClass="odd"/>
- 
-                            <Columns>
-                                <asp:BoundField HeaderText="Fecha" DataField="fecha"/>
-                                <asp:BoundField HeaderText="Hora de Entrada" DataField="inhour"/>
-                                <asp:BoundField HeaderText="Hora de Salida" DataField="outhour"/>
-                                <asp:BoundField HeaderText="Dni" DataField="dni"/>
-                            </Columns>
- 
-                        </asp:GridView>
-                   
-                  </div>
-              </div>
+        
            </div>
         <!-- /page content -->
 
