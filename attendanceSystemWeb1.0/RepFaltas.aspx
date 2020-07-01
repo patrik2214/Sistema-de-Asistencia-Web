@@ -22,7 +22,6 @@
     <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <!-- Estilo de Tema Personalizado -->
-    <link href="../librerias/animate/animate.css" rel="stylesheet"/>
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
 
@@ -44,7 +43,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>Marina</h2>
+                <h2> <%Response.Write(Session("usuario")) %></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -52,8 +51,8 @@
             <br />
 
             <!-- sidebar menu -->
-            
-            <div id="sidebar-menu animate-pop-in" class="main_menu_side hidden-print main_menu">
+             
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-child"></i>Empleado<span class="fa fa-chevron-down"></span></a>
@@ -102,8 +101,7 @@
                 </ul>
               </div>
             </div>
-            
-            
+
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -132,7 +130,7 @@
         <!-- /top navigation -->
 
          <!-- page content -->
-        <div class="right_col animate-pop-in" role="main">
+        <div class="right_col " role="main">
           <div class="">            
                <cc1:StiWebViewer ID="StiWebViewer1" runat="server" OnGetReport="StiWebViewer1_GetReport"></cc1:StiWebViewer>                          
           </div>
@@ -141,7 +139,7 @@
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right animate-pop-in">
+          <div class="pull-right ">
             Plataforma Asistencia Panchito -  by Us
           </div>
           <div class="clearfix"></div>

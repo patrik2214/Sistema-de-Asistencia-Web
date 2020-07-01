@@ -21,7 +21,7 @@
     <link href="../librerias/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
     <link href="../librerias/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <!-- Estilo de Tema Personalizado -->
-    <link href="../librerias/animate/animate.css" rel="stylesheet"/>
+    
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
 
@@ -51,8 +51,8 @@
             <br />
 
             <!-- sidebar menu -->
-            
-            <div id="sidebar-menu animate-pop-in" class="main_menu_side hidden-print main_menu">
+             
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-child"></i>Empleado<span class="fa fa-chevron-down"></span></a>
@@ -68,7 +68,7 @@
                   </li>
                   <li><a><i class="fa fa-table"></i>Horarios<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Mantenimiento</asp:LinkButton></li>    
+                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Mantenimiento</asp:LinkButton></li>   
                         <li><asp:LinkButton runat="server" ID="ModHorario" OnClick="Redirect_ModHorario">Modificar horario</asp:LinkButton></li>         
                     </ul>
                   </li>
@@ -101,7 +101,7 @@
                 </ul>
               </div>
             </div>
-            
+
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -130,7 +130,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col animate-pop-in" role="main">
+        <div class="right_col " role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
@@ -230,7 +230,7 @@
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right animate-pop-in">
+          <div class="pull-right ">
             Plataforma Asistencia Panchito -  by Us
           </div>
           <div class="clearfix"></div>
