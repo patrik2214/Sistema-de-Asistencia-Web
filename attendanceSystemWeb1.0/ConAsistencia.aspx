@@ -28,20 +28,20 @@
   <body class="nav-md" style="background-color: #1C4E80">
     <form id="form1" runat="server">
     <div class="container body">
-      <div class="main_container animate-pop-in">
-        <div class="col-md-3 left_col animate-pop-in">
-          <div class="left_col scroll-view animate-pop-in" style="background-color: #1C4E80">
-            <div class="navbar nav_title animate-pop-in" style="border: 0;background-color: #1C4E80">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view" style="background-color: #1C4E80">
+            <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
               <a href="Index.aspx" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
             </div>
 
-            <div class="clearfix animate-pop-in"></div>
+            <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            <div class="profile clearfix animate-pop-in">
-              <div class="profile_pic animate-pop-in">
+            <div class="profile clearfix">
+              <div class="profile_pic">
               </div>
-              <div class="profile_info animate-pop-in">
+              <div class="profile_info">
                 <span>Bienvenido,</span>
                 <h2> <%Response.Write(Session("usuario"))%></h2>
               </div>
@@ -53,7 +53,7 @@
             <!-- sidebar menu -->
             
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu animate-pop-in">
-              <div class="menu_section animate-pop-in">
+              <div class="menu_section">
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-child"></i>Empleado<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -131,23 +131,23 @@
 
         <!-- page content -->
           <div class="right_col animate-pop-in" role="main">
-          <div class="animate-pop-in">
-            <div class="page-title animate-pop-in">
-              <div class="title_left animate-pop-in">
+          <div class="">
+            <div class="page-title ">
+              <div class="title_left ">
                 <h3>Asistencia</h3>
               </div>
             </div>
-            <div class="clearfix animate-pop-in"></div>
-            <div class="row animate-pop-in">
-              <div class="col-md-12 col-sm-12 animate-pop-in">
-                <div class="x_panel animate-pop-in">
-                  <div class="x_title animate-pop-in">
+            <div class="clearfix "></div>
+            <div class="row ">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel ">
+                  <div class="x_title ">
                     <h2><small>Consulta</small></h2>
-                    <div class="clearfix animate-pop-in"></div>
+                    <div class="clearfix "></div>
                   </div>
                     <label runat="server" ID="lblAviso" class="label-align">_</label>
-                  <div class="x_content animate-pop-in">
-                      <div class="item form-group animate-pop-in"> 
+                  <div class="x_content ">
+                      <div class="item form-group "> 
                          <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un dni" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchDni" Text="Buscar" />
                       </div>
@@ -157,7 +157,7 @@
             </div>
                
             <div class="row">
-              <div class="col-md-12 col-sm-12 animate-pop-in">
+              <div class="col-md-12 col-sm-12 ">
                        <asp:GridView 
                              runat="server" ID="DgvAssitance" CssClass="table"
                              GridLines="None"
@@ -192,7 +192,7 @@
           <div class="pull-right animate-pop-in">
             Plataforma Asistencia Panchito -  by Us
           </div>
-          <div class="clearfix animate-pop-in"></div>
+          <div class="clearfix "></div>
         </footer>
         <!-- /footer content -->
        

@@ -18,6 +18,7 @@
     <!-- NProgress -->
     <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css"/>
     <!-- Estilo de Tema Personalizado -->
+    <link href="../librerias/animate/animate.css" rel="stylesheet"/>
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
   </head>
      
@@ -48,7 +49,7 @@
 
             <!-- sidebar menu -->
             
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div id="sidebar-menu animate-pop-in" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-child"></i>Empleado<span class="fa fa-chevron-down"></span></a>
@@ -125,7 +126,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
+        <div class="right_col animate-pop-in" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
@@ -240,7 +241,7 @@
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right">
+          <div class="pull-right animate-pop-in">
             Plataforma Asistencia Panchito -  by Us
           </div>
           <div class="clearfix"></div>
