@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Sistema de Asistencia! | Permiso</title>
+    <title>Sistema de Asistencia! | Permisos</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.min.css"/>
@@ -127,82 +127,91 @@
         <!-- page content -->
         <div class="right_col " role="main">
           <div class="container">
-            <div class="page-title">
+            <div class="page-title container">
               <div class="title_left">
-                <h3>Contrato</h3>
+                <h3>Permisos</h3>
               </div>
             </div>
             <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">
+            <div class="row container">
+              <div class="col-md-12 col-sm-12 container">
+                <div class="x_panel container">
                   <div class="x_title">
                     <h2><small>Mantenimiento</small></h2>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content container">
                     <br />
                       <asp:HiddenField id="HiddenId" runat="server" value=""/>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Presentación<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                          <asp:Calendar ID="calPresentacion" CssClass="" runat="server"  Width="400px" Height="400px"></asp:Calendar>
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Permiso<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                          <asp:Calendar ID="calPermiso" CssClass="" runat="server"  Width="400px" Height="400px"></asp:Calendar>
+                      <div class="row">
+                          <div class="col-form-label col-md-6 col-sm-3">
+                              <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Presentación<span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                  <asp:Calendar ID="calPresentacion" CssClass="" runat="server" Height="400px"></asp:Calendar>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-form-label col-md-6 col-sm-3">                              
+                              <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Permiso<span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                  <asp:Calendar ID="calPermiso" CssClass="" runat="server" Height="400px"></asp:Calendar>
+                                </div>
+                              </div>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Motivo<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtMotivo" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtMotivo" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
+                        <br />
                         <label class="col-form-label col-md-3 col-sm-3 label-align">DNI<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
+                        <br />
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Estado<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                            <label class="form-check-label"></label>
-                          <asp:CheckBox ID="chkEstado" CssClass="custom-checkbox" runat="server"  Width="400px" Height="40px"></asp:CheckBox>
+                          <asp:CheckBox ID="chkEstado" CssClass="custom-checkbox" runat="server" Height="40px"></asp:CheckBox>
                         </div>
                       </div>
-                      <label runat="server" ID="lblAviso" class="label-align">_</label>
+                      <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
-                        <div class="col-md-6 col-sm-6 offset-md-3">
+                        <div class="col-md-6 col-sm-6 offset-md-3">                           
                           <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
                           <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegister" Text="Guardar" />
                         </div>
                       </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
 
-              <div class="row">
-                  <div class="col-md-12 col-sm-12 ">
-                      <div class="x_panel"> 
+              <div class="row container">
+                  <div class="col-md-12 col-sm-12 container">
+                      <div class="x_panel container"> 
                           <div class="item form-group"> 
-                              <asp:TextBox ID="txtBuscar" placeholder="Ingrese un dni"  CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                              <asp:TextBox ID="txtBuscar" placeholder="Ingrese un DNI"  CssClass="form-control" runat="server" Height="40px"></asp:TextBox>
                               <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearch" Text="Buscar" />
                           </div>
                           
                       </div>
                       
-                    <div class="x_panel">
+                    <div class="x_panel container">                    
+                      <div class="table-responsive col-md-12 col-sm-12 ">
                         <asp:GridView 
                             runat="server" ID="DgvPermission" CssClass="table" OnRowCommand="DgvPermission_RowCommand"
                             GridLines="None"
@@ -218,7 +227,7 @@
                                 <asp:BoundField HeaderText="Día de Presentación" DataField="presentationDate"/>
                                 <asp:BoundField HeaderText="Día de Permiso" DataField="permissionDate"/>
                                 <asp:BoundField HeaderText="Motivo" DataField="reason"/>
-                                <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                <asp:BoundField HeaderText="DNI" DataField="dni"/>
                                 <asp:BoundField HeaderText="Estado" DataField="state"/>
                                 <asp:TemplateField HeaderText="Modificar">
                                     <ItemTemplate>
@@ -233,6 +242,7 @@
                             </Columns>
  
                         </asp:GridView>
+                          </div>
                     </div>
                   </div>
               </div>
