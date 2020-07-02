@@ -125,30 +125,30 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="container">
-            <div class="page-title">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Horario</h3>
               </div>
             </div>
             <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">
+            <div class="row container">
+              <div class="col-md-12 col-sm-12 container">
+                <div class="x_panel container">
                   <div class="x_title">
                     <h2><small>Modificar</small></h2>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content container">
                     <br />
                       <div class="item form-group">
                             <label class="col-form-label col-md-3 col-sm-3 label-align">DNI Empleado:</label>
                             <div class="col-md-6 col-sm-6 ">
                               <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server" class="col-md-6" ></asp:TextBox>
-                                <asp:Button  runat="server" CssClass="btn btn-info" ID="BtnBuscar" Text="Buscar" />
+                              <asp:Button  runat="server" CssClass="btn btn-info" ID="BtnBuscar" Text="Buscar" />
                             </div>
                         </div>                       
                         <div class="ln_solid"></div>
-                        <label runat="server" ID="lblAviso" class="label-align">_</label>
+                        <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                           <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
@@ -159,9 +159,10 @@
                 </div>
               </div>
             </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 ">
-                        <div class="x_panel">
+                <div class="row container">
+                  <div class="col-md-12 col-sm-12 container">
+                      <div class="x_panel container"> 
+                          <div class="table-responsive col-md-12 col-sm-12 ">
                         <asp:GridView 
                             runat="server" ID="DgvScheduleDetails" CssClass="table" 
                             AutoGenerateEditButton="True" 
@@ -173,6 +174,7 @@
                             >
  
                         </asp:GridView>
+                       </div>
                     </div>
                     </div>
                 </div>

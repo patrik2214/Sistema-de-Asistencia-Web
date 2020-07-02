@@ -185,7 +185,7 @@
                   <div class="col-md-12 col-sm-12 container">
                       <div class="x_panel container"> 
                           <div class="item form-group"> 
-                              <asp:TextBox ID="txtBuscar" placeholder="Ingrese un dni"  CssClass="form-control" runat="server" Height="40px"></asp:TextBox>
+                              <asp:TextBox ID="txtBuscar" placeholder="Ingrese un DNI"  CssClass="form-control" runat="server" Height="40px"></asp:TextBox>
                               <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearch" Text="Buscar" />
                           </div>
                           
