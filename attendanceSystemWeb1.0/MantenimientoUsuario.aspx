@@ -124,40 +124,40 @@
         <!-- page content -->
         <div class="right_col " role="main">
           <div class="container">
-            <div class="page-title">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Usuario</h3>
               </div>
             </div>
             <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">
+            <div class="row container">
+              <div class="col-md-12 col-sm-12 container">
+                <div class="x_panel container">
                   <div class="x_title">
                     <h2><small>Mantenimiento</small></h2>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content container">
                     <br />
                       <asp:HiddenField id="HiddenId" runat="server" value=""/>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Nombre <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Contraseña <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">DNI</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
@@ -165,7 +165,7 @@
                           <br/>
                         <div class="col-md-6 col-sm-6 ">
                           <label class="form-check-label"></label>
-                          <asp:CheckBox ID="chkEstado" TextAlign="right" CssClass="custom-checkbox" runat="server"  Width="400px" Height="30px"/>
+                          <asp:CheckBox ID="chkEstado" TextAlign="right" CssClass="custom-checkbox" runat="server"  Height="30px"/>
                         </div>
                       </div>
                       <label runat="server" ID="lblAviso" class="label-align"></label>
@@ -181,17 +181,18 @@
               </div>
             </div>
 
-              <div class="row">
-                  <div class="col-md-12 col-sm-12 ">
-                      <div class="x_panel"> 
+              <div class="row container">
+                  <div class="col-md-12 col-sm-12 container">
+                      <div class="x_panel container"> 
                           <div class="item form-group"> 
-                              <asp:TextBox ID="txtBuscar" placeholder="Ingrese un dni"  CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                              <asp:TextBox ID="txtBuscar" placeholder="Ingrese un dni"  CssClass="form-control" runat="server" Height="40px"></asp:TextBox>
                               <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearch" Text="Buscar" />
                           </div>
                           
                       </div>
                       
-                    <div class="x_panel">
+                    <div class="x_panel container">                    
+                      <div class="table-responsive col-md-12 col-sm-12 ">
                         <asp:GridView 
                             runat="server" ID="DgvUser" CssClass="table" OnRowCommand="DgvUser_RowCommand"
                             GridLines="None"
@@ -203,9 +204,9 @@
                             <AlternatingRowStyle CssClass="odd"/>
  
                             <Columns>
-                                <asp:BoundField HeaderText="ID" DataField="userid"/>
+                                <asp:BoundField HeaderText="Id" DataField="userid"/>
                                 <asp:BoundField HeaderText="Nombre" DataField="username"/>
-                                <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                <asp:BoundField HeaderText="DNI" DataField="dni"/>
                                 <asp:BoundField HeaderText="Contraseña" DataField="userpassword"/>
                                 <asp:BoundField HeaderText="Estado" DataField="userstate"/>
                                 <asp:TemplateField HeaderText="Modificar">
@@ -226,6 +227,7 @@
                             </Columns>
  
                         </asp:GridView>
+                    </div>
                     </div>
                   </div>
               </div>
