@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Sistema de Asistencia! | </title>
+    <title>Sistema de Asistencia! | Mi asistencia</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.min.css"/>
@@ -32,7 +32,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
-              <a href="Index.aspx" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
+              <a href="Index.aspx" class="site_title"><i class="fa fa-calendar"></i> <span></span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -74,7 +74,7 @@
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Tipo Licencia</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Mantenimiento</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Operaciones<span class="fa fa-chevron-down"></span></a>
@@ -128,25 +128,26 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-          <div class="right_col " role="main">
-          <div >
-            <div class="page-title ">
+          <div class="right_col container" role="main">
+          <div class="container">
+            <div class="page-title container">
               <div class="title_left ">
                 <h3>Asistencia</h3>
               </div>
             </div>
             <div class="clearfix "></div>
-            <div class="row ">
+            <div class="row container">
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel ">
                   <div class="x_title ">
                     <h2><small>Consulta</small></h2>
                     <div class="clearfix "></div>
                   </div>
-                    <label runat="server" ID="lblAviso" class="label-align">_</label>
-                  <div class="x_content ">
-                      <div class="item form-group "> 
-                         <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un dni" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                    <label runat="server" ID="lblAviso" class="label-align"></label>
+                  <div class="x_content">
+                      <div class="container"> 
+                         <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un DNI" runat="server"></asp:TextBox>
+                          <br />
                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearchDni" Text="Buscar" />
                       </div>
                   </div>
@@ -154,8 +155,9 @@
               </div>
             </div>
                
-            <div class="row">
-              <div class="col-md-12 col-sm-12 ">
+            <div class="row container">
+              <div class="x_panel container">
+              <div class="table-responsive col-md-12 col-sm-12 ">
                        <asp:GridView 
                              runat="server" ID="DgvAssitance" CssClass="table"
                              GridLines="None"
@@ -170,11 +172,11 @@
                                  <asp:BoundField HeaderText="Fecha" DataField="fecha"/>
                                  <asp:BoundField HeaderText="Hora de Entrada" DataField="inhour"/>
                                  <asp:BoundField HeaderText="Hora de Salida" DataField="outhour"/>
-                                 <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                 <asp:BoundField HeaderText="DNI" DataField="dni"/>
                              </Columns>
   
                          </asp:GridView>
-                    
+                    </div>
                    </div>
                </div>
 

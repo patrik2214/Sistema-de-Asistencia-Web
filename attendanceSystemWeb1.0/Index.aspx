@@ -70,7 +70,7 @@
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Tipo Licencia</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Mantenimiento</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Operaciones<span class="fa fa-chevron-down"></span></a>
@@ -96,9 +96,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            
-            
+            </div>            
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -124,8 +122,8 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col " role="main">
-          <div class="">
+        <div class="right_col" role="main">
+          <div class="container">
             <div class="page-title">
               <div class="title_left">
                 <h3>Bienvenido!!</h3>

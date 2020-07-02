@@ -16,7 +16,7 @@
   </head>
 
   <body class="login" style="background-color: #1C4E80" >
-    <div>
+    <div class="container">
       <div class="login_wrapper animate-pop-in">
         <div class="animate form login_form">
           <section class="login_content">

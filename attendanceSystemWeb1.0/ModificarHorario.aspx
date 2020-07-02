@@ -28,7 +28,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
-              <a href="Index.aspx" class="site_title"><i class="fa fa-calendar"></i> <span>Asistencia Panchito</span></a>
+              <a href="Index.aspx" class="site_title"><i class="fa fa-calendar"></i> <span></span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -64,13 +64,13 @@
                   </li>
                   <li><a><i class="fa fa-table"></i>Horarios<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Registrar horario</asp:LinkButton></li>
-                        <li><asp:LinkButton runat="server" ID="ModHorario" OnClick="Redirect_ModHorario">Modificar horario</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Mantenimiento</asp:LinkButton></li>   
+                        <li><asp:LinkButton runat="server" ID="ModHorario" OnClick="Redirect_ModHorario">Modificar horario</asp:LinkButton></li>         
                     </ul>
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Tipo Licencia</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Mantenimiento</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Operaciones<span class="fa fa-chevron-down"></span></a>
@@ -96,8 +96,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -124,7 +123,7 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
+          <div class="container">
             <div class="page-title">
               <div class="title_left">
                 <h3>Horario</h3>

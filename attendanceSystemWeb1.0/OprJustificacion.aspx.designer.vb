@@ -158,6 +158,15 @@ Partial Public Class OprJustificacion
     Protected WithEvents Logout As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control HiddenId.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HiddenId As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
     '''Control txtDni.
     '''</summary>
     '''<remarks>
@@ -167,31 +176,49 @@ Partial Public Class OprJustificacion
     Protected WithEvents txtDni As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control tblDni.
+    '''Control BuscarDni.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents tblDni As Global.System.Web.UI.WebControls.DataGrid
+    Protected WithEvents BuscarDni As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control txtTardanza.
+    '''Control DgvJustify.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtTardanza As Global.System.Web.UI.WebControls.DataGrid
+    Protected WithEvents DgvJustify As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control txtApellido.
+    '''Control DtpFecha.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtApellido As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents DtpFecha As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtMotivo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtMotivo As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblAviso.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblAviso As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''Control Cancelar.
@@ -201,15 +228,6 @@ Partial Public Class OprJustificacion
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Cancelar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control Button1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control Guardar.

@@ -76,29 +76,34 @@ Public Class OprJustificacion
         Response.Redirect("TipoLicencia.aspx")
     End Sub
 
-    Private Sub BuscarDni(sender As Object, e As EventArgs) Handles BuscarDni.Click
+    Private Sub Button_BuscarDni(sender As Object, e As EventArgs) Handles BuscarDni.Click
         Try
-            If TxtDniForSearch.Text.Length = 8 Then
-                DgvJustify.DataSource = clsAsistencia.List(TxtDni.Text)
+            If txtDni.Text.Length = 8 Then
+                DgvJustify.DataSource = clsAsistencia.List(txtDni.Text)
                 DgvJustify.DataBind()
             Else
                 lblAviso.InnerText = "Ingrese un DNI de 8 digitos"
             End If
         Catch ex As Exception
-           Throw New Exception("Error" + ex.Message)
+            Throw New Exception("Error" + ex.Message)
         End Try
 
     End Sub
 
-    Private Sub Guardar(sender As Object, e As EventArgs) Handles Guardar.Click
+    Private Sub Button_Guardar(sender As Object, e As EventArgs) Handles Guardar.Click
         Try
             SetNewJustification(jus)
             clsJustificacion.Register(jus)
+            ClearControls()
             lblAviso.InnerText = "Justificación registrada correctamente"
         Catch ex As Exception
-           Throw New Exception("Error" + ex.Message)
+            Throw New Exception("Error" + ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub Button_Cancelar(sender As Object, e As EventArgs) Handles Cancelar.Click
+        ClearControls()
     End Sub
 
     Private Sub SetNewJustification(j As capaDatos.justification)
@@ -116,4 +121,11 @@ Public Class OprJustificacion
             lblAviso.InnerText = ex.Message
         End Try
     End Sub
+
+    Private Sub ClearControls()
+        txtDni.Text = ""
+        txtMotivo.Text = ""
+        DtpFecha.Text = ""
+    End Sub
+
 End Class
