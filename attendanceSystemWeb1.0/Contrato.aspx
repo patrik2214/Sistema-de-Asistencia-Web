@@ -145,19 +145,25 @@
                   <div class="x_content container">
                     <br />
                       <asp:HiddenField id="HiddenId" runat="server" value=""/>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Inicio<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                          <asp:Calendar ID="calInicio" CssClass="" runat="server" Height="400px"></asp:Calendar>
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Fin<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                          <asp:Calendar ID="calFin" CssClass="" runat="server" Height="400px"></asp:Calendar>
-                        </div>
+                      <div class="row">
+                          <div class="col-form-label col-md-6 col-sm-3">
+                              <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Inicio<span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6">
+                                  <asp:Calendar ID="calInicio" CssClass="" runat="server" Height="400px"></asp:Calendar>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-form-label col-md-6 col-sm-3">                              
+                              <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align">Fecha de Fin<span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                  <asp:Calendar ID="calFin" CssClass="" runat="server" Height="400px"></asp:Calendar>
+                                </div>
+                              </div>
+                          </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Salario<span class="required">*</span>
@@ -189,7 +195,7 @@
                           <asp:CheckBox ID="chkEstado" CssClass="custom-checkbox" runat="server"  Height="40px"></asp:CheckBox>
                         </div>
                       </div>
-                      <label runat="server" ID="lblAviso" class="label-align">_</label>
+                      <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
