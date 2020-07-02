@@ -192,9 +192,9 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col container" role="main">
+        <div class="right_col" role="main">
           <div class="container">
-            <div class="page-title">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Horario</h3>
               </div>
@@ -234,10 +234,11 @@
                         <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="item form-group container">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" /><br />
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
                           <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegisterSchedule" Text="Registrar" />
                         </div>
                       </div>
+                        <br />
                         <div id="calendar">
                             
                         </div>
