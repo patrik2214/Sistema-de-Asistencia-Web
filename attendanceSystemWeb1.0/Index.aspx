@@ -124,7 +124,7 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="container">
-            <div class="page-title">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Bienvenido!!</h3>
               </div>
@@ -132,12 +132,10 @@
 
             <div class="clearfix"></div>
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_content">
-                      <img src="Resources/authentication_isometric.png" class="col-md-12"  />
-                  </div>
+            <div class="row container">
+              <div class="col-md-12 col-sm-12 container">
+                 <div class="x_panel container">
+                      <img src="Resources/authentication_isometric.png" class="col-md-12"  />                  
                 </div>
               </div>
             </div>
