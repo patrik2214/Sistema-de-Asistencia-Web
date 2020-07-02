@@ -28,7 +28,8 @@
   <body class="nav-md" style="background-color: #1C4E80">
     <form runat="server">
     <div class="container body">
-      <div class="main_container">
+      <div class="main_container container">
+        <%--Aside--%>
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
@@ -74,7 +75,7 @@
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Tipo Licencia</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Mantenimiento</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Operaciones<span class="fa fa-chevron-down"></span></a>
@@ -126,48 +127,47 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col " role="main">
-          <div class="">
-            <div class="page-title">
+        <div class="right_col" role="main">
+          <div class="container">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Empleado</h3>
               </div>
             </div>
             <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">
+            <div class="row container">
+              <div class="container col-md-12 col-sm-12 ">
+                <div class="x_panel container">
                   <div class="x_title">
                     <h2><small>Mantenimiento</small></h2>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content container">
                     <br />
-
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">DNI<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Nombre<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Apellidos</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtApellido" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtApellido" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Sexo</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:DropDownList ID="CbxSex" CssClass="form-control" runat="server"  Width="400px" Height="35px">
+                          <asp:DropDownList ID="CbxSex" CssClass="form-control" runat="server" Height="35px">
                               <asp:ListItem Selected="True" Value="Seleccionar">-Seleccionar-</asp:ListItem>
                               <asp:ListItem Value="F">Femenino</asp:ListItem>
                               <asp:ListItem Value="M">Masculino</asp:ListItem>
@@ -177,19 +177,19 @@
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Dirección</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtDireccion" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtDireccion" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Telefono</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtTelefono" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtTelefono" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Correo</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtCorreo" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtCorreo" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
@@ -205,8 +205,7 @@
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
-                          
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />                          
                           <asp:Button  runat="server" CssClass="btn btn-success" ID="BtnRegister" Text="Registrar" />
                         </div>
                       </div>
@@ -215,17 +214,19 @@
               </div>
             </div>
                   
-              <div class="row">
-                  <div class="col-md-12 col-sm-12 ">
-                      <div class="x_panel"> 
+              
+              <div class="row container">
+                  <div class="col-md-12 col-sm-12 container">
+                      <div class="x_panel container">
                           <div class="item form-group"> 
-                              <asp:TextBox ID="txtBuscar" CssClass="form-control" runat="server"  Width="1200px" Height="40px"></asp:TextBox>
+                              <asp:TextBox ID="txtBuscar" CssClass="form-control" runat="server"  Height="40px"></asp:TextBox>
                               <asp:Button  runat="server" CssClass="btn btn-primary" ID="BtnSearch" Text="Buscar" />
                           </div>
                           
                       </div>
                       
-                    <div class="x_panel">
+                    <div class="x_panel container">
+                    <div class="table-responsive col-md-12 col-sm-12 ">
                         <asp:GridView 
                             runat="server" ID="DgvEmpl" CssClass="table" OnRowCommand="DgvEmpl_RowCommand"
                             GridLines="None"
@@ -261,7 +262,7 @@
                     </div>
                   </div>
               </div>
-                 
+              </div>
             </div>
           </div>
         </div>
@@ -269,10 +270,12 @@
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right ">
+          <div class="container">
+              <div class="pull-right ">
             Plataforma Asistencia Panchito -  by Us
           </div>
           <div class="clearfix"></div>
+          </div>
         </footer>
         <!-- /footer content -->
         
@@ -295,4 +298,3 @@
 	</form>
   </body>
 </html>
-

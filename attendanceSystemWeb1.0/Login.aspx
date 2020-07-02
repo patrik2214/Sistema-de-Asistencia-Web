@@ -16,25 +16,25 @@
   </head>
 
   <body class="login" style="background-color: #1C4E80" >
-    <div>
+    <div class="container">
       <div class="login_wrapper animate-pop-in">
         <div class="animate form login_form">
           <section class="login_content">
-              <div class="row m-o p-0">
+              <div class="row m-o p-0 ">
                     <img src="Resources/innovation__monochromatic.png" width="70%" />
                </div>
-            <form id="formIncio" runat="server">
+            <form id="formIncio" class="container" runat="server">
                 
                 <h1 style="color: #ffffff">Iniciar Sesión</h1>
-                <div class="form-group" style="clip: rect(5px, auto, 5px, auto)">                   
+                <div class="container" >                   
                     
-                    <asp:TextBox ID="txtNombreUsuario" CssClass="form-control" runat="server" placeholder=" Usuario" Width="300px" Height="30px"></asp:TextBox> <br/>                    
-                    <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server" TextMode="Password" placeholder=" Contraseña"  Width="300px" Height="30px"></asp:TextBox><br />
+                    <asp:TextBox ID="txtNombreUsuario" CssClass="form-control" runat="server" placeholder=" Usuario" Height="30px"></asp:TextBox> <br/>                    
+                    <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server" TextMode="Password" placeholder=" Contraseña" Height="30px"></asp:TextBox><br />
                     <asp:Label runat="server" ForeColor="White" ID="lblMensaje"></asp:Label><br /><br />
                     <asp:Button ID="btnLogin" Text="Ingresar" runat="server" BorderStyle="None" style="center" Width="108px" Height="34px" BackColor="#2A75BF" ForeColor="White" Font-Bold="True" Font-Size="Medium"/><br/>
                 </div>
                 <div class="clearfix"><br /></div>
-                <div>
+                <div class="container">
                    <p style="color: #FFFFFF">© 2020 Todos los derechos reservados.</p>
                 </div>                
             </form>         

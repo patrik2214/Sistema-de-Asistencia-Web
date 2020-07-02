@@ -1,5 +1,7 @@
-﻿Public Class OprJustificacion
+﻿Imports capaNegocio
+Public Class OprJustificacion
     Inherits System.Web.UI.Page
+    Dim jus As New capaDatos.justification
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
@@ -72,6 +74,58 @@
 
     Protected Sub Redirect_TipoLicencia(ByVal sender As Object, ByVal e As System.EventArgs)
         Response.Redirect("TipoLicencia.aspx")
+    End Sub
+
+    Private Sub Button_BuscarDni(sender As Object, e As EventArgs) Handles BuscarDni.Click
+        Try
+            If txtDni.Text.Length = 8 Then
+                DgvJustify.DataSource = clsAsistencia.List(txtDni.Text)
+                DgvJustify.DataBind()
+            Else
+                lblAviso.InnerText = "Ingrese un DNI de 8 digitos"
+            End If
+        Catch ex As Exception
+            Throw New Exception("Error" + ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub Button_Guardar(sender As Object, e As EventArgs) Handles Guardar.Click
+        Try
+            SetNewJustification(jus)
+            clsJustificacion.Register(jus)
+            ClearControls()
+            lblAviso.InnerText = "Justificación registrada correctamente"
+        Catch ex As Exception
+            Throw New Exception("Error" + ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub Button_Cancelar(sender As Object, e As EventArgs) Handles Cancelar.Click
+        ClearControls()
+    End Sub
+
+    Private Sub SetNewJustification(j As capaDatos.justification)
+        j.fecha = Date.Parse(DtpFecha.Text)
+        j.reason = txtMotivo.Text
+        j.state = True
+        j.AssistanceId = HiddenId.Value
+    End Sub
+
+    Protected Sub DgvJustify_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles DgvJustify.RowCommand
+        Try
+            Dim i = Convert.ToInt32(e.CommandArgument)
+            HiddenId.Value = Integer.Parse(DgvJustify.Rows(i).Cells(0).Text)
+        Catch ex As Exception
+            lblAviso.InnerText = ex.Message
+        End Try
+    End Sub
+
+    Private Sub ClearControls()
+        txtDni.Text = ""
+        txtMotivo.Text = ""
+        DtpFecha.Text = ""
     End Sub
 
 End Class

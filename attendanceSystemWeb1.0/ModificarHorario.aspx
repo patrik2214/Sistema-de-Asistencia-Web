@@ -21,10 +21,11 @@
     <!-- Estilo de Tema Personalizado -->
     <link href="../librerias/build/css/custom.min.css" rel="stylesheet"/>
 </head>
+
 <body class="nav-md" style="background-color: #1C4E80">
-    <form id="form1" runat="server">
-        <div class="container body">
-            <div class="main_container">
+    <form runat="server">
+    <div class="container body">
+      <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
@@ -64,13 +65,13 @@
                   </li>
                   <li><a><i class="fa fa-table"></i>Horarios<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Registrar horario</asp:LinkButton></li>
-                        <li><asp:LinkButton runat="server" ID="ModHorario" OnClick="Redirect_ModHorario">Modificar horario</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManHorario" OnClick="Redirect_Horario">Mantenimiento</asp:LinkButton></li>   
+                        <li><asp:LinkButton runat="server" ID="ModHorario" OnClick="Redirect_ModHorario">Modificar horario</asp:LinkButton></li>         
                     </ul>
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Tipo Licencia</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Mantenimiento</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Operaciones<span class="fa fa-chevron-down"></span></a>
@@ -96,8 +97,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -124,31 +124,31 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
+          <div class="container">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Horario</h3>
               </div>
             </div>
             <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">
+            <div class="row container">
+              <div class="col-md-12 col-sm-12 container">
+                <div class="x_panel container">
                   <div class="x_title">
                     <h2><small>Modificar</small></h2>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content container">
                     <br />
                       <div class="item form-group">
                             <label class="col-form-label col-md-3 col-sm-3 label-align">DNI Empleado:</label>
                             <div class="col-md-6 col-sm-6 ">
                               <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server" class="col-md-6" ></asp:TextBox>
-                                <asp:Button  runat="server" CssClass="btn btn-info" ID="BtnBuscar" Text="Buscar" />
+                              <asp:Button  runat="server" CssClass="btn btn-info" ID="BtnBuscar" Text="Buscar" />
                             </div>
                         </div>                       
                         <div class="ln_solid"></div>
-                        <label runat="server" ID="lblAviso" class="label-align">_</label>
+                        <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                           <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
@@ -159,9 +159,10 @@
                 </div>
               </div>
             </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 ">
-                        <div class="x_panel">
+                <div class="row container">
+                  <div class="col-md-12 col-sm-12 container">
+                      <div class="x_panel container"> 
+                          <div class="table-responsive col-md-12 col-sm-12 ">
                         <asp:GridView 
                             runat="server" ID="DgvScheduleDetails" CssClass="table" 
                             AutoGenerateEditButton="True" 
@@ -173,6 +174,7 @@
                             >
  
                         </asp:GridView>
+                       </div>
                     </div>
                     </div>
                 </div>

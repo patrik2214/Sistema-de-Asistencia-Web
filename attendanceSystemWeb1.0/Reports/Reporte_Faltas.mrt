@@ -10,15 +10,17 @@
         <Name>MS SQL</Name>
       </MS_x0020_SQL>
     </Databases>
-    <DataSources isList="true" count="10">
+    <DataSources isList="true" count="11">
       <assistance Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>assistance</Alias>
-        <Columns isList="true" count="5">
+        <Columns isList="true" count="7">
           <value>assistanceId,System.Int32</value>
-          <value>fecha,System.DateTime</value>
           <value>inHour,System.DateTime</value>
           <value>outHour,System.DateTime</value>
+          <value>fecha,System.DateTime</value>
           <value>dni,System.String</value>
+          <value>lastname,System.String</value>
+          <value>name,System.String</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
@@ -26,9 +28,11 @@
         <Name>assistance</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="0" />
-        <SqlCommand>SELECT assistance.dni,employee.lastname,employee.name,assistance.fecha,assistance.inHour
-FROM assistance INNER JOIN employee ON assistance.dni = employee.dni
-WHERE fecha &lt; GETDATE() - 1 AND inHour Is Null </SqlCommand>
+        <SqlCommand>SELECT assistance.dni, employee.lastname, employee.name, assistance.fecha,
+  assistance.inHour
+FROM assistance INNER JOIN
+  employee ON assistance.dni = employee.dni
+WHERE assistance.fecha &lt; SYSDATETIME() AND assistance.inHour IS NULL</SqlCommand>
       </assistance>
       <contract Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
         <Alias>contract</Alias>
@@ -190,15 +194,33 @@ WHERE fecha &lt; GETDATE() - 1 AND inHour Is Null </SqlCommand>
         <Parameters isList="true" count="0" />
         <SqlCommand>select * from users</SqlCommand>
       </users>
+      <Datos1 Ref="13" type="Stimulsoft.Report.Dictionary.StiDataTransformation" isKey="true">
+        <Actions isList="true" count="0" />
+        <Alias>Datos1</Alias>
+        <Columns isList="true" count="5">
+          <value>TRANSFORM,dni,dni,System.String,employee.dni,_x0033_efe4ae2fc20443c80e51f14a7a98a45,Dimension</value>
+          <value>TRANSFORM,lastname,lastname,System.String,employee.lastname,_x0036_2e8040a54374ff79efc10d6806ae43a,Dimension</value>
+          <value>TRANSFORM,name,name,System.String,employee.name,_x0034_6fedc8b6c204f46a5f8015ba29538f3,Dimension</value>
+          <value>TRANSFORM,fecha,fecha,System.DateTime,assistance.fecha,_x0034_f208d3b7298480c931c97450ec92d42,Dimension</value>
+          <value>TRANSFORM,inHour,inHour,System.DateTime,assistance.inHour,_x0034_6d05039007e46f5b5daa57bbed3517d,Dimension</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Filters isList="true" count="0" />
+        <Key>b412e02f005246689cae747c2021400a</Key>
+        <Name>Datos1</Name>
+        <NameInSource>Categoría</NameInSource>
+        <Sorts isList="true" count="0" />
+      </Datos1>
     </DataSources>
     <Relations isList="true" count="3">
-      <ReportLicense_Typed Ref="13" type="DataRelation" isKey="true">
+      <ReportLicense_Typed Ref="14" type="DataRelation" isKey="true">
         <Alias>ReportLicense_Typed</Alias>
         <ChildColumns isList="true" count="1">
           <value>typeId</value>
         </ChildColumns>
         <ChildSource isRef="7" />
         <Dictionary isRef="1" />
+        <Key>7abe118ec2bc4068b629315f66989a71</Key>
         <Name>ReportLicense_Typed</Name>
         <NameInSource>ReportLicense_Typed</NameInSource>
         <ParentColumns isList="true" count="1">
@@ -206,13 +228,14 @@ WHERE fecha &lt; GETDATE() - 1 AND inHour Is Null </SqlCommand>
         </ParentColumns>
         <ParentSource isRef="8" />
       </ReportLicense_Typed>
-      <ReportEmployee Ref="14" type="DataRelation" isKey="true">
+      <ReportEmployee Ref="15" type="DataRelation" isKey="true">
         <Alias>ReportEmployee</Alias>
         <ChildColumns isList="true" count="1">
           <value>dni</value>
         </ChildColumns>
         <ChildSource isRef="7" />
         <Dictionary isRef="1" />
+        <Key>39f030325f4741e08ce1c611fd48b72b</Key>
         <Name>ReportEmployee</Name>
         <NameInSource>ReportEmployee</NameInSource>
         <ParentColumns isList="true" count="1">
@@ -220,13 +243,14 @@ WHERE fecha &lt; GETDATE() - 1 AND inHour Is Null </SqlCommand>
         </ParentColumns>
         <ParentSource isRef="5" />
       </ReportEmployee>
-      <assistance_employee Ref="15" type="DataRelation" isKey="true">
+      <assistance_employee Ref="16" type="DataRelation" isKey="true">
         <Alias>assistance_employee</Alias>
         <ChildColumns isList="true" count="1">
           <value>dni</value>
         </ChildColumns>
         <ChildSource isRef="3" />
         <Dictionary isRef="1" />
+        <Key>a366c737b25947a1a726c6458d9b65a4</Key>
         <Name>assistance_employee</Name>
         <NameInSource>assistance</NameInSource>
         <ParentColumns isList="true" count="1">
@@ -244,23 +268,23 @@ WHERE fecha &lt; GETDATE() - 1 AND inHour Is Null </SqlCommand>
   <Key>81771e7086654aebba6acdff3a884bbf</Key>
   <MetaTags isList="true" count="0" />
   <Pages isList="true" count="1">
-    <Page1 Ref="16" type="Page" isKey="true">
+    <Page1 Ref="17" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="4">
-        <PageHeaderBand1 Ref="17" type="PageHeaderBand" isKey="true">
+        <PageHeaderBand1 Ref="18" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,19,0.2</ClientRectangle>
           <Components isList="true" count="1">
-            <Text2 Ref="18" type="Text" isKey="true">
+            <Text2 Ref="19" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.2,0,5.4,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Segoe UI,10,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text2</Name>
-              <Page isRef="16" />
-              <Parent isRef="17" />
+              <Page isRef="17" />
+              <Parent isRef="18" />
               <Text>{Today}</Text>
               <TextBrush>[198:217:240]</TextBrush>
               <Type>SystemVariables</Type>
@@ -269,14 +293,14 @@ WHERE fecha &lt; GETDATE() - 1 AND inHour Is Null </SqlCommand>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>PageHeaderBand1</Name>
-          <Page isRef="16" />
-          <Parent isRef="16" />
+          <Page isRef="17" />
+          <Parent isRef="17" />
         </PageHeaderBand1>
-        <ReportTitleBand1 Ref="19" type="ReportTitleBand" isKey="true">
+        <ReportTitleBand1 Ref="20" type="ReportTitleBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,1.4,19,2</ClientRectangle>
           <Components isList="true" count="2">
-            <Text1 Ref="20" type="Text" isKey="true">
+            <Text1 Ref="21" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>5.4,0.6,9.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -284,14 +308,14 @@ WHERE fecha &lt; GETDATE() - 1 AND inHour Is Null </SqlCommand>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text1</Name>
-              <Page isRef="16" />
-              <Parent isRef="19" />
+              <Page isRef="17" />
+              <Parent isRef="20" />
               <Text>REPORTE DE FALTAS</Text>
               <TextBrush>[0:112:192]</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text1>
-            <Image1 Ref="21" type="Image" isKey="true">
+            <Image1 Ref="22" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>3.6,0.2,1.8,1.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -362,59 +386,59 @@ mj+5C+AOENEDVhPT/dvpgdKwSI0AFi4AS2YDsz19dPPofAQhRtRHDJdCc95LnQ83ROLx/4NGZecH
 pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <Margins>0,0,0,0</Margins>
               <Name>Image1</Name>
-              <Page isRef="16" />
-              <Parent isRef="19" />
+              <Page isRef="17" />
+              <Parent isRef="20" />
               <VertAlignment>Center</VertAlignment>
             </Image1>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>ReportTitleBand1</Name>
-          <Page isRef="16" />
-          <Parent isRef="16" />
+          <Page isRef="17" />
+          <Parent isRef="17" />
         </ReportTitleBand1>
-        <GroupHeaderBand1 Ref="22" type="GroupHeaderBand" isKey="true">
+        <GroupHeaderBand1 Ref="23" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,4.2,19,1.8</ClientRectangle>
           <Components isList="true" count="3">
-            <Text4 Ref="23" type="Text" isKey="true">
+            <Text4 Ref="24" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.2,0.8,4.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Segoe UI,12,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text4</Name>
-              <Page isRef="16" />
-              <Parent isRef="22" />
+              <Page isRef="17" />
+              <Parent isRef="23" />
               <Text>Apellidos y Nombre:</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text4>
-            <Text9 Ref="24" type="Text" isKey="true">
+            <Text9 Ref="25" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>4.6,0.8,14.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Segoe UI,10</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text9</Name>
-              <Page isRef="16" />
-              <Parent isRef="22" />
+              <Page isRef="17" />
+              <Parent isRef="23" />
               <Text>{assistance.assistance_employee.lastname}, {assistance.assistance_employee.name}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text9>
-            <HorizontalLinePrimitive2 Ref="25" type="HorizontalLinePrimitive" isKey="true">
+            <HorizontalLinePrimitive2 Ref="26" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.6,19,0.0254</ClientRectangle>
               <Color>Black</Color>
               <Conditions isList="true" count="0" />
-              <EndCap Ref="26" type="Cap" isKey="true">
+              <EndCap Ref="27" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Name>HorizontalLinePrimitive2</Name>
-              <Page isRef="16" />
-              <Parent isRef="22" />
-              <StartCap Ref="27" type="Cap" isKey="true">
+              <Page isRef="17" />
+              <Parent isRef="23" />
+              <StartCap Ref="28" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive2>
@@ -422,15 +446,15 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
           <Condition>{assistance.assistance_employee.lastname}and {assistance.assistance_employee.name}</Condition>
           <Conditions isList="true" count="0" />
           <Name>GroupHeaderBand1</Name>
-          <Page isRef="16" />
-          <Parent isRef="16" />
+          <Page isRef="17" />
+          <Parent isRef="17" />
         </GroupHeaderBand1>
-        <DataBand1 Ref="28" type="DataBand" isKey="true">
+        <DataBand1 Ref="29" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
           <ClientRectangle>0,6.8,19,1.4</ClientRectangle>
           <Components isList="true" count="4">
-            <Text7 Ref="29" type="Text" isKey="true">
+            <Text7 Ref="30" type="Text" isKey="true">
               <Border>All;White;1;Solid;False;4;Black</Border>
               <Brush>[54:96:146]</Brush>
               <ClientRectangle>2,0,3.8,0.8</ClientRectangle>
@@ -439,14 +463,14 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text7</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
+              <Page isRef="17" />
+              <Parent isRef="29" />
               <Text>DNI</Text>
               <TextBrush>White</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text7>
-            <Text8 Ref="30" type="Text" isKey="true">
+            <Text8 Ref="31" type="Text" isKey="true">
               <Border>All;White;1;Solid;False;4;Black</Border>
               <Brush>[54:96:146]</Brush>
               <ClientRectangle>5.8,0,5,0.8</ClientRectangle>
@@ -455,14 +479,14 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text8</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
+              <Page isRef="17" />
+              <Parent isRef="29" />
               <Text>Fecha Inicio</Text>
               <TextBrush>White</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text8>
-            <Text5 Ref="31" type="Text" isKey="true">
+            <Text5 Ref="32" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>5.8,0.8,5,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -470,16 +494,16 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text5</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
+              <Page isRef="17" />
+              <Parent isRef="29" />
               <Text>{assistance.fecha}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="32" type="DateFormat" isKey="true">
+              <TextFormat Ref="33" type="DateFormat" isKey="true">
                 <StringFormat>dd/MM/yyyy</StringFormat>
               </TextFormat>
               <VertAlignment>Center</VertAlignment>
             </Text5>
-            <Text6 Ref="33" type="Text" isKey="true">
+            <Text6 Ref="34" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>2,0.8,3.8,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -487,8 +511,8 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text6</Name>
-              <Page isRef="16" />
-              <Parent isRef="28" />
+              <Page isRef="17" />
+              <Parent isRef="29" />
               <Text>{assistance.assistance_employee.dni}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
@@ -499,8 +523,8 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
           <DataSourceName>assistance</DataSourceName>
           <Filters isList="true" count="0" />
           <Name>DataBand1</Name>
-          <Page isRef="16" />
-          <Parent isRef="16" />
+          <Page isRef="17" />
+          <Parent isRef="17" />
           <Sort isList="true" count="0" />
         </DataBand1>
       </Components>
@@ -524,10 +548,10 @@ pvKnLqfvUvEX+AIp4/8BqmpV8MCDoBAAAAAASUVORK5CYII=</ImageBytes>
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/29/2020 9:00:11 PM</ReportChanged>
+  <ReportChanged>7/2/2020 7:47:07 AM</ReportChanged>
   <ReportCreated>6/6/2020 8:24:20 PM</ReportCreated>
   <ReportFile>C:\Users\LISSETH\Documents\MEGA\Lisseth\CICLO VII\Sistemas Distribuidos\Proyecto\Sistema-de-Asistencia-Web\attendanceSystemWeb1.0\Reports\Reporte_Faltas.mrt</ReportFile>
-  <ReportGuid>5fe3b149239f487e957b1c9143116a6a</ReportGuid>
+  <ReportGuid>87eef2e4468748fe9c277e5755258a15</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2020.3.2.0</ReportVersion>

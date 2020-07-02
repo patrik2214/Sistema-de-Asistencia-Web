@@ -70,7 +70,7 @@
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Tipo Licencia</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Mantenimiento</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Operaciones<span class="fa fa-chevron-down"></span></a>
@@ -96,9 +96,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            
-            
+            </div>            
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -124,9 +122,9 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col " role="main">
-          <div class="">
-            <div class="page-title">
+        <div class="right_col" role="main">
+          <div class="container">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Bienvenido!!</h3>
               </div>
@@ -134,12 +132,10 @@
 
             <div class="clearfix"></div>
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_content">
-                      <img src="Resources/authentication_isometric.png" class="col-md-12"  />
-                  </div>
+            <div class="row container">
+              <div class="col-md-12 col-sm-12 container">
+                 <div class="x_panel container">
+                      <img src="Resources/authentication_isometric.png" class="col-md-12"  />                  
                 </div>
               </div>
             </div>

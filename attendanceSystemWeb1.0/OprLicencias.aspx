@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Sistema de Asistencia! | </title>
+    <title>Sistema de Asistencia! | Licencias</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.min.css"/>
@@ -51,7 +51,7 @@
             <br />
 
             <!-- sidebar menu -->
-             
+            
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
@@ -74,7 +74,7 @@
                   </li>
                   <li><a><i class="fa fa-folder"></i>Licencias<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Tipo Licencia</asp:LinkButton></li>                     
+                      <li><asp:LinkButton runat="server" ID="ManTipoLicencia" OnClick="Redirect_TipoLicencia">Mantenimiento</asp:LinkButton></li>                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Operaciones<span class="fa fa-chevron-down"></span></a>
@@ -100,8 +100,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
-
+            </div>            
           </div>
         </div>
         <!-- end sidebar menu -->
@@ -128,63 +127,63 @@
 
         <!-- page content -->
         <div class="right_col " role="main">
-          <div class="">
-            <div class="page-title">
+          <div class="container">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Licencias</h3>
               </div>
             </div>
             <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">
+            <div class="row container">
+              <div class="col-md-12 col-sm-12 container">
+                <div class="x_panel container">
                   <div class="x_title">
                     <h2><small>Operación</small></h2>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content container">
                     <br />
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Dni Empleado:</label>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">DNI Empleado:</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="TxtDni" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Tipo de Licencia<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:DropDownList ID="CbxTypeLicense" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:DropDownList>
+                          <asp:DropDownList ID="CbxTypeLicense" CssClass="form-control" runat="server" Height="30px"></asp:DropDownList>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha de Presentación<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="DtpPresentation" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="DtpPresentation" textmode="Date" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha de Inicio</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="DtpStartDate" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="DtpStartDate" textmode="Date" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha de Fin<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="DtpEndDate" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="DtpEndDate" textmode="Date" CssClass="form-control" runat="server"  Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Documento</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="TxtDocument" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="TxtDocument" CssClass="form-control" runat="server"  Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="ln_solid"></div>
-                      <label runat="server" ID="lblAviso" class="label-align">_</label>
+                      <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                           <asp:Button  runat="server" CssClass="btn btn-danger" ID="BtnClear" Text="Cancelar" />
@@ -195,9 +194,10 @@
                 </div>
               </div>
             </div>
-              <div class="row">
-                  <div class="col-md-12 col-sm-12 ">
-                    <div class="x_panel">
+              <div class="row container">
+                  <div class="col-md-12 col-sm-12 container">
+                  <div class="x_panel container">                    
+                      <div class="table-responsive col-md-12 col-sm-12 ">
                         <asp:GridView 
                             runat="server" ID="DgvLicense" CssClass="table" 
                             GridLines="None"
@@ -216,7 +216,7 @@
                             </Columns>
  
                         </asp:GridView>
-                  
+                        </div>
                     </div>
                   </div>
               </div>
