@@ -28,7 +28,7 @@
  <body class="nav-md" style="background-color: #1C4E80">
     <form runat="server">
     <div class="container body">
-      <div class="main_container">
+      <div class="main_container container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view" style="background-color: #1C4E80">
             <div class="navbar nav_title" style="border: 0;background-color: #1C4E80">
@@ -128,7 +128,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-          <div class="right_col container" role="main">
+          <div class="right_col" role="main">
           <div class="container">
             <div class="page-title container">
               <div class="title_left ">
@@ -138,13 +138,13 @@
             <div class="clearfix "></div>
             <div class="row container">
               <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel ">
+                <div class="x_panel container">
                   <div class="x_title ">
                     <h2><small>Consulta</small></h2>
                     <div class="clearfix "></div>
                   </div>
                     <label runat="server" ID="lblAviso" class="label-align"></label>
-                  <div class="x_content">
+                  <div class="x_content container">
                       <div class="container"> 
                          <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Ingrese un DNI" runat="server"></asp:TextBox>
                           <br />

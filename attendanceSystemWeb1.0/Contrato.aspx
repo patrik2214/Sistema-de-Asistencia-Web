@@ -127,9 +127,9 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col container" role="main">
+        <div class="right_col" role="main">
           <div class="container">
-            <div class="page-title">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Contrato</h3>
               </div>
@@ -211,7 +211,7 @@
                           </div>
                           
                       </div>
-                                          
+                      <div class="x_panel container">                    
                       <div class="table-responsive col-md-12 col-sm-12 ">
                         <asp:GridView 
                             runat="server" ID="DgvContract" CssClass="table" OnRowCommand="DgvContract_RowCommand"
@@ -246,6 +246,7 @@
                         </asp:GridView>
                     </div>
                   </div>
+                      </div>
               </div>
                  
             </div>
