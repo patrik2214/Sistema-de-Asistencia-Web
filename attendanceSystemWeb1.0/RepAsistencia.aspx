@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Sistema de Asistencia! |Reporte de Asistencia </title>
+    <title>Sistema de Asistencia! | Reporte de Asistencia </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.min.css"/>

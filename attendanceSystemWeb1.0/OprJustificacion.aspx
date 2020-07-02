@@ -145,36 +145,32 @@
                     <br />
                       <asp:HiddenField id="HiddenId" runat="server" value=""/>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">DNI<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Height="30px"></asp:TextBox>
-                          <asp:Button  runat="server" CssClass="btn btn-primary" ID="BuscarDni" Text="Buscar" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 ">
-                          <div class="x_panel container">
-                              <div class="table-responsive col-md-12 col-sm-12 ">
-                            <asp:GridView 
-                                runat="server" ID="DgvJustify" CssClass="table" OnRowCommand="DgvJustify_RowCommand" 
-                                GridLines="None"
-                                AutoGenerateColumns="False"
-                                >
-     
-                                <RowStyle CssClass="even"/>
-                                <HeaderStyle CssClass="header" />
-                                <AlternatingRowStyle CssClass="odd"/>
-     
-                                <Columns>
-                                    <asp:BoundField HeaderText="ID" DataField="id"/>
-                                    <asp:BoundField HeaderText="Fecha" DataField="fecha"/>
-                                    <asp:BoundField HeaderText="Hora de Entrada" DataField="inhour"/>
-                                    <asp:BoundField HeaderText="Hora de Salida" DataField="outhour"/>
-                                    <asp:BoundField HeaderText="Dni" DataField="dni"/>
-                                </Columns>
-                            </asp:GridView>
-                                  </div>
+                        <label class="col-form-label col-md-6 col-sm-3 label-align">DNI:<span class="required">*</span> </label>
+                        <div class="row">
+                          <div class="col-md-8 col-sm-8">
+                            <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Height="30px"></asp:TextBox>                          
+                          </div>
+                          <div class="col-md-6 col-sm-6 ">                            
+                            <asp:Button  runat="server" CssClass="btn btn-primary" ID="BuscarDni" Text="Buscar" />
                           </div>
                         </div>
+                          <br />
+                              <div class="table-responsive col-md-12 col-sm-12 ">
+                                <asp:GridView 
+                                    runat="server" ID="DgvJustify" CssClass="table" OnRowCommand="DgvJustify_RowCommand" GridLines="None" AutoGenerateColumns="False">   
+                                    <RowStyle CssClass="even"/>
+                                    <HeaderStyle CssClass="header" />
+                                    <AlternatingRowStyle CssClass="odd"/>
+     
+                                    <Columns>
+                                        <asp:BoundField HeaderText="Id" DataField="id"/>
+                                        <asp:BoundField HeaderText="Fecha" DataField="fecha"/>
+                                        <asp:BoundField HeaderText="Hora de Entrada" DataField="inhour"/>
+                                        <asp:BoundField HeaderText="Hora de Salida" DataField="outhour"/>
+                                        <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                    </Columns>
+                                </asp:GridView>
+                              </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha<span class="required">*</span>
@@ -193,7 +189,7 @@
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" /> />
+                          <asp:Button  runat="server" CssClass="btn btn-danger" ID="Cancelar" Text="Cancelar" />
                           <asp:Button  runat="server" CssClass="btn btn-success" ID="Guardar" Text="Guardar" />
                         </div>
                       </div>

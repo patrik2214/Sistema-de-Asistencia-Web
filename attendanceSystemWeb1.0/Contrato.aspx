@@ -230,8 +230,8 @@
                             <AlternatingRowStyle CssClass="odd"/>
  
                             <Columns>
-                                <asp:BoundField HeaderText="ID" DataField="id"/>
-                                <asp:BoundField HeaderText="Dni" DataField="dni"/>
+                                <asp:BoundField HeaderText="Id" DataField="id"/>
+                                <asp:BoundField HeaderText="DNI" DataField="dni"/>
                                 <asp:BoundField HeaderText="Fecha Inicio" DataField="startdate"/>
                                 <asp:BoundField HeaderText="Fecha Fin" DataField="finishdate"/>
                                 <asp:BoundField HeaderText="Salario" DataField="mount"/>
