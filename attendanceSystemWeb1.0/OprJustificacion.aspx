@@ -128,31 +128,32 @@
         <!-- page content -->
         <div class="right_col " role="main">
           <div class="container">
-            <div class="page-title">
+            <div class="page-title container">
               <div class="title_left">
                 <h3>Justificación</h3>
               </div>
             </div>
             <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">
+            <div class="row container">
+              <div class="col-md-12 col-sm-12 container">
+                <div class="x_panel container">
                   <div class="x_title">
                     <h2><small>Operación</small></h2>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content container">
                     <br />
                       <asp:HiddenField id="HiddenId" runat="server" value=""/>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">DNI<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Height="30px"></asp:TextBox>
                           <asp:Button  runat="server" CssClass="btn btn-primary" ID="BuscarDni" Text="Buscar" />
                         </div>
                         <div class="col-md-6 col-sm-6 ">
-                          <div class="x_panel">
+                          <div class="x_panel container">
+                              <div class="table-responsive col-md-12 col-sm-12 ">
                             <asp:GridView 
                                 runat="server" ID="DgvJustify" CssClass="table" OnRowCommand="DgvJustify_RowCommand" 
                                 GridLines="None"
@@ -171,6 +172,7 @@
                                     <asp:BoundField HeaderText="Dni" DataField="dni"/>
                                 </Columns>
                             </asp:GridView>
+                                  </div>
                           </div>
                         </div>
                       </div>
@@ -178,16 +180,16 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Seleccionar Fecha<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="DtpFecha" textmode="Date" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="DtpFecha" textmode="Date" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align">Motivo</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <asp:TextBox ID="txtMotivo" CssClass="form-control" runat="server"  Width="400px" Height="30px"></asp:TextBox>
+                          <asp:TextBox ID="txtMotivo" CssClass="form-control" runat="server" Height="30px"></asp:TextBox>
                         </div>
                       </div>
-                      <label runat="server" ID="lblAviso" class="label-align">_</label>
+                      <label runat="server" ID="lblAviso" class="label-align"></label>
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
