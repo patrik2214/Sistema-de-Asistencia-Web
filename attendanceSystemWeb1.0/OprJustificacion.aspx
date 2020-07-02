@@ -147,7 +147,7 @@
                       <div class="item form-group">
                         <label class="col-form-label col-md-6 col-sm-3 label-align">DNI:<span class="required">*</span> </label>
                         <div class="row">
-                          <div class="col-md-8 col-sm-8">
+                          <div class="col-md-12 col-sm-8">
                             <asp:TextBox ID="txtDni" CssClass="form-control" runat="server"  Height="30px"></asp:TextBox>                          
                           </div>
                           <div class="col-md-6 col-sm-6 ">                            
